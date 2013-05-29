@@ -4,171 +4,67 @@
 	<comment>English (US) Language File</comment>
 	<!-- ***************************** Tabs *************************** -->
 
-	<entry key="itemGroup.tabDendritis">Dendritis</entry>
-	<entry key="itemGroup.tabDendritisBlocks">Dendritis Blocks</entry>
-	<entry key="itemGroup.tabDendritisItems">Dendritis Items</entry>
-	<entry key="itemGroup.tabDendritisFood">Dendritis Food</entry>
-	<entry key="itemGroup.tabDendritisUsable">Dendritis Usable</entry>
+	<entry key="itemGroup.tabHephaestus">Hephaestus</entry>
+	<entry key="itemGroup.tabHephaestusBlocks">Hephaestus' Blocks</entry>
+	<entry key="itemGroup.tabHephaestusMaterials">Hephaestus' Materials</entry>
+	<entry key="itemGroup.tabHephaestusParts">Hephaestus' Parts</entry>
+	<entry key="itemGroup.tabHephaestusTools">Hephaestus' Tools</entry>
 
-	<!-- ***************************** Items ************************** -->
+	<!-- ***************************** Handles ************************** -->
 
-	<entry key="item.handle.name">Handle</entry>
+	<entry key="item.handleWood.name">Wood Handle</entry>
+	<entry key="item.handleBronze.name">Bronze Handle</entry>
+	<entry key="item.handleHardIron.name">HardIron Handle</entry>
+	<entry key="item.handleIron.name">Iron Handle</entry>
+	<entry key="item.handleSteel.name">Steel Handle</entry>
+	<entry key="item.handleTitanium.name">Titanium Handle</entry>
 	
-	<entry key="item.gemAmethyst.name">Amethyst</entry>
-	<entry key="item.gemBDiamond.name">Black Diamond</entry>
-	<entry key="item.gemCitrine.name">Citrine</entry>
-	<entry key="item.gemCZirconia.name">Cubic Zirconia</entry>
-	<entry key="item.gemFuchsia.name">Fuchsia</entry>
-	<entry key="item.gemJet.name">Jet</entry>
-	<entry key="item.gemOlivine.name">Olivine</entry>
-	<entry key="item.gemOpal.name">Opal</entry>
-	<entry key="item.gemRuby.name">Ruby</entry>
-	<entry key="item.gemSapphire.name">Sapphire</entry>
-	<entry key="item.gemSQuartz.name">Smoky Quartz</entry>
-	<entry key="item.gemSun.name">Sun</entry>
-	<entry key="item.gemTopaz.name">Topaz</entry>
-	<entry key="item.gemTurquoise.name">Turquoise</entry>
-	<entry key="item.gemWAlabaster.name">White Alabaster</entry>
+	<!-- ***************************** Ingots ************************** -->
+	
+	<entry key="item.ingotAluminum.name">Aluminum Ingot</entry>
+	<entry key="item.ingotBronze.name">Bronze Ingot</entry>
+	<entry key="item.ingotCopper.name">Copper Ingot</entry>
+	<entry key="item.ingotHardIron.name">HardIron Ingot</entry>
+	<entry key="item.ingotHeavyIron.name">HeavyIron Ingot</entry>
+	<entry key="item.ingotLead.name">Lead Ingot</entry>
+	<entry key="item.ingotSilver.name">Silver Ingot</entry>
+	<entry key="item.ingotSteel.name">Steel Ingot</entry>
+	<entry key="item.ingotTin.name">Tin Ingot</entry>
+	<entry key="item.ingotTitanium.name">Titanium Ingot</entry>
+	<entry key="item.ingotTitCarbide.name">Titanium Carbide Ingot</entry>
+	<entry key="item.ingotTunCarbide.name">Tungsten Carbide Ingot</entry>
+	<entry key="item.ingotTungsten.name">Tungsten Ingot</entry>
 
-	<!-- ******************************** Blocks ****************************** -->
+	<!-- ******************************** Ore ****************************** -->
 
-	<entry key="tile.oreAmethyst.name">Amethyst Ore</entry>
-	<entry key="tile.oreBDiamond.name">Black Diamond Ore</entry>
-	<entry key="tile.oreCitrine.name">Citrine Ore</entry>
-	<entry key="tile.oreCZirconia.name">Cubic Zirconia Ore</entry>
-	<entry key="tile.oreFuchsia.name">Fuchsia Ore</entry>
-	<entry key="tile.oreJet.name">Jet Ore</entry>
-	<entry key="tile.oreOlivine.name">Olivine Ore</entry>
-	<entry key="tile.oreOpal.name">Opal Ore</entry>
-	<entry key="tile.oreRuby.name">Ruby Ore</entry>
-	<entry key="tile.oreSapphire.name">Sapphire Ore</entry>
-	<entry key="tile.oreSQuartz.name">Smoky Quartz Ore</entry>
-	<entry key="tile.oreSun.name">Sun Ore</entry>
-	<entry key="tile.oreTopaz.name">Topaz Ore</entry>
-	<entry key="tile.oreTurquoise.name">Turquoise Ore</entry>
-	<entry key="tile.oreWAlabaster.name">White Alabaster Ore</entry>
+	<entry key="tile.oreAluminum.name">Aluminum Ore</entry>
+	<entry key="tile.oreCopper.name">Copper Ore</entry>
+	<entry key="tile.oreLead.name">Lead Ore</entry>
+	<entry key="tile.oreSilver.name">Silver Ore</entry>
+	<entry key="tile.oreTin.name">Tin Ore</entry>
+	<entry key="tile.oreTitanium.name">Titanium Ore</entry>
+	<entry key="tile.oreTungsten.name">Tungsten Ore</entry>
 
-	<entry key="tile.blockAmethyst.name">Amethyst Block</entry>
-	<entry key="tile.blockBDiamond.name">Black Diamond Block</entry>
-	<entry key="tile.blockCitrine.name">Citrine Block</entry>
-	<entry key="tile.blockCZirconia.name">Cubic Zirconia Block</entry>
-	<entry key="tile.blockFuchsia.name">Fuchsia Block</entry>
-	<entry key="tile.blockJet.name">Jet Block</entry>
-	<entry key="tile.blockOlivine.name">Olivine Block</entry>
-	<entry key="tile.blockOpal.name">Opal Block</entry>
-	<entry key="tile.blockRuby.name">Ruby Block</entry>
-	<entry key="tile.blockSapphire.name">Sapphire Block</entry>
-	<entry key="tile.blockSQuartz.name">Smoky Quartz Block</entry>
-	<entry key="tile.blockSun.name">Sun Block</entry>
-	<entry key="tile.blockTopaz.name">Topaz block</entry>
-	<entry key="tile.blockTurquoise.name">Turquoise Block</entry>
-	<entry key="tile.blockWAlabaster.name">White Alabaster Block</entry>
+	<!-- ******************************** Storage Blocks ****************************** -->
+	
+	<entry key="tile.blockAluminum.name">Aluminum Block</entry>
+	<entry key="tile.blockBronze.name">Bronze Block</entry>
+	<entry key="tile.blockCopper.name">Copper Block</entry>
+	<entry key="tile.blockHardIron.name">HardIron Block</entry>
+	<entry key="tile.blockHeavyIron.name">HeavyIron Block</entry>
+	<entry key="tile.blockLead.name">Lead Block</entry>
+	<entry key="tile.blockSilver.name">Silver Block</entry>
+	<entry key="tile.blockSteel.name">Steel Block</entry>
+	<entry key="tile.blockTin.name">Tin Block</entry>
+	<entry key="tile.blockTitanium.name">Titanium Block</entry>
+	<entry key="tile.blockTitCarbide.name">Titanium Carbide Block</entry>
+	<entry key="tile.blockTunCarbide.name">Tungsten Carbide Block</entry>
+	<entry key="tile.blockTungsten.name">Tungsten Block</entry>
 
 	<!-- ******************************** Tools ****************************** -->
 
-	<entry key="item.axeAmethyst.name">Amethyst Axe</entry>
-	<entry key="item.hoeAmethyst.name">Amethyst Hoe</entry>
-	<entry key="item.spadeAmethyst.name">Amethyst Shovel</entry>
-	<entry key="item.pickAmethyst.name">Amethyst Pickaxe</entry>
-	<entry key="item.swordAmethyst.name">Amethyst Sword</entry>
-
-	<entry key="item.axeBDiamond.name">Black Diamond Axe</entry>
-	<entry key="item.hoeBDiamond.name">Black Diamond Hoe</entry>
-	<entry key="item.spadeBDiamond.name">Black Diamond Shovel</entry>
-	<entry key="item.pickBDiamond.name">Black Diamond Pickaxe</entry>
-	<entry key="item.swordBDiamond.name">Black Diamond Sword</entry>
-
-	<entry key="item.axeCitrine.name">Citrine Axe</entry>
-	<entry key="item.hoeCitrine.name">Citrine Hoe</entry>
-	<entry key="item.spadeCitrine.name">Citrine Shovel</entry>
-	<entry key="item.pickCitrine.name">Citrine Pickaxe</entry>
-	<entry key="item.swordCitrine.name">Citrine Sword</entry>
-
-	<entry key="item.axeCZirconia.name">Cubic Zirconia Axe</entry>
-	<entry key="item.hoeCZirconia.name">Cubic Zirconia Hoe</entry>
-	<entry key="item.spadeCZirconia.name">Cubic Zirconia Shovel</entry>
-	<entry key="item.pickCZirconia.name">Cubic Zirconia Pickaxe</entry>
-	<entry key="item.swordCZirconia.name">Cubic Zirconia Sword</entry>
-
-	<entry key="item.axeEmerald.name">Emerald Axe</entry>
-	<entry key="item.hoeEmerald.name">Emerald Hoe</entry>
-	<entry key="item.spadeEmerald.name">Emerald Shovel</entry>
-	<entry key="item.pickEmerald.name">Emerald Pickaxe</entry>
-	<entry key="item.swordEmerald.name">Emerald Sword</entry>
-
-	<entry key="item.axeFuchsia.name">Fuchsia Axe</entry>
-	<entry key="item.hoeFuchsia.name">Fuchsia Hoe</entry>
-	<entry key="item.spadeFuchsia.name">Fuchsia Shovel</entry>
-	<entry key="item.pickFuchsia.name">Fuchsia Pickaxe</entry>
-	<entry key="item.swordFuchsia.name">Fuchsia Sword</entry>
-
-	<entry key="item.axeJet.name">Jet Axe</entry>
-	<entry key="item.hoeJet.name">Jet Hoe</entry>
-	<entry key="item.spadeJet.name">Jet Shovel</entry>
-	<entry key="item.pickJet.name">Jet Pickaxe</entry>
-	<entry key="item.swordJet.name">Jet Sword</entry>
-
-	<entry key="item.axeOlivine.name">Olivine Axe</entry>
-	<entry key="item.hoeOlivine.name">Olivine Hoe</entry>
-	<entry key="item.spadeOlivine.name">Olivine Shovel</entry>
-	<entry key="item.pickOlivine.name">Olivine Pickaxe</entry>
-	<entry key="item.swordOlivine.name">Olivine Sword</entry>
-
-	<entry key="item.axeOpal.name">Opal Axe</entry>
-	<entry key="item.hoeOpal.name">Opal Hoe</entry>
-	<entry key="item.spadeOpal.name">Opal Shovel</entry>
-	<entry key="item.pickOpal.name">Opal Pickaxe</entry>
-	<entry key="item.swordOpal.name">Opal Sword</entry>
-
-	<entry key="item.axeQuartz.name">Quartz Axe</entry>
-	<entry key="item.hoeQuartz.name">Quartz Hoe</entry>
-	<entry key="item.spadeQuartz.name">Quartz Shovel</entry>
-	<entry key="item.pickQuartz.name">Quartz Pickaxe</entry>
-	<entry key="item.swordQuartz.name">Quartz Sword</entry>
-
-	<entry key="item.axeRuby.name">Ruby Axe</entry>
-	<entry key="item.hoeRuby.name">Ruby Hoe</entry>
-	<entry key="item.spadeRuby.name">Ruby Shovel</entry>
-	<entry key="item.pickRuby.name">Ruby Pickaxe</entry>
-	<entry key="item.swordRuby.name">Ruby Sword</entry>
-
-	<entry key="item.axeSapphire.name">Sapphire Axe</entry>
-	<entry key="item.hoeSapphire.name">Sapphire Hoe</entry>
-	<entry key="item.spadeSapphire.name">Sapphire Shovel</entry>
-	<entry key="item.pickSapphire.name">Sapphire Pickaxe</entry>
-	<entry key="item.swordSapphire.name">Sapphire Sword</entry>
-
-	<entry key="item.axeSQuartz.name">Smoky Quartz Axe</entry>
-	<entry key="item.hoeSQuartz.name">Smoky Quartz Hoe</entry>
-	<entry key="item.spadeSQuartz.name">Smoky Quartz Shovel</entry>
-	<entry key="item.pickSQuartz.name">Smoky Quartz Pickaxe</entry>
-	<entry key="item.swordSQuartz.name">Smoky Quartz Sword</entry>
-
-	<entry key="item.axeSun.name">Sun Axe</entry>
-	<entry key="item.hoeSun.name">Sun Hoe</entry>
-	<entry key="item.spadeSun.name">Sun Shovel</entry>
-	<entry key="item.pickSun.name">Sun Pickaxe</entry>
-	<entry key="item.swordSun.name">Sun Sword</entry>
-
-	<entry key="item.axeTopaz.name">Topaz Axe</entry>
-	<entry key="item.hoeTopaz.name">Topaz Hoe</entry>
-	<entry key="item.spadeTopaz.name">Topaz Shovel</entry>
-	<entry key="item.pickTopaz.name">Topaz Pickaxe</entry>
-	<entry key="item.swordTopaz.name">Topaz Sword</entry>
-
-	<entry key="item.axeTurquoise.name">Turquoise Axe</entry>
-	<entry key="item.hoeTurquoise.name">Turquoise Hoe</entry>
-	<entry key="item.spadeTurquoise.name">Turquoise Shovel</entry>
-	<entry key="item.pickTurquoise.name">Turquoise Pickaxe</entry>
-	<entry key="item.swordTurquoise.name">Turquoise Sword</entry>
-
-	<entry key="item.axeWAlabaster.name">White Alabaster Axe</entry>
-	<entry key="item.hoeWAlabaster.name">White Alabaster Hoe</entry>
-	<entry key="item.spadeWAlabaster.name">White Alabaster Shovel</entry>
-	<entry key="item.pickWAlabaster.name">White Alabaster Pickaxe</entry>
-	<entry key="item.swordWAlabaster.name">White Alabaster Sword</entry>
 
 	<!-- ******************************** Errors ****************************** -->
 
-	<entry key="error.invalidFingerPrint">The version of Dendritis that you are currently using has being tampered with!!!!!</entry>
+	<entry key="error.invalidFingerPrint">The version of Hephaestus' Workshop that you are currently using has being tampered with!!!!!</entry>
 </properties>
