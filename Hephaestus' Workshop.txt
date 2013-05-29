@@ -1,0 +1,98 @@
+Hephaestus' Workshop
+
+Hephaestus’ Notebook - In game book describing the forging process
+
+"Machines"
+•	Forge - Going to be what’s used for heating the metals for use on anvil. Multi Block
+•	Anvil - Use heated metals to create tools and armor parts.
+•	Blast furnace - Used to make steel and other metals. Multi Block
+•	Grinder - Used to make dusts, VERY SLOW does not require fuel
+
+Metals
+•	Tin - Soft metal used alloys
+•	Copper - Soft metal used for tools, armor,  and alloys
+•	Titanium - Strong metal used for tools, armor, and alloys (titanite)
+•	Tungsten - Strong metal used for tools and armor after smelted in blast furnace
+•	Silver - Weak metal used for tools, effective against endermen and the undead, slight fortune aspect
+•	Sulfur - Dust like material used for creating extreme heat, used as fuel in forge and blast furnace
+•	Lead - Heavy metal used in alloys
+
+Alloys
+•	Bronze - Above average metal used for tools and armor, created by mixing copper and tin (3:1) = 4
+•	Heavy Iron - Strong metal used for tools and armor, created by mixing iron and lead (3:2) = 5
+•	Steel - Strong metal used for tools and armor, created by smelting iron in the blast furnace
+•	Hardend Iron - Strong metal used for tools and armor, created by smelting heavy iron in the blast furnace
+•	Titanite - Very strong metal used for tools and armor, created by mixing titanium and aluminum (3:2) = 5
+•	Titanium Carbide - Very strong metal used for tools and armor, created by smelting titanium in the blast furnace
+•	Tungsten Carbide - Very strong metal used for tools and armor, created by smelting tungsten in the blast furnace
+
+Armor
+•	Shield - just a new armor piece that increases block effectiveness, may not do
+•	Hephaestus’ Mask
+•	Hephaestus’ Apron w/ gloves
+•	Hephaestus’ Pants
+•	Hephaestus’ Boots
+
+Tools
+•	Tongs - Used for picking up hot ingots created in the forge
+
+Blocks
+•	Ores
+•	Storage Blocks
+•	Half Blocks ?
+•	Fences ?
+•	Forge Brick ?
+•	Blast Furnace Brick ?
+
+Item
+•	Tools/Weapons
+•	Armor
+•	Ingots
+•	Dusts
+•	Tool/Weapon heads
+•	Handels ?
+
+Recipes
+•	Anvil - [xxx] [ x ] [yyy]   x=iron  y=logs   I shape with iron and logs
+•	Forge - Multi block made out of clay brick blocks: 3x3x3
+	~ [xxx] [xyx] [xxx], [xxx] [x x] [x x], [yxy] [x x] [yxy] x=brick block y=brick half block
+•	Blast Furnace - Multi Block 3x3x4 two inside blocks hollow, bottom one is lava
+	~ made out of TC smeltery bricks or unknown
+•	Grinder - unknown
+
+Metal Working (Forge)
+•	Uses Charcoal, Coal, and Sulfur for fuel
+•	Charcoal/Coal - Heats most metals
+•	Sulfur - Heats more advanced metals
+•	May have a heat meter like the thermionic fabricator from Forestry
+•	GUI: Similar to furnace, Slot for input, fuel, and output
+
+Anvil
+•	GUI: input, 2 output, and hammer slots Design grid 3x3 squares
+•	Info Bar - Put the hammer and the tongs in and make the design on the grid, output and excess show up
+
+Blast Furnace
+•	GUI: 2 fuel slots an input and an output
+•	Fuel is sulfur plus coal, NEED both for it to work
+•	Can create steel and carbide
+
+Grinder
+•	GUI: an input and an output slot
+•	No fuel but is VERY SLOW
+•	It is unknown if it will double ores
+
+Tinkers Construct support:
+
+Modifyers
+•	Lead - Adds better blocking for weapons, unknown for tools
+•	Silver - Effective against endermen and the undead
+
+Ores
+•	Tin and Copper ore gen will be disabeled when TC is instaled
+
+Armor
+•	This mod will have support for TC armor when it is finished
+
+Items
+•	All the various pieces that TC already has but in the new metals
+•	"Hephaestus’ Notebook" will also list all the stats for the metals

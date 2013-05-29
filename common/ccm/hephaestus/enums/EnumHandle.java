@@ -1,0 +1,34 @@
+package ccm.hephaestus.enums;
+
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.util.Icon;
+import ccm.hephaestus.utils.lib.Locations;
+import ccm.nucleum_omnium.helper.TextureHelper;
+
+public enum EnumHandle {
+
+    handleWood,
+    handleBronze,
+    handleHardIron,
+    handleIron,
+    handleSteel,
+    handleTitanium;
+
+    public static void registerIcons(final IconRegister register) {
+        for (final EnumHandle handle : EnumHandle.values()) {
+            handle.icon = register.registerIcon(handle.texture);
+        }
+    }
+
+    private Icon icon;
+
+    public final String texture;
+
+    private EnumHandle() {
+        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE);
+    }
+
+    public Icon getIcon() {
+        return this.icon;
+    }
+}
