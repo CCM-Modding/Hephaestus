@@ -19,7 +19,7 @@ public enum EnumBlocks {
     blockTin,
     blockTitanium,
     blockTitCarbide,
-    blockTunCrabide,
+    blockTunCarbide,
     blockTungsten;
 
     private Icon icon;

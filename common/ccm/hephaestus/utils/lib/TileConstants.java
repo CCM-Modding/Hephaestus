@@ -12,6 +12,16 @@ public final class TileConstants {
 
     /*
      * ******************************************************
+     * Grinder Stuff ******************************************************
+     */
+    public static final String GRINDER_UNLOCALIZED = CONTAINER + "grinder";
+
+    public static final String GRINDER_GUI = Locations.GUI + "guiGrinder.png";
+
+    public static final int GRINDER_GUID = 0;
+
+    /*
+     * ******************************************************
      * NBT Stuff ******************************************************
      */
     public static final String NBT_TE_Direction = "direction";

@@ -4,7 +4,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
+import ccm.hephaestus.client.inventory.gui.GUIGrinder;
 import ccm.hephaestus.tileentity.TileBase;
+import ccm.hephaestus.tileentity.TileGrinder;
+import ccm.hephaestus.utils.lib.TileConstants;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class ClientProxy extends CommonProxy {
@@ -25,6 +28,9 @@ public class ClientProxy extends CommonProxy {
     @Override
     public Object getClientGuiElement(final int ID, final EntityPlayer player, final World world, final int x, final int y, final int z) {
         switch (ID) {
+            case TileConstants.GRINDER_GUID:
+                final TileGrinder grinder = (TileGrinder) world.getBlockTileEntity(x, y, z);
+                return new GUIGrinder(player.inventory, grinder);
             default:
                 return null;
         }

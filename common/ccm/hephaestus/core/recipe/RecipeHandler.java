@@ -12,10 +12,11 @@ public final class RecipeHandler {
      */
     public static void init() {
         RecipesRemover.delete(toDelete);
-        RecipesCrafting.init();
-        RecipesCraftingTools.init();
-        RecipesCraftingArmor.init();
-        RecipesCraftingBlocks.init();
-        RecipesSmelting.init();
+        new RecipesGrinder();
+        new RecipesCrafting();
+        new RecipesCraftingArmor();
+        new RecipesCraftingBlocks();
+        new RecipesCraftingTools();
+        new RecipesSmelting();
     }
 }

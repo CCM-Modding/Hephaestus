@@ -1,6 +1,5 @@
 package ccm.hephaestus.core.recipe;
 
-
 final class RecipesCraftingTools {
 
     /**

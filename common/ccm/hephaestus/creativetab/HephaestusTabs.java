@@ -1,11 +1,9 @@
 package ccm.hephaestus.creativetab;
 
-import net.minecraft.item.ItemStack;
 import ccm.hephaestus.core.handlers.EHandler;
 import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumHandle;
 import ccm.hephaestus.enums.EnumIngots;
-import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
 
@@ -42,6 +40,5 @@ public class HephaestusTabs {
         tabHephaestusBlocks.init(EHandler.getItem(EnumBlocks.blockCopper));
         tabHephaestusMaterials.init(EHandler.getItem(EnumIngots.ingotCopper));
         tabHephaestusParts.init(EHandler.getItem(EnumHandle.handleWood));
-        tabHephaestusTools.init(new ItemStack(ModItems.pick));
     }
 }

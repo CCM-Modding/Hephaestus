@@ -19,7 +19,13 @@ public class Properties {
     public static int itemIngotID;
 
     public static int itemDustID;
-    
+
+    public static int gsStoneID;
+    public static int gsIronID;
+    public static int gsBronzeID;
+    public static int gsObsidianID;
+    public static int gsDiamondID;
+
     /*
      * ***********************************************
      * Blocks IDs ***********************************************
@@ -28,6 +34,9 @@ public class Properties {
     public static int oreID;
 
     public static int blocksID;
+
+    public static int blockGrinderID;
+    public static int blockGrinderRunningID;
 
     /*
      * ***************************************************

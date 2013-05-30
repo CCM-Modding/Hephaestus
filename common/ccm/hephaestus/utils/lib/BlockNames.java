@@ -6,4 +6,6 @@ public final class BlockNames {
      * ******************************************************
      * Blocks ******************************************************
      */
+
+    public static final String blockGrinder = "machineGrinder";
 }

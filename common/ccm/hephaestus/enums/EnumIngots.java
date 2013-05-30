@@ -7,7 +7,7 @@ import ccm.nucleum_omnium.helper.TextureHelper;
 
 public enum EnumIngots {
 
-    ingotALuminum,
+    ingotAluminum,
     ingotBronze,
     ingotCopper,
     ingotHardIron,
@@ -18,7 +18,7 @@ public enum EnumIngots {
     ingotTin,
     ingotTitanium,
     ingotTitCarbide,
-    ingotTunCrabide,
+    ingotTunCarbide,
     ingotTungsten;
 
     public static void registerIcons(final IconRegister register) {
@@ -32,7 +32,7 @@ public enum EnumIngots {
     public final String texture;
 
     private EnumIngots() {
-        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "gems/");
+        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
     }
 
     public Icon getIcon() {

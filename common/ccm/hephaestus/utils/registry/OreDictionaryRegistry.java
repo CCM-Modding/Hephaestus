@@ -9,5 +9,6 @@ final class OreDictionaryRegistry {
      * Registers all the Entries to the Ore Dictionary.
      */
     protected static void oreDictionary() {
-        Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");}
+        Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");
+    }
 }

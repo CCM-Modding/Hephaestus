@@ -22,10 +22,8 @@ final class ConfigWorldGen extends Config {
         genCopper(config);
     }
 
-
     /**
-     * Loads or creates the Copper World Generation in the Configuration
-     * file.
+     * Loads or creates the Copper World Generation in the Configuration file.
      * 
      * @param config
      *            The Configuration file that is being edited.

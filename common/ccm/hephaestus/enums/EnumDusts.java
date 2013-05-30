@@ -21,7 +21,7 @@ public enum EnumDusts {
     dustTin,
     dustTitanium,
     dustTitCarbide,
-    dustTunCrabide,
+    dustTunCarbide,
     dustTungsten;
 
     public static void registerIcons(final IconRegister register) {
@@ -35,7 +35,7 @@ public enum EnumDusts {
     public final String texture;
 
     private EnumDusts() {
-        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "gems/");
+        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "dusts/");
     }
 
     public Icon getIcon() {
