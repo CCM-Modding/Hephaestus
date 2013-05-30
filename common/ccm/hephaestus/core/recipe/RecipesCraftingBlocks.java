@@ -26,6 +26,7 @@ final class RecipesCraftingBlocks {
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockSteel), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotSteel) }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockSulfur), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumDusts.dustSulfur) }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockTin), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotTin) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockTitanite), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotTitanite) }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockTitanium), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotTitanium) }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockTitCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotTitCarbide) }));
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EHandler.getItem(EnumBlocks.blockTunCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EHandler.getItem(EnumIngots.ingotTunCarbide) }));
@@ -48,6 +49,7 @@ final class RecipesCraftingBlocks {
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotSteel, 9), EHandler.getItem(EnumBlocks.blockSteel)));
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumDusts.dustSulfur, 9), EHandler.getItem(EnumBlocks.blockSulfur)));
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotTin, 9), EHandler.getItem(EnumBlocks.blockTin)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotTitanite, 9), EHandler.getItem(EnumBlocks.blockTitanite)));
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotTitanium, 9), EHandler.getItem(EnumBlocks.blockTitanium)));
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotTitCarbide, 9), EHandler.getItem(EnumBlocks.blockTitCarbide)));
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EHandler.getItem(EnumIngots.ingotTunCarbide, 9), EHandler.getItem(EnumBlocks.blockTunCarbide)));

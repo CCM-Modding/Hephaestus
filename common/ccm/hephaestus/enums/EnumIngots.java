@@ -16,6 +16,7 @@ public enum EnumIngots {
     ingotSilver,
     ingotSteel,
     ingotTin,
+    ingotTitanite,
     ingotTitanium,
     ingotTitCarbide,
     ingotTunCarbide,

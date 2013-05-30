@@ -28,10 +28,10 @@ final class RecipesGrinder {
 
     // needs ore dictionary
     private static void registerRecipes() {
-        
+
         GrinderRecipes.grinding().addGrinding(new ItemStack(Block.oreGold), EHandler.getItem(EnumDusts.dustGold, 2));
         GrinderRecipes.grinding().addGrinding(new ItemStack(Block.oreIron), EHandler.getItem(EnumDusts.dustIron, 2));
-        
+
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreAluminum), EHandler.getItem(EnumDusts.dustAluminum, 2));
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreCopper), EHandler.getItem(EnumDusts.dustCopper, 2));
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreLead), EHandler.getItem(EnumDusts.dustLead, 2));
@@ -40,7 +40,7 @@ final class RecipesGrinder {
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreTin), EHandler.getItem(EnumDusts.dustTin, 2));
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreTitanium), EHandler.getItem(EnumDusts.dustTitanium, 2));
         GrinderRecipes.grinding().addGrinding(EHandler.getItem(EnumOres.oreTungsten), EHandler.getItem(EnumDusts.dustTungsten, 2));
-        
+
         GrinderRecipes.grinding().addGrinding(new ItemStack(Item.ingotIron), EHandler.getItem(EnumDusts.dustGold));
         GrinderRecipes.grinding().addGrinding(new ItemStack(Item.ingotGold), EHandler.getItem(EnumDusts.dustIron));
 

@@ -19,6 +19,7 @@ public enum EnumDusts {
     dustSteel,
     dustSulfur,
     dustTin,
+    dustTitanite,
     dustTitanium,
     dustTitCarbide,
     dustTunCarbide,

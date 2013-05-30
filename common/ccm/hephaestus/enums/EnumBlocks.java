@@ -17,6 +17,7 @@ public enum EnumBlocks {
     blockSteel,
     blockSulfur,
     blockTin,
+    blockTitanite,
     blockTitanium,
     blockTitCarbide,
     blockTunCarbide,

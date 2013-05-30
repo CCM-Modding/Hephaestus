@@ -45,26 +45,6 @@ public class Hephaestus extends BaseMod implements IMod {
     @SidedProxy(serverSide = Locations.SERVER_PROXY, clientSide = Locations.CLIENT_PROXY)
     public static CommonProxy proxy;
 
-    @Override
-    public String getId() {
-        return Archive.MOD_ID;
-    }
-
-    @Override
-    public String getPrefix() {
-        return Archive.MOD_PREFIX;
-    }
-
-    @Override
-    public String getName() {
-        return Archive.MOD_NAME;
-    }
-
-    @Override
-    public String getVersion() {
-        return Archive.MOD_VERSION;
-    }
-
     @FingerprintWarning
     public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
         /*
@@ -80,9 +60,7 @@ public class Hephaestus extends BaseMod implements IMod {
 
             Handler.initLog(this);
 
-            this.setConfigFolderBase(evt.getModConfigurationDirectory());
-
-            Config.init(this.getConfig());
+            Config.init(this.initializeConfig(evt));
 
             HephaestusTabs.initTabs();
 

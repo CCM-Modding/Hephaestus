@@ -7,7 +7,7 @@ import ccm.nucleum_omnium.handler.enums.IEnum;
 import ccm.nucleum_omnium.helper.TextureHelper;
 
 public enum EnumUsable implements IEnum {
-    gsStone(100), gsIron(250), gsBronze(400), gsObsidian(1000), gsDiamond(1500);
+    gsStone(250), gsIron(400), gsBronze(600), gsObsidian(2000), gsDiamond(3000);
 
     public static void registerIcons(final IconRegister register) {
         for (final EnumUsable item : EnumUsable.values()) {
