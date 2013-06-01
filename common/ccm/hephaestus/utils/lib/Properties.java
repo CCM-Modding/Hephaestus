@@ -38,6 +38,9 @@ public class Properties {
     public static int blockGrinderID;
     public static int blockGrinderRunningID;
 
+    public static int blockBlastID;
+    public static int blockBlastRunningID;
+
     /*
      * ***************************************************
      * World Generation Stuff

@@ -3,7 +3,9 @@ package ccm.hephaestus.core.proxy;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
+import ccm.hephaestus.inventory.container.ContainerBlast;
 import ccm.hephaestus.inventory.container.ContainerGrinder;
+import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.tileentity.TileGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
 import cpw.mods.fml.common.network.IGuiHandler;
@@ -16,6 +18,9 @@ public class CommonProxy implements IGuiHandler {
             case TileConstants.GRINDER_GUID:
                 final TileGrinder grinder = (TileGrinder) world.getBlockTileEntity(x, y, z);
                 return new ContainerGrinder(player.inventory, grinder);
+            case TileConstants.BLAST_GUID:
+                final TileBlast blast = (TileBlast) world.getBlockTileEntity(x, y, z);
+                return new ContainerBlast(player.inventory, blast);
             default:
                 return null;
         }

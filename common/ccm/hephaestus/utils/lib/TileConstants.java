@@ -22,6 +22,17 @@ public final class TileConstants {
 
     /*
      * ******************************************************
+     * Grinder Stuff ******************************************************
+     */
+    public static final String BLAST_UNLOCALIZED = CONTAINER + "blast";
+
+    public static final String BLAST_GUI = Locations.GUI + "guiBlast.png";
+
+    public static final int BLAST_GUID = 1;
+
+
+    /*
+     * ******************************************************
      * NBT Stuff ******************************************************
      */
     public static final String NBT_TE_Direction = "direction";

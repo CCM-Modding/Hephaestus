@@ -5,17 +5,19 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-import ccm.hephaestus.inventory.slot.SlotGrinder;
+import ccm.hephaestus.inventory.slot.SlotBlastCoal;
+import ccm.hephaestus.inventory.slot.SlotBlastSulfur;
 import ccm.hephaestus.inventory.slot.SlotOutput;
+import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.tileentity.TileGrinder;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ContainerGrinder extends ContainerBase {
+public class ContainerBlast extends ContainerBase {
 
-    private final TileGrinder grinder;
+    private final TileBlast blast;
 
-    private int lastGrindTime;
+    private int lastSmeltTime;
 
     /**
      * Creates the Container for the Grinders GUI
@@ -26,21 +28,23 @@ public class ContainerGrinder extends ContainerBase {
      *            The {@link TileGrinder} instance that the player is looking
      *            at.
      */
-    public ContainerGrinder(final InventoryPlayer player, final TileGrinder grinder) {
-        super(player, grinder, 8, 84, 142);
-        this.grinder = grinder;
+    public ContainerBlast(final InventoryPlayer player, final TileBlast blast) {
+        super(player, blast, 8, 84, 142);
+        this.blast = blast;
         // (Input)
-        this.addSlotToContainer(new Slot(grinder, 0, 57, 35));
-        // (Grinding)
-        this.addSlotToContainer(new SlotGrinder(grinder, 1, 30, 35));
+        this.addSlotToContainer(new Slot(blast, 0, 57, 35));
+        // (Coal)
+        this.addSlotToContainer(new SlotBlastCoal(blast, 1, 30, 15));
+        // (Sulfur)
+        this.addSlotToContainer(new SlotBlastSulfur(blast, 2, 30, 45));
         // (Output)
-        this.addSlotToContainer(new SlotOutput(grinder, 2, 124, 35));
+        this.addSlotToContainer(new SlotOutput(blast, 3, 124, 35));
     }
 
     @Override
     public void addCraftingToCrafters(final ICrafting crafting) {
         super.addCraftingToCrafters(crafting);
-        crafting.sendProgressBarUpdate(this, 0, this.grinder.grinderCookTime);
+        crafting.sendProgressBarUpdate(this, 0, this.blast.blastSmeltTime);
     }
 
     /**
@@ -49,16 +53,16 @@ public class ContainerGrinder extends ContainerBase {
     @Override
     public void detectAndSendChanges() {
         super.detectAndSendChanges();
-        if (this.grinder.canGrind()) {
+        if (this.blast.canSmelt()) {
             for (int i = 0; i < this.crafters.size(); ++i) {
                 final ICrafting icrafting = (ICrafting) this.crafters.get(i);
-                if (this.lastGrindTime != this.grinder.grinderCookTime) {
-                    icrafting.sendProgressBarUpdate(this, 0, this.grinder.grinderCookTime);
+                if (this.lastSmeltTime != this.blast.blastSmeltTime) {
+                    icrafting.sendProgressBarUpdate(this, 0, this.blast.blastSmeltTime);
                 }
             }
-            this.lastGrindTime = this.grinder.grinderCookTime;
+            this.lastSmeltTime = this.blast.blastSmeltTime;
         } else {
-            this.lastGrindTime = 0;
+            this.lastSmeltTime = 0;
         }
     }
 
@@ -71,7 +75,7 @@ public class ContainerGrinder extends ContainerBase {
     @SideOnly(Side.CLIENT)
     public void updateProgressBar(final int progressIndex, final int progress) {
         if (progressIndex == 0) {
-            this.grinder.grinderCookTime = progress;
+            this.blast.blastSmeltTime = progress;
         }
     }
 }

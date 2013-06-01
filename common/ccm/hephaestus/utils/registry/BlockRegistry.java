@@ -19,5 +19,6 @@ final class BlockRegistry {
         GameRegistry.registerBlock(ModBlocks.blocks, ItemBlockBlock.class, "BLOCKS");
 
         GameRegistry.registerBlock(ModBlocks.blockGrinder, BlockNames.blockGrinder);
+        GameRegistry.registerBlock(ModBlocks.blockBlast, BlockNames.blockBlast);
     }
 }

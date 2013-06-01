@@ -93,7 +93,8 @@ public final class RecipeHandler {
      */
     public static void init() {
         RecipesRemover.delete(toDelete);
-        new RecipesGrinder();
+        new RecipesSetGrinder();
+        new RecipesSetBlast();
         new RecipesCrafting();
         new RecipesCraftingArmor();
         new RecipesCraftingBlocks();

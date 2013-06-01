@@ -8,4 +8,5 @@ public final class BlockNames {
      */
 
     public static final String blockGrinder = "machineGrinder";
+    public static final String blockBlast = "machineBlast";
 }

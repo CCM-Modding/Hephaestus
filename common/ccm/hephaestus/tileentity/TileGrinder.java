@@ -2,7 +2,7 @@ package ccm.hephaestus.tileentity;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import ccm.hephaestus.api.recipes.GrinderRecipes;
+import ccm.hephaestus.api.recipes.RecipesGrinder;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
 import ccm.nucleum_omnium.helper.InventoryHelper;
@@ -12,7 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileGrinder extends TileBase {
 
-    private final GrinderRecipes recipe = GrinderRecipes.grinding();
+    private final RecipesGrinder recipe = RecipesGrinder.grinding();
 
     /** The number of ticks that the current item has been grinding for */
     public int grinderCookTime = 0;

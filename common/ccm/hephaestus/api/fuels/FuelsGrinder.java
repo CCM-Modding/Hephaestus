@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 import net.minecraft.item.ItemStack;
 
-public class GrinderFuels {
+public class FuelsGrinder {
 
     /**
      * Grinder Fuels

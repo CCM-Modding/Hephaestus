@@ -6,28 +6,28 @@ import java.util.Set;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public final class GrinderRecipes {
+public final class RecipesBlast {
 
     // needs ore dictionary
-    private static final GrinderRecipes grindingBase = new GrinderRecipes();
+    private static final RecipesBlast smeltingBase = new RecipesBlast();
 
     /**
-     * Used to call methods addGrinding and getGrindingResult.
+     * Used to call methods addSmelting and getSmeltingResult.
      */
-    public static final GrinderRecipes grinding() {
-        return grindingBase;
+    public static final RecipesBlast smelting() {
+        return smeltingBase;
     }
 
-    /** The list of grinding results. */
+    /** The list of smelting results. */
     private final HashSet<Recipes> recipes = new HashSet<Recipes>();
 
-    private GrinderRecipes() {}
+    private RecipesBlast() {}
 
     /**
-     * Adds a Grinding recipe. It natively supports meta data. And passing Items
+     * Adds a Smelting recipe. It natively supports meta data. And passing Items
      * as the first parameter :D
      */
-    public void addGrinding(final Item input, final ItemStack output) {
+    public void addSmelting(final Item input, final ItemStack output) {
         final ItemStack in = new ItemStack(input);
         this.recipes.add(new Recipes(in, output));
     }
@@ -35,11 +35,11 @@ public final class GrinderRecipes {
     /**
      * Adds a Grinding recipe. It natively supports meta data.
      */
-    public void addGrinding(final ItemStack input, final ItemStack output) {
+    public void addSmelting(final ItemStack input, final ItemStack output) {
         this.recipes.add(new Recipes(input, output));
     }
 
-    public Set<Recipes> getGrindingList() {
+    public Set<Recipes> getSmeltingList() {
         return this.recipes;
     }
 
@@ -50,7 +50,7 @@ public final class GrinderRecipes {
      *            The Source ItemStack
      * @return The result ItemStack
      */
-    public Recipes getGrindingResult(final ItemStack item) {
+    public Recipes getSmeltingResult(final ItemStack item) {
         for (final Recipes r : this.recipes) {
             if (r.isInput(item)) {
                 return r;
