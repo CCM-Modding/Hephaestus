@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.tileentity.TileGrinder;
+import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
@@ -27,9 +27,9 @@ public class BlockBlast extends BaseContainerBlock {
         final TileEntity tileentity = world.getBlockTileEntity(x, y, z);
         keepInventory = true;
         if (working) {
-            world.setBlock(x, y, z, ModBlocks.blockGrinderRunning.blockID);
+            world.setBlock(x, y, z, ModBlocks.blockBlastRunning.blockID);
         } else {
-            world.setBlock(x, y, z, ModBlocks.blockGrinder.blockID);
+            world.setBlock(x, y, z, ModBlocks.blockBlast.blockID);
         }
         keepInventory = false;
         world.setBlockMetadataWithNotify(x, y, z, blockID, 3);
@@ -49,7 +49,7 @@ public class BlockBlast extends BaseContainerBlock {
 
     @Override
     public TileEntity createNewTileEntity(final World world) {
-        return new TileGrinder();
+        return new TileBlast();
     }
 
     /**
@@ -70,20 +70,20 @@ public class BlockBlast extends BaseContainerBlock {
 
     @Override
     public ItemStack getPickBlock(final MovingObjectPosition target, final World world, final int x, final int y, final int z) {
-        return new ItemStack(Properties.blockGrinderID, 1, 0);
+        return new ItemStack(Properties.blockBlastID, 1, 0);
     }
 
     @Override
     public int idDropped(final int meta, final Random random, final int fortune) {
-        return Properties.blockGrinderID;
+        return Properties.blockBlastID;
     }
 
     @Override
     public boolean onBlockActivated(final World world, final int x, final int y, final int z, final EntityPlayer player, final int wut, final float clickX, final float clickY, final float clockZ) {
         super.onBlockActivated(world, x, y, z, player, wut, clockZ, clockZ, clockZ);
-        final TileGrinder grinder = (TileGrinder) world.getBlockTileEntity(x, y, z);
+        final TileBlast grinder = (TileBlast) world.getBlockTileEntity(x, y, z);
         if (grinder != null) {
-            player.openGui(Hephaestus.instance, TileConstants.GRINDER_GUID, world, x, y, z);
+            player.openGui(Hephaestus.instance, TileConstants.BLAST_GUID, world, x, y, z);
             return true;
         } else {
             return false;

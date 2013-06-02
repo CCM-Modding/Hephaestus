@@ -41,20 +41,18 @@ public class TileBlast extends TileBase {
     public ItemStack decrStackSize(final int solt, final int amount) {
         if (this.inventory[solt] != null) {
             ItemStack itemstack;
-
             if (this.inventory[solt].stackSize <= amount) {
                 itemstack = this.inventory[solt];
                 this.inventory[solt] = null;
                 return itemstack;
-            } else {
-                itemstack = this.inventory[solt].splitStack(amount);
-
-                if (this.inventory[solt].stackSize == 0) {
-                    this.inventory[solt] = null;
-                }
-
-                return itemstack;
             }
+            ItemStack itemstack1;
+            itemstack1 = this.inventory[solt].splitStack(amount);
+
+            if (this.inventory[solt].stackSize == 0) {
+                this.inventory[solt] = null;
+            }
+            return itemstack1;
         } else {
             return null;
         }
@@ -170,8 +168,8 @@ public class TileBlast extends TileBase {
     }
 
     /**
-     * Returns true if the Blast Furnace can smelt an item, i.e. has a source item,
-     * destination stack isn't full, etc.
+     * Returns true if the Blast Furnace can smelt an item, i.e. has a source
+     * item, destination stack isn't full, etc.
      */
     public boolean canSmelt() {
         if ((this.inventory[0] != null)) {
@@ -198,8 +196,8 @@ public class TileBlast extends TileBase {
     }
 
     /**
-     * Turn one item from the Blast Furnace's source stack into the appropriate smelted
-     * item in the Blast Furnace's result stack
+     * Turn one item from the Blast Furnace's source stack into the appropriate
+     * smelted item in the Blast Furnace's result stack
      */
     public void smeltItem() {
         if (this.canSmelt()) {

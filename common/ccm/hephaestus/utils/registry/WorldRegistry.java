@@ -1,13 +1,5 @@
 package ccm.hephaestus.utils.registry;
 
-import net.minecraft.item.ItemStack;
-import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.enums.EnumOres;
-import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.handler.Handler;
-import ccm.nucleum_omnium.world.generator.WorldGenHandler;
-import ccm.nucleum_omnium.world.generator.WorldGenMinable;
 
 final class WorldRegistry {
 
@@ -15,7 +7,7 @@ final class WorldRegistry {
      * Registers all the World Generation.
      */
     protected static void registerWorld() {
-        if (Properties.enableWorldGenAluminum) {
+        /*if (Properties.enableWorldGenAluminum) {
             registerAluminum();
         }
         if (Properties.enableWorldGenCopper) {
@@ -38,10 +30,10 @@ final class WorldRegistry {
         }
         if (Properties.enableWorldGenTungsten) {
             registerTungsten();
-        }
+        }*/
     }
 
-    private static void registerAluminum() {
+    /*private static void registerAluminum() {
         Handler.log(Hephaestus.instance, "Registering World Generation for ALuminum");
         WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreAluminum.ordinal()), Properties.aluSize), Properties.aluMinHeight, Properties.aluMaxHeight, Properties.aluDensity, WorldGenHandler.GenType.ORE_1.ordinal());
     }
@@ -79,6 +71,6 @@ final class WorldRegistry {
     private static void registerTungsten() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Tungsten");
         WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTungsten.ordinal()), Properties.tunSize), Properties.tunMinHeight, Properties.tunMaxHeight, Properties.tunDensity, WorldGenHandler.GenType.ORE_1.ordinal());
-    }
+    }*/
 
 }

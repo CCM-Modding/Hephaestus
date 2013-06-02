@@ -15,7 +15,6 @@ import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum_omnium.BaseMod;
 import ccm.nucleum_omnium.IMod;
 import ccm.nucleum_omnium.handler.Handler;
-import ccm.nucleum_omnium.stats.StatEventHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.FingerprintWarning;
 import cpw.mods.fml.common.Mod.Init;
@@ -75,7 +74,6 @@ public class Hephaestus extends BaseMod implements IMod {
     @Init
     public void init(final FMLInitializationEvent event) {
         Registry.register();
-        StatEventHandler.addModToList(this);
         this.loadLangs(Languages.LANGUAGE_FILES);
     }
 

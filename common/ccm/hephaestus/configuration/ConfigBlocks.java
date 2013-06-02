@@ -21,5 +21,8 @@ final class ConfigBlocks extends Config {
 
         Properties.blockGrinderID = property.getNextUsableBlockID(config, BlockNames.blockGrinder).getInt();
         Properties.blockGrinderRunningID = property.getNextUsableBlockID(config, BlockNames.blockGrinder + "Active").getInt();
+
+        Properties.blockBlastID = property.getNextUsableBlockID(config, BlockNames.blockBlast).getInt();
+        Properties.blockBlastRunningID = property.getNextUsableBlockID(config, BlockNames.blockBlast + "Active").getInt();
     }
 }
