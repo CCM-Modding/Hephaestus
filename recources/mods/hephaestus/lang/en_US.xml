@@ -34,6 +34,25 @@
 	<entry key="item.ingotTitCarbide.name">Titanium Carbide Ingot</entry>
 	<entry key="item.ingotTunCarbide.name">Tungsten Carbide Ingot</entry>
 	<entry key="item.ingotTungsten.name">Tungsten Ingot</entry>
+	
+	<!-- ***************************** Dusts ************************** -->
+	
+	<entry key="item.dustAluminum.name">Aluminum Dust</entry>
+	<entry key="item.dustBronze.name">Bronze Dust</entry>
+	<entry key="item.dustCopper.name">Copper Dust</entry>
+	<entry key="item.dustGold.name">Gold Dust</entry>
+	<entry key="item.dustHardIron.name">HardIron Dust</entry>
+	<entry key="item.dustHeavyIron.name">HeavyIron Dust</entry>
+	<entry key="item.dustIron.name">Iron Dust</entry>
+	<entry key="item.dustLead.name">Lead Dust</entry>
+	<entry key="item.dustSilver.name">Silver Dust</entry>
+	<entry key="item.dustSulfur.name">Sulfur Dust</entry>
+	<entry key="item.dustSteel.name">Steel Dust</entry>
+	<entry key="item.dustTin.name">Tin Dust</entry>
+	<entry key="item.dustTitanium.name">Titanium Dust</entry>
+	<entry key="item.dustTitCarbide.name">Titanium Carbide Dust</entry>
+	<entry key="item.dustTunCarbide.name">Tungsten Carbide Dust</entry>
+	<entry key="item.dustTungsten.name">Tungsten Dust</entry>
 
 	<!-- ******************************** Ore ****************************** -->
 
@@ -41,6 +60,7 @@
 	<entry key="tile.oreCopper.name">Copper Ore</entry>
 	<entry key="tile.oreLead.name">Lead Ore</entry>
 	<entry key="tile.oreSilver.name">Silver Ore</entry>
+	<entry key="tile.oreDulfur.name">Sulfur Ore</entry>
 	<entry key="tile.oreTin.name">Tin Ore</entry>
 	<entry key="tile.oreTitanium.name">Titanium Ore</entry>
 	<entry key="tile.oreTungsten.name">Tungsten Ore</entry>
@@ -54,12 +74,23 @@
 	<entry key="tile.blockHeavyIron.name">HeavyIron Block</entry>
 	<entry key="tile.blockLead.name">Lead Block</entry>
 	<entry key="tile.blockSilver.name">Silver Block</entry>
+	<entry key="tile.blockSulfur.name">Sulfur Block</entry>
 	<entry key="tile.blockSteel.name">Steel Block</entry>
 	<entry key="tile.blockTin.name">Tin Block</entry>
 	<entry key="tile.blockTitanium.name">Titanium Block</entry>
 	<entry key="tile.blockTitCarbide.name">Titanium Carbide Block</entry>
 	<entry key="tile.blockTunCarbide.name">Tungsten Carbide Block</entry>
 	<entry key="tile.blockTungsten.name">Tungsten Block</entry>
+
+	<!-- ******************************** "Machines" ****************************** -->
+	
+	<entry key="tile.machineGrinder.name">Metal Grinder</entry>
+	<entry key="tile.machineBlast.name">Blast Furnace</entry>
+
+	<!-- **************************** Tile Entities *************************** -->
+
+	<entry key="container.grinder">Metal Grinder</entry>
+	<entry key="container.blast">Blast Furnace</entry>
 
 	<!-- ******************************** Tools ****************************** -->
 

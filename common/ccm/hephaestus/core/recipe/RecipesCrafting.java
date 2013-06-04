@@ -1,5 +1,6 @@
 package ccm.hephaestus.core.recipe;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -19,6 +20,7 @@ final class RecipesCrafting {
 
         // needs proper recipe
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ModBlocks.blockGrinder), new Object[] { "xxx", "x x", "xxx", 'x', EHandler.getItem(EnumIngots.ingotSteel) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ModBlocks.blockBlast), new Object[] { "xxx", "x x", "xxx", 'x', Block.brick }));
     }
 
     /**

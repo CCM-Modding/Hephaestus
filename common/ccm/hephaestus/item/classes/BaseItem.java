@@ -61,7 +61,7 @@ public class BaseItem extends BaseItemClass {
                 return currentHandels[meta].getIcon();
             case 1:
                 return currentIngots[meta].getIcon();
-            case 3:
+            case 2:
                 return currentDusts[meta].getIcon();
             default:
                 return null;

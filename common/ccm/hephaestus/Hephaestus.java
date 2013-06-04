@@ -9,12 +9,12 @@ import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.network.PacketHandler;
 import ccm.hephaestus.utils.lib.Archive;
-import ccm.hephaestus.utils.lib.Languages;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum_omnium.BaseMod;
 import ccm.nucleum_omnium.IMod;
 import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.handler.LanguageHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.FingerprintWarning;
 import cpw.mods.fml.common.Mod.Init;
@@ -74,7 +74,7 @@ public class Hephaestus extends BaseMod implements IMod {
     @Init
     public void init(final FMLInitializationEvent event) {
         Registry.register();
-        this.loadLangs(Languages.LANGUAGE_FILES);
+        new LanguageHandler(Locations.LANGUAGE_FILE, Archive.LANGUAGE_FILES);
     }
 
     @PostInit

@@ -28,15 +28,16 @@ final class RecipesSetBlast {
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumOres.oreTitanium), EHandler.getItem(EnumIngots.ingotTitanium));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumOres.oreTungsten), EHandler.getItem(EnumIngots.ingotTungsten));
 
+        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumIngots.ingotHeavyIron), EHandler.getItem(EnumIngots.ingotHardIron));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumIngots.ingotTitanium), EHandler.getItem(EnumIngots.ingotTitCarbide));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumIngots.ingotTungsten), EHandler.getItem(EnumIngots.ingotTunCarbide));
-        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumIngots.ingotHeavyIron), EHandler.getItem(EnumIngots.ingotHardIron));
 
+        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustHardIron), EHandler.getItem(EnumIngots.ingotHardIron));
+        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTitanite), EHandler.getItem(EnumIngots.ingotTitanite));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTitanium), EHandler.getItem(EnumIngots.ingotTitanium));
-        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTungsten), EHandler.getItem(EnumIngots.ingotTungsten));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTitCarbide), EHandler.getItem(EnumIngots.ingotTitCarbide));
         RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTunCarbide), EHandler.getItem(EnumIngots.ingotTunCarbide));
-        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustHeavyIron), EHandler.getItem(EnumIngots.ingotHardIron));
+        RecipesBlast.smelting().addSmelting(EHandler.getItem(EnumDusts.dustTungsten), EHandler.getItem(EnumIngots.ingotTungsten));
 
     }
 }

@@ -1,6 +1,7 @@
 package ccm.hephaestus.block;
 
 import java.util.List;
+import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -9,6 +10,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
+import ccm.hephaestus.enums.EnumBlocks;
+import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumOres;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -35,7 +38,14 @@ public class ModOres extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreAluminum.ordinal(), "pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreCopper.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreLead.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSilver.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSulfur.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTin.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTitanium.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTungsten.ordinal(), "pickaxe", 3);
     }
 
     @Override
@@ -43,6 +53,14 @@ public class ModOres extends BaseBlock {
     public Icon getIcon(final int side, final int meta) {
         this.blockIcon = ores[meta].getIcon();
         return this.blockIcon;
+    }
+
+    /**
+     * Returns the ID of the items to drop on destruction.
+     */
+    @Override
+    public int idDropped(int par1, Random par2Random, int par3) {
+        return blockID  == (EnumBlocks.blockSulfur.ordinal()) ? (EnumDusts.dustSulfur.ordinal()) : blockID;
     }
 
     // Makes sure pick block works right

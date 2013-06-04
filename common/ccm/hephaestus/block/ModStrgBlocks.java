@@ -35,7 +35,14 @@ public class ModStrgBlocks extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockAluminum.ordinal(), "pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockCopper.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockLead.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSilver.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSulfur.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTin.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTitanium.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTungsten.ordinal(), "pickaxe", 3);
     }
 
     @Override
