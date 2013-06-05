@@ -3,14 +3,17 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-final class RecipesSmelting {
+final class RecipesSmelting
+{
 
-    public static void init() {
+    public RecipesSmelting()
+    {
 
         FurnaceRecipes.smelting().addSmelting((EnumOres.oreAluminum.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotAluminum), 1.0F);
         FurnaceRecipes.smelting().addSmelting((EnumOres.oreCopper.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotCopper), 1.0F);
@@ -20,7 +23,7 @@ final class RecipesSmelting {
 
         FurnaceRecipes.smelting().addSmelting((EnumDusts.dustGold.ordinal()), new ItemStack(Item.ingotGold), 0.0F);
         FurnaceRecipes.smelting().addSmelting((EnumDusts.dustIron.ordinal()), new ItemStack(Item.ingotIron), 0.0F);
-        
+
         FurnaceRecipes.smelting().addSmelting((EnumDusts.dustAluminum.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotAluminum), 0.0F);
         FurnaceRecipes.smelting().addSmelting((EnumDusts.dustBronze.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotBronze), 0.0F);
         FurnaceRecipes.smelting().addSmelting((EnumDusts.dustCopper.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotCopper), 0.0F);
