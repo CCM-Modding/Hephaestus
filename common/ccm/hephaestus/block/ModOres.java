@@ -10,10 +10,10 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.hephaestus.core.handlers.EHandler;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.nucleum_omnium.helper.MathHelper;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -62,7 +62,7 @@ public class ModOres extends BaseBlock {
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
         if (this.metadata == (EnumOres.oreSulfur.ordinal())) {
-            return EHandler.getItem(EnumDusts.dustSulfur, (MathHelper.getRandomInt(5)));
+            return EnumHelper.getItemIS(EnumDusts.dustSulfur, (MathHelper.getRandomInt(5)));
         }
         else {
             return blockID;

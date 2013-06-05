@@ -1,11 +1,11 @@
 package ccm.hephaestus.creativetab;
 
-import ccm.hephaestus.core.handlers.EHandler;
 import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumHandle;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 public class HephaestusTabs {
 
@@ -37,8 +37,9 @@ public class HephaestusTabs {
     }
 
     public static void initTabIcons() {
-        tabHephaestusBlocks.init(EHandler.getItem(EnumBlocks.blockCopper));
-        tabHephaestusMaterials.init(EHandler.getItem(EnumIngots.ingotCopper));
-        tabHephaestusParts.init(EHandler.getItem(EnumHandle.handleWood));
+        tabHephaestusBlocks.init(EnumHelper.getBlockIS(EnumBlocks.blockCopper));
+        tabHephaestusMaterials.init(EnumHelper.getItemIS(EnumIngots.ingotCopper));
+        tabHephaestusParts.init(EnumHelper.getItemIS(EnumHandle.handleWood));
+        tabHephaestusTools.init(EnumHelper.getItemIS(EnumHandle.handleWood));
     }
 }

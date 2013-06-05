@@ -2,12 +2,12 @@ package ccm.hephaestus.utils.registry;
 
 import net.minecraftforge.oredict.OreDictionary;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.core.handlers.EHandler;
 import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 final class OreDictionaryRegistry {
 
@@ -17,51 +17,51 @@ final class OreDictionaryRegistry {
     protected static void oreDictionary() {
         Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");
 
-        OreDictionary.registerOre("naturalAluminum", EHandler.getItem(EnumIngots.ingotAluminum));
-        OreDictionary.registerOre("ingotAluminium", EHandler.getItem(EnumIngots.ingotAluminum));
-        OreDictionary.registerOre("ingotAluminum", EHandler.getItem(EnumIngots.ingotAluminum));
-        OreDictionary.registerOre("ingotCopper", EHandler.getItem(EnumIngots.ingotCopper));
-        OreDictionary.registerOre("ingotLead", EHandler.getItem(EnumIngots.ingotLead));
-        OreDictionary.registerOre("ingotSilver", EHandler.getItem(EnumIngots.ingotSilver));
-        OreDictionary.registerOre("ingotTin", EHandler.getItem(EnumIngots.ingotTin));
-        OreDictionary.registerOre("ingotTitanium", EHandler.getItem(EnumIngots.ingotTitanium));
-        OreDictionary.registerOre("ingotTungsten", EHandler.getItem(EnumIngots.ingotTungsten));
+        OreDictionary.registerOre("naturalAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
+        OreDictionary.registerOre("ingotAluminium", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
+        OreDictionary.registerOre("ingotAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
+        OreDictionary.registerOre("ingotCopper", EnumHelper.getItemIS(EnumIngots.ingotCopper));
+        OreDictionary.registerOre("ingotLead", EnumHelper.getItemIS(EnumIngots.ingotLead));
+        OreDictionary.registerOre("ingotSilver", EnumHelper.getItemIS(EnumIngots.ingotSilver));
+        OreDictionary.registerOre("ingotTin", EnumHelper.getItemIS(EnumIngots.ingotTin));
+        OreDictionary.registerOre("ingotTitanium", EnumHelper.getItemIS(EnumIngots.ingotTitanium));
+        OreDictionary.registerOre("ingotTungsten", EnumHelper.getItemIS(EnumIngots.ingotTungsten));
 
-        OreDictionary.registerOre("dustAluminium", EHandler.getItem(EnumDusts.dustAluminum));
-        OreDictionary.registerOre("dustAluminum", EHandler.getItem(EnumDusts.dustAluminum));
-        OreDictionary.registerOre("dustCopper", EHandler.getItem(EnumDusts.dustCopper));
-        OreDictionary.registerOre("dustGold", EHandler.getItem(EnumDusts.dustGold));
-        OreDictionary.registerOre("dustIron", EHandler.getItem(EnumDusts.dustIron));
-        OreDictionary.registerOre("dustLead", EHandler.getItem(EnumDusts.dustLead));
-        OreDictionary.registerOre("dustSilver", EHandler.getItem(EnumDusts.dustSilver));
-        OreDictionary.registerOre("dustSulphur", EHandler.getItem(EnumDusts.dustSulfur));
-        OreDictionary.registerOre("dustSulfur", EHandler.getItem(EnumDusts.dustSulfur));
-        OreDictionary.registerOre("dustTin", EHandler.getItem(EnumDusts.dustTin));
-        OreDictionary.registerOre("dustTitanium", EHandler.getItem(EnumDusts.dustTitanium));
-        OreDictionary.registerOre("dustTungsten", EHandler.getItem(EnumDusts.dustTungsten));
+        OreDictionary.registerOre("dustAluminium", EnumHelper.getItemIS(EnumDusts.dustAluminum));
+        OreDictionary.registerOre("dustAluminum", EnumHelper.getItemIS(EnumDusts.dustAluminum));
+        OreDictionary.registerOre("dustCopper", EnumHelper.getItemIS(EnumDusts.dustCopper));
+        OreDictionary.registerOre("dustGold", EnumHelper.getItemIS(EnumDusts.dustGold));
+        OreDictionary.registerOre("dustIron", EnumHelper.getItemIS(EnumDusts.dustIron));
+        OreDictionary.registerOre("dustLead", EnumHelper.getItemIS(EnumDusts.dustLead));
+        OreDictionary.registerOre("dustSilver", EnumHelper.getItemIS(EnumDusts.dustSilver));
+        OreDictionary.registerOre("dustSulphur", EnumHelper.getItemIS(EnumDusts.dustSulfur));
+        OreDictionary.registerOre("dustSulfur", EnumHelper.getItemIS(EnumDusts.dustSulfur));
+        OreDictionary.registerOre("dustTin", EnumHelper.getItemIS(EnumDusts.dustTin));
+        OreDictionary.registerOre("dustTitanium", EnumHelper.getItemIS(EnumDusts.dustTitanium));
+        OreDictionary.registerOre("dustTungsten", EnumHelper.getItemIS(EnumDusts.dustTungsten));
 
-        OreDictionary.registerOre("blockNaturalAluminum", EHandler.getItem(EnumBlocks.blockAluminum));
-        OreDictionary.registerOre("blockAluminum", EHandler.getItem(EnumBlocks.blockAluminum));
-        OreDictionary.registerOre("blockAluminum", EHandler.getItem(EnumBlocks.blockAluminum));
-        OreDictionary.registerOre("blockCopper", EHandler.getItem(EnumBlocks.blockCopper));
-        OreDictionary.registerOre("blockLead", EHandler.getItem(EnumBlocks.blockLead));
-        OreDictionary.registerOre("blockSilver", EHandler.getItem(EnumBlocks.blockSilver));
-        OreDictionary.registerOre("blockSulphur", EHandler.getItem(EnumBlocks.blockSulfur));
-        OreDictionary.registerOre("blockSulfur", EHandler.getItem(EnumBlocks.blockSulfur));
-        OreDictionary.registerOre("blockTin", EHandler.getItem(EnumBlocks.blockTin));
-        OreDictionary.registerOre("blockTitanium", EHandler.getItem(EnumBlocks.blockTitanium));
-        OreDictionary.registerOre("blockTungsten", EHandler.getItem(EnumBlocks.blockTungsten));
+        OreDictionary.registerOre("blockNaturalAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
+        OreDictionary.registerOre("blockAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
+        OreDictionary.registerOre("blockAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
+        OreDictionary.registerOre("blockCopper", EnumHelper.getBlockIS(EnumBlocks.blockCopper));
+        OreDictionary.registerOre("blockLead", EnumHelper.getBlockIS(EnumBlocks.blockLead));
+        OreDictionary.registerOre("blockSilver", EnumHelper.getBlockIS(EnumBlocks.blockSilver));
+        OreDictionary.registerOre("blockSulphur", EnumHelper.getBlockIS(EnumBlocks.blockSulfur));
+        OreDictionary.registerOre("blockSulfur", EnumHelper.getBlockIS(EnumBlocks.blockSulfur));
+        OreDictionary.registerOre("blockTin", EnumHelper.getBlockIS(EnumBlocks.blockTin));
+        OreDictionary.registerOre("blockTitanium", EnumHelper.getBlockIS(EnumBlocks.blockTitanium));
+        OreDictionary.registerOre("blockTungsten", EnumHelper.getBlockIS(EnumBlocks.blockTungsten));
 
-        OreDictionary.registerOre("oreNaturalAluminium", EHandler.getItem(EnumOres.oreAluminum));
-        OreDictionary.registerOre("oreAluminium", EHandler.getItem(EnumOres.oreAluminum));
-        OreDictionary.registerOre("oreAluminum", EHandler.getItem(EnumOres.oreAluminum));
-        OreDictionary.registerOre("oreCopper", EHandler.getItem(EnumOres.oreCopper));
-        OreDictionary.registerOre("oreLead", EHandler.getItem(EnumOres.oreLead));
-        OreDictionary.registerOre("oreSilver", EHandler.getItem(EnumOres.oreSilver));
-        OreDictionary.registerOre("oreSulphur", EHandler.getItem(EnumOres.oreSulfur));
-        OreDictionary.registerOre("oreSulfur", EHandler.getItem(EnumOres.oreSulfur));
-        OreDictionary.registerOre("oreTin", EHandler.getItem(EnumOres.oreTin));
-        OreDictionary.registerOre("oreTitanium", EHandler.getItem(EnumOres.oreTitanium));
-        OreDictionary.registerOre("oreTungsten", EHandler.getItem(EnumOres.oreTungsten));
+        OreDictionary.registerOre("oreNaturalAluminium", EnumHelper.getBlockIS(EnumOres.oreAluminum));
+        OreDictionary.registerOre("oreAluminium", EnumHelper.getBlockIS(EnumOres.oreAluminum));
+        OreDictionary.registerOre("oreAluminum", EnumHelper.getBlockIS(EnumOres.oreAluminum));
+        OreDictionary.registerOre("oreCopper", EnumHelper.getBlockIS(EnumOres.oreCopper));
+        OreDictionary.registerOre("oreLead", EnumHelper.getBlockIS(EnumOres.oreLead));
+        OreDictionary.registerOre("oreSilver", EnumHelper.getBlockIS(EnumOres.oreSilver));
+        OreDictionary.registerOre("oreSulphur", EnumHelper.getBlockIS(EnumOres.oreSulfur));
+        OreDictionary.registerOre("oreSulfur", EnumHelper.getBlockIS(EnumOres.oreSulfur));
+        OreDictionary.registerOre("oreTin", EnumHelper.getBlockIS(EnumOres.oreTin));
+        OreDictionary.registerOre("oreTitanium", EnumHelper.getBlockIS(EnumOres.oreTitanium));
+        OreDictionary.registerOre("oreTungsten", EnumHelper.getBlockIS(EnumOres.oreTungsten));
     }
 }

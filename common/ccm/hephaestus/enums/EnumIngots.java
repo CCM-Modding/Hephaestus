@@ -1,11 +1,14 @@
 package ccm.hephaestus.enums;
 
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
+import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum_omnium.helper.TextureHelper;
+import ccm.nucleum_omnium.helper.enums.IItemEnum;
 
-public enum EnumIngots {
+public enum EnumIngots implements IItemEnum {
 
     ingotAluminum,
     ingotBronze,
@@ -38,5 +41,10 @@ public enum EnumIngots {
 
     public Icon getIcon() {
         return this.icon;
+    }
+
+    @Override
+    public Item getBaseItem() {
+        return ModItems.itemIngot;
     }
 }

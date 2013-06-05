@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.block.machines.BlockGrinder;
-import ccm.hephaestus.utils.lib.BlockNames;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.handler.Handler;
 
@@ -31,11 +30,11 @@ public final class ModBlocks {
         ores = new ModOres(Properties.oreID);
         blocks = new ModStrgBlocks(Properties.blocksID);
 
-        blockGrinder = new BlockGrinder(Properties.blockGrinderID, false).setUnlocalizedName(BlockNames.blockGrinder).setHardness(3.0F);
-        blockGrinderRunning = new BlockGrinder(Properties.blockGrinderRunningID, true).setUnlocalizedName(BlockNames.blockGrinder).setHardness(3.0F);
+        blockGrinder = new BlockGrinder(Properties.blockGrinderID, false).setUnlocalizedName("blockGrinder").setHardness(3.0F);
+        blockGrinderRunning = new BlockGrinder(Properties.blockGrinderRunningID, true).setUnlocalizedName("blockGrinder").setHardness(3.0F);
 
-        blockBlast = new BlockBlast(Properties.blockBlastID, false).setUnlocalizedName(BlockNames.blockBlast).setHardness(3.0F);
-        blockBlastRunning = new BlockBlast(Properties.blockBlastRunningID, true).setUnlocalizedName(BlockNames.blockBlast).setHardness(3.0F).setLightValue(0.875F);
+        blockBlast = new BlockBlast(Properties.blockBlastID, false).setUnlocalizedName("blockBlast").setHardness(3.0F);
+        blockBlastRunning = new BlockBlast(Properties.blockBlastRunningID, true).setUnlocalizedName("blockBlast").setHardness(3.0F).setLightValue(0.875F);
 
     }
 }

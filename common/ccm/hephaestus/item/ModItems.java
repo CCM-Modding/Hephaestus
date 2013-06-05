@@ -3,9 +3,7 @@ package ccm.hephaestus.item;
 import net.minecraft.item.Item;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.hephaestus.enums.EnumUsable;
 import ccm.hephaestus.item.classes.BaseItem;
-import ccm.hephaestus.item.classes.BaseUseableItem;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.handler.Handler;
 
@@ -32,10 +30,10 @@ public final class ModItems {
         itemIngot = new BaseItem(Properties.itemIngotID, 1).setCreativeTab(HephaestusTabs.tabHephaestusMaterials);
         itemDust = new BaseItem(Properties.itemDustID, 2).setCreativeTab(HephaestusTabs.tabHephaestusMaterials);
 
-        gsStone = new BaseUseableItem(Properties.gsStoneID, EnumUsable.gsStone.duration).setUnlocalizedName(EnumUsable.gsStone.name());
-        gsIron = new BaseUseableItem(Properties.gsIronID, EnumUsable.gsIron.duration).setUnlocalizedName(EnumUsable.gsIron.name());
-        gsBronze = new BaseUseableItem(Properties.gsBronzeID, EnumUsable.gsBronze.duration).setUnlocalizedName(EnumUsable.gsBronze.name());
-        gsObsidian = new BaseUseableItem(Properties.gsObsidianID, EnumUsable.gsObsidian.duration).setUnlocalizedName(EnumUsable.gsObsidian.name());
-        gsDiamond = new BaseUseableItem(Properties.gsDiamondID, EnumUsable.gsDiamond.duration).setUnlocalizedName(EnumUsable.gsDiamond.name());
+        gsStone = new BaseItem(Properties.gsStoneID).setUnlocalizedName("gsStone").setMaxDamage(250).setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        gsIron = new BaseItem(Properties.gsIronID).setUnlocalizedName("gsIron").setMaxDamage(400).setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        gsBronze = new BaseItem(Properties.gsBronzeID).setUnlocalizedName("gsBronze").setMaxDamage(600).setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        gsObsidian = new BaseItem(Properties.gsObsidianID).setUnlocalizedName("gsObsidian").setMaxDamage(2000).setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        gsDiamond = new BaseItem(Properties.gsDiamondID).setUnlocalizedName("gsDiamond").setMaxDamage(3000).setCreativeTab(HephaestusTabs.tabHephaestusTools);
     }
 }
