@@ -1,20 +1,24 @@
 package ccm.hephaestus.utils.registry;
 
 import net.minecraftforge.oredict.OreDictionary;
+
+import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
+
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum_omnium.handler.Handler;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-final class OreDictionaryRegistry {
+final class OreDictionaryRegistry
+{
 
     /**
      * Registers all the Entries to the Ore Dictionary.
      */
-    protected static void oreDictionary() {
+    protected static void oreDictionary()
+    {
         Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");
 
         OreDictionary.registerOre("naturalAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));

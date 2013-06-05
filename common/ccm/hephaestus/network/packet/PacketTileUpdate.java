@@ -6,27 +6,38 @@ import java.io.IOException;
 
 import net.minecraft.network.INetworkManager;
 import net.minecraftforge.common.ForgeDirection;
-import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.network.PacketTypeHandler;
+
 import cpw.mods.fml.common.network.Player;
 
-public class PacketTileUpdate extends BasePacket {
+import ccm.hephaestus.Hephaestus;
+import ccm.hephaestus.network.PacketTypeHandler;
 
-    public int x, y, z;
+public class PacketTileUpdate extends BasePacket
+{
 
-    public byte orientation;
+    public int    x, y, z;
 
-    public short state;
+    public byte   orientation;
+
+    public short  state;
 
     public String owner;
 
     public String customName;
 
-    public PacketTileUpdate() {
+    public PacketTileUpdate()
+    {
         super(PacketTypeHandler.TILE, true);
     }
 
-    public PacketTileUpdate(final int x, final int y, final int z, final ForgeDirection orientation, final short state, final String owner, final String customName) {
+    public PacketTileUpdate(final int x,
+                            final int y,
+                            final int z,
+                            final ForgeDirection orientation,
+                            final short state,
+                            final String owner,
+                            final String customName)
+    {
         super(PacketTypeHandler.TILE, true);
         this.x = x;
         this.y = y;
@@ -38,12 +49,14 @@ public class PacketTileUpdate extends BasePacket {
     }
 
     @Override
-    public void execute(final INetworkManager manager, final Player player) {
+    public void execute(final INetworkManager manager, final Player player)
+    {
         Hephaestus.proxy.handleTileEntityPacket(this.x, this.y, this.z, ForgeDirection.getOrientation(this.orientation), this.state, this.owner, this.customName);
     }
 
     @Override
-    public void readData(final DataInputStream data) throws IOException {
+    public void readData(final DataInputStream data) throws IOException
+    {
         this.x = data.readInt();
         this.y = data.readInt();
         this.z = data.readInt();
@@ -54,7 +67,8 @@ public class PacketTileUpdate extends BasePacket {
     }
 
     @Override
-    public void writeData(final DataOutputStream data) throws IOException {
+    public void writeData(final DataOutputStream data) throws IOException
+    {
         data.writeInt(this.x);
         data.writeInt(this.y);
         data.writeInt(this.z);

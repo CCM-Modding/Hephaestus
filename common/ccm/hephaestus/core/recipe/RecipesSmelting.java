@@ -3,14 +3,18 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
+
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
+
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-final class RecipesSmelting {
+final class RecipesSmelting
+{
 
-    public RecipesSmelting() {
+    public RecipesSmelting()
+    {
 
         FurnaceRecipes.smelting().addSmelting((EnumOres.oreAluminum.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotAluminum), 1.0F);
         FurnaceRecipes.smelting().addSmelting((EnumOres.oreCopper.ordinal()), EnumHelper.getItemIS(EnumIngots.ingotCopper), 1.0F);

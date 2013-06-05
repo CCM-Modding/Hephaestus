@@ -9,11 +9,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.hephaestus.enums.EnumBlocks;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ModStrgBlocks extends BaseBlock {
+import ccm.hephaestus.enums.EnumBlocks;
+
+public class ModStrgBlocks extends BaseBlock
+{
 
     private static EnumBlocks[] blocks = EnumBlocks.values();
 
@@ -23,7 +26,8 @@ public class ModStrgBlocks extends BaseBlock {
      * @param id
      *            Block Id
      */
-    public ModStrgBlocks(final int id) {
+    public ModStrgBlocks(final int id)
+    {
         super(id, Material.iron);
         this.setHardness(3.0F);
         this.setResistance(5.0F);
@@ -47,27 +51,32 @@ public class ModStrgBlocks extends BaseBlock {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(final int side, final int meta) {
+    public Icon getIcon(final int side, final int meta)
+    {
         this.blockIcon = blocks[meta].getIcon();
         return this.blockIcon;
     }
 
     // Makes sure pick block works right
     @Override
-    public int damageDropped(final int metadata) {
+    public int damageDropped(final int metadata)
+    {
         return metadata;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(final IconRegister iconRegister) {
+    public void registerIcons(final IconRegister iconRegister)
+    {
         EnumBlocks.registerIcons(iconRegister);
     }
 
     @Override
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
-        for (int i = 0; i < EnumBlocks.values().length; i++) {
+    @SuppressWarnings(
+    { "rawtypes", "unchecked" })
+    public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list)
+    {
+        for (int i = 0; i < EnumBlocks.values().length; i++){
             list.add(new ItemStack(itemId, 1, i));
         }
     }

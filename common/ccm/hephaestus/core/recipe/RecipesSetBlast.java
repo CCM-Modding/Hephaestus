@@ -2,27 +2,33 @@ package ccm.hephaestus.core.recipe;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
+
 import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-final class RecipesSetBlast {
+final class RecipesSetBlast
+{
 
-    public RecipesSetBlast() {
+    public RecipesSetBlast()
+    {
         registerFuels();
         registerRecipes();
     }
 
-    private static void registerFuels() {
+    private static void registerFuels()
+    {
         FuelsBlast.registerCoalFuel(new ItemStack(Item.coal));
         FuelsBlast.registerSulfurFuel(EnumHelper.getItemIS(EnumDusts.dustSulfur));
     }
 
     // needs ore dictionary
-    private static void registerRecipes() {
+    private static void registerRecipes()
+    {
 
         RecipesBlast.smelting().addSmelting(EnumHelper.getBlockIS(EnumOres.oreTitanium), EnumHelper.getItemIS(EnumIngots.ingotTitanium));
         RecipesBlast.smelting().addSmelting(EnumHelper.getBlockIS(EnumOres.oreTungsten), EnumHelper.getItemIS(EnumIngots.ingotTungsten));

@@ -4,9 +4,14 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class SlotOutput extends Slot {
+public class SlotOutput extends Slot
+{
 
-    public SlotOutput(final IInventory inventory, final int index, final int x, final int y) {
+    public SlotOutput(final IInventory inventory,
+                      final int index,
+                      final int x,
+                      final int y)
+    {
         super(inventory, index, x, y);
     }
 
@@ -15,7 +20,8 @@ public class SlotOutput extends Slot {
      * the armor slots.
      */
     @Override
-    public boolean isItemValid(final ItemStack itemStack) {
+    public boolean isItemValid(final ItemStack itemStack)
+    {
         return false;
     }
 }

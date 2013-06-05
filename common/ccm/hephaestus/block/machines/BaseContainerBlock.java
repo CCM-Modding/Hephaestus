@@ -18,23 +18,26 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
-import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.hephaestus.tileentity.TileBase;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public abstract class BaseContainerBlock extends BlockContainer {
+import ccm.hephaestus.creativetab.HephaestusTabs;
+import ccm.hephaestus.tileentity.TileBase;
+
+public abstract class BaseContainerBlock extends BlockContainer
+{
 
     @SideOnly(Side.CLIENT)
-    protected Icon topIcon;
+    protected Icon           topIcon;
 
     @SideOnly(Side.CLIENT)
-    protected Icon bottomIcon;
+    protected Icon           bottomIcon;
 
     @SideOnly(Side.CLIENT)
-    protected Icon frontIcon;
+    protected Icon           frontIcon;
 
-    protected final boolean isActive;
+    protected final boolean  isActive;
 
     protected static boolean keepInventory = false;
 
@@ -42,7 +45,7 @@ public abstract class BaseContainerBlock extends BlockContainer {
      * Is the random generator used by all Containers to drop the inventory
      * contents in random directions.
      */
-    protected Random rand = new Random();
+    protected Random         rand          = new Random();
 
     /**
      * Creates a new Block instance capable of containing a {@link TileEntity}.
@@ -50,7 +53,9 @@ public abstract class BaseContainerBlock extends BlockContainer {
      * @param id
      *            The Block ID.
      */
-    public BaseContainerBlock(final int id, final boolean active) {
+    public BaseContainerBlock(final int id,
+                              final boolean active)
+    {
         super(id, Material.rock);
         this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
         this.isActive = active;
@@ -64,14 +69,18 @@ public abstract class BaseContainerBlock extends BlockContainer {
      * @param material
      *            The Material of the Block.
      */
-    public BaseContainerBlock(final int id, final Material material, final boolean active) {
+    public BaseContainerBlock(final int id,
+                              final Material material,
+                              final boolean active)
+    {
         super(id, material);
         this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
         this.isActive = active;
     }
 
     @Override
-    public void breakBlock(final World world, final int x, final int y, final int z, final int id, final int meta) {
+    public void breakBlock(final World world, final int x, final int y, final int z, final int id, final int meta)
+    {
         this.dropInventory(world, x, y, z);
         super.breakBlock(world, x, y, z, id, meta);
     }
@@ -91,22 +100,23 @@ public abstract class BaseContainerBlock extends BlockContainer {
      * @param z
      *            The z location.
      */
-    private void dropInventory(final World world, final int x, final int y, final int z) {
-        if (!keepInventory) {
+    private void dropInventory(final World world, final int x, final int y, final int z)
+    {
+        if (!keepInventory){
             final TileEntity tileEntity = world.getBlockTileEntity(x, y, z);
-            if (tileEntity != null) {
-                if (!(tileEntity instanceof IInventory)) {
+            if (tileEntity != null){
+                if (!(tileEntity instanceof IInventory)){
                     return;
                 }
                 final IInventory inventory = (IInventory) tileEntity;
-                for (int i = 0; i < inventory.getSizeInventory(); i++) {
+                for (int i = 0; i < inventory.getSizeInventory(); i++){
                     final ItemStack itemStack = inventory.getStackInSlot(i);
-                    if ((itemStack != null) && (itemStack.stackSize > 0)) {
+                    if ((itemStack != null) && (itemStack.stackSize > 0)){
                         final float dX = (this.rand.nextFloat() * 0.8F) + 0.1F;
                         final float dY = (this.rand.nextFloat() * 0.8F) + 0.1F;
                         final float dZ = (this.rand.nextFloat() * 0.8F) + 0.1F;
                         final EntityItem entityItem = new EntityItem(world, x + dX, y + dY, z + dZ, new ItemStack(itemStack.itemID, itemStack.stackSize, itemStack.getItemDamage()));
-                        if (itemStack.hasTagCompound()) {
+                        if (itemStack.hasTagCompound()){
                             entityItem.getEntityItem().setTagCompound((NBTTagCompound) itemStack.getTagCompound().copy());
                         }
                         final float factor = 0.05F;
@@ -136,19 +146,29 @@ public abstract class BaseContainerBlock extends BlockContainer {
     public abstract int idDropped(int meta, Random random, int fortune);
 
     @Override
-    public boolean onBlockActivated(final World world, final int x, final int y, final int z, final EntityPlayer player, final int wut, final float clickX, final float clickY, final float clockZ) {
-        if (world.isRemote) {
+    public boolean onBlockActivated(final World world,
+                                    final int x,
+                                    final int y,
+                                    final int z,
+                                    final EntityPlayer player,
+                                    final int wut,
+                                    final float clickX,
+                                    final float clickY,
+                                    final float clockZ)
+    {
+        if (world.isRemote){
             return true;
         }
-        if (player.isSneaking()) {
+        if (player.isSneaking()){
             return false;
-        } else {
+        }else{
             return true;
         }
     }
 
     @Override
-    public void onBlockAdded(final World world, final int x, final int y, final int z) {
+    public void onBlockAdded(final World world, final int x, final int y, final int z)
+    {
         super.onBlockAdded(world, x, y, z);
         this.setDefaultDirection(world, x, y, z);
     }
@@ -157,24 +177,25 @@ public abstract class BaseContainerBlock extends BlockContainer {
      * Sets the direction of the block when placed
      */
     @Override
-    public void onBlockPlacedBy(final World world, final int x, final int y, final int z, final EntityLiving living, final ItemStack itemStack) {
+    public void onBlockPlacedBy(final World world, final int x, final int y, final int z, final EntityLiving living, final ItemStack itemStack)
+    {
         int direction = 0;
         final int facing = MathHelper.floor_double(((living.rotationYaw * 4.0F) / 360.0F) + 0.5D) & 3;
-        if (facing == 0) {
+        if (facing == 0){
             direction = ForgeDirection.NORTH.ordinal();
             world.setBlockMetadataWithNotify(x, y, z, direction, 2);
-        } else if (facing == 1) {
+        }else if (facing == 1){
             direction = ForgeDirection.EAST.ordinal();
             world.setBlockMetadataWithNotify(x, y, z, direction, 2);
-        } else if (facing == 2) {
+        }else if (facing == 2){
             direction = ForgeDirection.SOUTH.ordinal();
             world.setBlockMetadataWithNotify(x, y, z, direction, 2);
-        } else if (facing == 3) {
+        }else if (facing == 3){
             direction = ForgeDirection.WEST.ordinal();
             world.setBlockMetadataWithNotify(x, y, z, direction, 2);
         }
         world.setBlockMetadataWithNotify(x, y, z, direction, 3);
-        if (itemStack.hasDisplayName()) {
+        if (itemStack.hasDisplayName()){
             ((TileBase) world.getBlockTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
         }
         ((TileBase) world.getBlockTileEntity(x, y, z)).setOwner(living.getEntityName());
@@ -191,23 +212,24 @@ public abstract class BaseContainerBlock extends BlockContainer {
     /**
      * set a blocks direction
      */
-    private void setDefaultDirection(final World world, final int x, final int y, final int z) {
-        if (!world.isRemote) {
+    private void setDefaultDirection(final World world, final int x, final int y, final int z)
+    {
+        if (!world.isRemote){
             final int l = world.getBlockId(x, y, z - 1);
             final int i1 = world.getBlockId(x, y, z + 1);
             final int j1 = world.getBlockId(x - 1, y, z);
             final int k1 = world.getBlockId(x + 1, y, z);
             byte b0 = 3;
-            if (Block.opaqueCubeLookup[l] && !Block.opaqueCubeLookup[i1]) {
+            if (Block.opaqueCubeLookup[l] && !Block.opaqueCubeLookup[i1]){
                 b0 = 3;
             }
-            if (Block.opaqueCubeLookup[i1] && !Block.opaqueCubeLookup[l]) {
+            if (Block.opaqueCubeLookup[i1] && !Block.opaqueCubeLookup[l]){
                 b0 = 2;
             }
-            if (Block.opaqueCubeLookup[j1] && !Block.opaqueCubeLookup[k1]) {
+            if (Block.opaqueCubeLookup[j1] && !Block.opaqueCubeLookup[k1]){
                 b0 = 5;
             }
-            if (Block.opaqueCubeLookup[k1] && !Block.opaqueCubeLookup[j1]) {
+            if (Block.opaqueCubeLookup[k1] && !Block.opaqueCubeLookup[j1]){
                 b0 = 4;
             }
             world.setBlockMetadataWithNotify(x, y, z, b0, 2);

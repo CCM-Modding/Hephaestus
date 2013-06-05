@@ -1,11 +1,14 @@
 package ccm.hephaestus.configuration;
 
 import net.minecraftforge.common.Configuration;
-import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.utils.lib.Properties;
+
 import ccm.nucleum_omnium.handler.Handler;
 
-final class ConfigBlocks extends Config {
+import ccm.hephaestus.Hephaestus;
+import ccm.hephaestus.utils.lib.Properties;
+
+final class ConfigBlocks extends Config
+{
 
     /**
      * Loads or creates the Blocks in the Configuration file.
@@ -13,7 +16,8 @@ final class ConfigBlocks extends Config {
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configBlocks(final Configuration config) {
+    protected static void configBlocks(final Configuration config)
+    {
         Handler.log(Hephaestus.instance, "Loading Blocks Configs");
         Properties.oreID = property.getNextUsableBlockID(config, "Ores").getInt();
         Properties.blocksID = property.getNextUsableBlockID(config, "Blocks").getInt();

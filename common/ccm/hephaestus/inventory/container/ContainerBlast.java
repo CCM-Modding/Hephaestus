@@ -5,19 +5,22 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import ccm.hephaestus.inventory.slot.SlotBlastCoal;
 import ccm.hephaestus.inventory.slot.SlotBlastSulfur;
 import ccm.hephaestus.inventory.slot.SlotOutput;
 import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.tileentity.TileGrinder;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class ContainerBlast extends ContainerBase {
+public class ContainerBlast extends ContainerBase
+{
 
     private final TileBlast blast;
 
-    private int lastSmeltTime;
+    private int             lastSmeltTime;
 
     /**
      * Creates the Container for the Grinders GUI
@@ -28,7 +31,9 @@ public class ContainerBlast extends ContainerBase {
      *            The {@link TileGrinder} instance that the player is looking
      *            at.
      */
-    public ContainerBlast(final InventoryPlayer player, final TileBlast blast) {
+    public ContainerBlast(final InventoryPlayer player,
+                          final TileBlast blast)
+    {
         super(player, blast, 8, 84, 142);
         this.blast = blast;
         // (Input)
@@ -42,7 +47,8 @@ public class ContainerBlast extends ContainerBase {
     }
 
     @Override
-    public void addCraftingToCrafters(final ICrafting crafting) {
+    public void addCraftingToCrafters(final ICrafting crafting)
+    {
         super.addCraftingToCrafters(crafting);
         crafting.sendProgressBarUpdate(this, 0, this.blast.blastSmeltTime);
     }
@@ -51,30 +57,33 @@ public class ContainerBlast extends ContainerBase {
      * Looks for changes made in the container, sends them to every listener.
      */
     @Override
-    public void detectAndSendChanges() {
+    public void detectAndSendChanges()
+    {
         super.detectAndSendChanges();
-        if (this.blast.canSmelt()) {
-            for (int i = 0; i < this.crafters.size(); ++i) {
+        if (this.blast.canSmelt()){
+            for (int i = 0; i < this.crafters.size(); ++i){
                 final ICrafting icrafting = (ICrafting) this.crafters.get(i);
-                if (this.lastSmeltTime != this.blast.blastSmeltTime) {
+                if (this.lastSmeltTime != this.blast.blastSmeltTime){
                     icrafting.sendProgressBarUpdate(this, 0, this.blast.blastSmeltTime);
                 }
             }
             this.lastSmeltTime = this.blast.blastSmeltTime;
-        } else {
+        }else{
             this.lastSmeltTime = 0;
         }
     }
 
     @Override
-    public ItemStack transferStackInSlot(final EntityPlayer entityPlayer, final int slotIndex) {
+    public ItemStack transferStackInSlot(final EntityPlayer entityPlayer, final int slotIndex)
+    {
         return null;
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void updateProgressBar(final int progressIndex, final int progress) {
-        if (progressIndex == 0) {
+    public void updateProgressBar(final int progressIndex, final int progress)
+    {
+        if (progressIndex == 0){
             this.blast.blastSmeltTime = progress;
         }
     }

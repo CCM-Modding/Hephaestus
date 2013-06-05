@@ -3,22 +3,27 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
+
 import ccm.hephaestus.api.fuels.FuelsGrinder;
 import ccm.hephaestus.api.recipes.RecipesGrinder;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.hephaestus.item.ModItems;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-final class RecipesSetGrinder {
+final class RecipesSetGrinder
+{
 
-    public RecipesSetGrinder() {
+    public RecipesSetGrinder()
+    {
         registerFuels();
         registerRecipes();
     }
 
-    private static void registerFuels() {
+    private static void registerFuels()
+    {
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsStone));
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsIron));
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsBronze));
@@ -27,7 +32,8 @@ final class RecipesSetGrinder {
     }
 
     // needs ore dictionary
-    private static void registerRecipes() {
+    private static void registerRecipes()
+    {
 
         RecipesGrinder.grinding().addGrinding(new ItemStack(Block.oreGold), EnumHelper.getItemIS(EnumDusts.dustGold, 2));
         RecipesGrinder.grinding().addGrinding(new ItemStack(Block.oreIron), EnumHelper.getItemIS(EnumDusts.dustIron, 2));
