@@ -20,8 +20,7 @@ public class GUIBlast extends GuiContainer {
      * @param player
      *            The Player looking at the GUI
      * @param grinder
-     *            The {@link TileBlast} instance that the player is looking
-     *            at.
+     *            The {@link TileBlast} instance that the player is looking at.
      */
     public GUIBlast(final InventoryPlayer player, final TileBlast blast) {
         super(new ContainerBlast(player, blast));

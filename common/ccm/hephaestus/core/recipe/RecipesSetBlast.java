@@ -9,7 +9,6 @@ import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
-
 final class RecipesSetBlast {
 
     public RecipesSetBlast() {

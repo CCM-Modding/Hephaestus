@@ -39,6 +39,7 @@ public enum EnumIngots implements IItemEnum {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
     }
 
+    @Override
     public Icon getIcon() {
         return this.icon;
     }

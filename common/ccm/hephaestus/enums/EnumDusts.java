@@ -42,6 +42,7 @@ public enum EnumDusts implements IItemEnum {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "dusts/");
     }
 
+    @Override
     public Icon getIcon() {
         return this.icon;
     }

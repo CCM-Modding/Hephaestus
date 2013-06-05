@@ -14,7 +14,7 @@ public final class TileConstants {
      * ******************************************************
      * Grinder Stuff ******************************************************
      */
-    public static final String GRINDER_UNLOCALIZED = CONTAINER + "grinder";
+    public static final String GRINDER_UNLOCALIZED = CONTAINER + "oregrinder";
 
     public static final String GRINDER_GUI = Locations.GUI + "guiGrinder.png";
 
@@ -29,7 +29,6 @@ public final class TileConstants {
     public static final String BLAST_GUI = Locations.GUI + "guiBlast.png";
 
     public static final int BLAST_GUID = 1;
-
 
     /*
      * ******************************************************

@@ -40,6 +40,7 @@ public enum EnumBlocks implements IBlockEnum {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "block/");
     }
 
+    @Override
     public Icon getIcon() {
         return this.icon;
     }

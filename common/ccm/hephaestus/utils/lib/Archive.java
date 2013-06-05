@@ -28,6 +28,5 @@ public final class Archive {
 
     public static final String INVALID_FINGERPRINT_MSG = "error.invalidFingerPrint";
 
-    public static final String[] LANGUAGE_FILES          =
-                                                         { "en_US", "es_ES" };
+    public static final String[] LANGUAGE_FILES = { "en_US", "es_ES" };
 }

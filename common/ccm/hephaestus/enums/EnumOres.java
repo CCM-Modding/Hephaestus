@@ -33,6 +33,7 @@ public enum EnumOres implements IBlockEnum {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "ore/");
     }
 
+    @Override
     public Icon getIcon() {
         return this.icon;
     }

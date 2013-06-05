@@ -31,6 +31,7 @@ public enum EnumHandle implements IItemEnum {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE);
     }
 
+    @Override
     public Icon getIcon() {
         return this.icon;
     }

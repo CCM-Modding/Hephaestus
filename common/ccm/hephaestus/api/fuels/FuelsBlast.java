@@ -79,6 +79,6 @@ public class FuelsBlast {
      * @return
      */
     public static int getSulfurValue(final ItemStack stack) {
-        return 3000; 
+        return 3000;
     }
 }

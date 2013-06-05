@@ -1,5 +1,13 @@
 package ccm.hephaestus.utils.registry;
 
+import net.minecraft.item.ItemStack;
+import ccm.hephaestus.Hephaestus;
+import ccm.hephaestus.block.ModBlocks;
+import ccm.hephaestus.enums.EnumOres;
+import ccm.hephaestus.utils.lib.Archive;
+import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.world.WorldGenerator;
 
 final class WorldRegistry {
 
@@ -7,7 +15,7 @@ final class WorldRegistry {
      * Registers all the World Generation.
      */
     protected static void registerWorld() {
-        /*if (Properties.enableWorldGenAluminum) {
+        if (Properties.enableWorldGenAluminum) {
             registerAluminum();
         }
         if (Properties.enableWorldGenCopper) {
@@ -30,47 +38,46 @@ final class WorldRegistry {
         }
         if (Properties.enableWorldGenTungsten) {
             registerTungsten();
-        }*/
+        }
     }
 
-    /*private static void registerAluminum() {
-        Handler.log(Hephaestus.instance, "Registering World Generation for ALuminum");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreAluminum.ordinal()), Properties.aluSize), Properties.aluMinHeight, Properties.aluMaxHeight, Properties.aluDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+    private static void registerAluminum() {
+        Handler.log(Hephaestus.instance, "Registering World Generation for Aluminum");
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreAluminum.ordinal()), EnumOres.oreAluminum.name(), Properties.aluSize, Properties.aluDensity, Properties.aluMinHeight, Properties.aluMaxHeight, Properties.enableWorldGenAluminum);
     }
 
     private static void registerCopper() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Copper");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreCopper.ordinal()), Properties.copSize), Properties.copMinHeight, Properties.copMaxHeight, Properties.copDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreCopper.ordinal()), EnumOres.oreCopper.name(), Properties.copSize, Properties.copDensity, Properties.copMinHeight, Properties.copMaxHeight, Properties.enableWorldGenCopper);
     }
 
     private static void registerLead() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Lead");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreLead.ordinal()), Properties.leadSize), Properties.leadMinHeight, Properties.leadMaxHeight, Properties.leadDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreLead.ordinal()), EnumOres.oreLead.name(), Properties.leadSize, Properties.leadDensity, Properties.leadMinHeight, Properties.leadMaxHeight, Properties.enableWorldGenLead);
     }
 
     private static void registerSilver() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Silver");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreSilver.ordinal()), Properties.silSize), Properties.silMinHeight, Properties.silMaxHeight, Properties.silDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreSilver.ordinal()), EnumOres.oreSilver.name(), Properties.silSize, Properties.silDensity, Properties.silMinHeight, Properties.silMaxHeight, Properties.enableWorldGenSilver);
     }
 
     private static void registerSulfur() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Sulfur");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreSulfur.ordinal()), Properties.sulSize), Properties.sulMinHeight, Properties.sulMaxHeight, Properties.sulDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreSulfur.ordinal()), EnumOres.oreSulfur.name(), Properties.sulSize, Properties.sulDensity, Properties.sulMinHeight, Properties.sulMaxHeight, Properties.enableWorldGenSulfur);
     }
 
     private static void registerTin() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Tin");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTin.ordinal()), Properties.tinSize), Properties.tinMinHeight, Properties.tinMaxHeight, Properties.tinDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTin.ordinal()), EnumOres.oreTin.name(), Properties.tinSize, Properties.tinDensity, Properties.tinMinHeight, Properties.tinMaxHeight, Properties.enableWorldGenTin);
     }
 
     private static void registerTitanium() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Titanium");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTitanium.ordinal()), Properties.titSize), Properties.titMinHeight, Properties.titMaxHeight, Properties.titDensity, WorldGenHandler.GenType.ORE_1.ordinal());
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTitanium.ordinal()), EnumOres.oreTitanium.name(), Properties.titSize, Properties.titDensity, Properties.titMinHeight, Properties.titMaxHeight, Properties.enableWorldGenTitanium);
     }
 
     private static void registerTungsten() {
         Handler.log(Hephaestus.instance, "Registering World Generation for Tungsten");
-        WorldGenHandler.addSurfaceGenerator(new WorldGenMinable(new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTungsten.ordinal()), Properties.tunSize), Properties.tunMinHeight, Properties.tunMaxHeight, Properties.tunDensity, WorldGenHandler.GenType.ORE_1.ordinal());
-    }*/
-
+        WorldGenerator.addOverworldGen(Archive.MOD_NAME, new ItemStack(ModBlocks.ores.blockID, 1, EnumOres.oreTungsten.ordinal()), EnumOres.oreTungsten.name(), Properties.tunSize, Properties.tunDensity, Properties.tunMinHeight, Properties.tunMaxHeight, Properties.enableWorldGenTungsten);
+    }
 }
