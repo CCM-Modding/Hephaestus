@@ -4,36 +4,32 @@ public final class TileConstants
 {
 
     /*
-     * ******************************************************
-     * Base Stuff ******************************************************
+     * ******************************** Base Stuff **********************************
      */
     public static final String CONTAINER           = "container.";
 
     public static final String INVENTORY           = CONTAINER + "inventory";
 
     /*
-     * ******************************************************
-     * Grinder Stuff ******************************************************
+     * ******************************* Grinder Stuff *********************************
      */
-    public static final String GRINDER_UNLOCALIZED = CONTAINER + "oregrinder";
+    public static final String GRINDER_GUID        = "oregrinder";
+
+    public static final String GRINDER_UNLOCALIZED = CONTAINER + GRINDER_GUID;
 
     public static final String GRINDER_GUI         = Locations.GUI + "guiGrinder.png";
 
-    public static final int    GRINDER_GUID        = 0;
-
     /*
-     * ******************************************************
-     * Grinder Stuff ******************************************************
+     * ****************************** Grinder Stuff ********************************
      */
-    public static final String BLAST_UNLOCALIZED   = CONTAINER + "blast";
+    public static final String BLAST_GUID          = "blast";
+
+    public static final String BLAST_UNLOCALIZED   = CONTAINER + BLAST_GUID;
 
     public static final String BLAST_GUI           = Locations.GUI + "guiBlast.png";
 
-    public static final int    BLAST_GUID          = 1;
-
     /*
-     * ******************************************************
-     * NBT Stuff ******************************************************
+     * ********************************* NBT Stuff *********************************
      */
     public static final String NBT_TE_Direction    = "direction";
 

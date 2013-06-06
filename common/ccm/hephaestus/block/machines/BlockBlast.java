@@ -14,6 +14,7 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+import ccm.nucleum_omnium.handler.GUIHandler;
 import ccm.nucleum_omnium.helper.TextureHelper;
 
 import ccm.hephaestus.Hephaestus;
@@ -103,7 +104,7 @@ public class BlockBlast extends BaseContainerBlock
         super.onBlockActivated(world, x, y, z, player, wut, clockZ, clockZ, clockZ);
         final TileBlast grinder = (TileBlast) world.getBlockTileEntity(x, y, z);
         if (grinder != null){
-            player.openGui(Hephaestus.instance, TileConstants.BLAST_GUID, world, x, y, z);
+            GUIHandler.openGui(Hephaestus.instance, TileConstants.BLAST_GUID, player, world, x, y, z);
             return true;
         }else{
             return false;

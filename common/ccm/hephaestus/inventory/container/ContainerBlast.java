@@ -5,6 +5,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -32,18 +33,18 @@ public class ContainerBlast extends ContainerBase
      *            at.
      */
     public ContainerBlast(final InventoryPlayer player,
-                          final TileBlast blast)
+                          final TileEntity blast)
     {
         super(player, blast, 8, 84, 142);
-        this.blast = blast;
+        this.blast = (TileBlast) blast;
         // (Input)
-        this.addSlotToContainer(new Slot(blast, 0, 57, 35));
+        this.addSlotToContainer(new Slot(this.blast, 0, 57, 35));
         // (Coal)
-        this.addSlotToContainer(new SlotBlastCoal(blast, 1, 30, 15));
+        this.addSlotToContainer(new SlotBlastCoal(this.blast, 1, 30, 15));
         // (Sulfur)
-        this.addSlotToContainer(new SlotBlastSulfur(blast, 2, 30, 45));
+        this.addSlotToContainer(new SlotBlastSulfur(this.blast, 2, 30, 45));
         // (Output)
-        this.addSlotToContainer(new SlotOutput(blast, 3, 124, 35));
+        this.addSlotToContainer(new SlotOutput(this.blast, 3, 124, 35));
     }
 
     @Override

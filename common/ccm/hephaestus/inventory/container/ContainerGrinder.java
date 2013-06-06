@@ -5,6 +5,7 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -30,16 +31,16 @@ public class ContainerGrinder extends ContainerBase
      *            at.
      */
     public ContainerGrinder(final InventoryPlayer player,
-                            final TileGrinder grinder)
+                            final TileEntity grinder)
     {
         super(player, grinder, 8, 84, 142);
-        this.grinder = grinder;
+        this.grinder = (TileGrinder) grinder;
         // (Input)
-        this.addSlotToContainer(new Slot(grinder, 0, 57, 35));
+        this.addSlotToContainer(new Slot(this.grinder, 0, 57, 35));
         // (Grinding)
-        this.addSlotToContainer(new SlotGrinder(grinder, 1, 30, 35));
+        this.addSlotToContainer(new SlotGrinder(this.grinder, 1, 30, 35));
         // (Output)
-        this.addSlotToContainer(new SlotOutput(grinder, 2, 124, 35));
+        this.addSlotToContainer(new SlotOutput(this.grinder, 2, 124, 35));
     }
 
     @Override

@@ -4,6 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.tileentity.TileEntity;
 
 import ccm.hephaestus.tileentity.TileBase;
 
@@ -13,12 +14,12 @@ public abstract class ContainerBase extends Container
     private final TileBase tileEntity;
 
     public ContainerBase(final InventoryPlayer player,
-                         final TileBase tileEntity,
+                         final TileEntity tileEntity,
                          final int xAxis,
                          final int playerY,
                          final int quickY)
     {
-        this.tileEntity = tileEntity;
+        this.tileEntity = (TileBase) tileEntity;
         // Add the player's inventory slots to the container
         for (int inventoryRowIndex = 0; inventoryRowIndex < 3; ++inventoryRowIndex){
             for (int inventoryColumnIndex = 0; inventoryColumnIndex < 9; ++inventoryColumnIndex){

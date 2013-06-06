@@ -4,6 +4,7 @@ import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.StatCollector;
 
 import ccm.hephaestus.inventory.container.ContainerBlast;
@@ -24,10 +25,10 @@ public class GUIBlast extends GuiContainer
      *            The {@link TileBlast} instance that the player is looking at.
      */
     public GUIBlast(final InventoryPlayer player,
-                    final TileBlast blast)
+                    final TileEntity blast)
     {
         super(new ContainerBlast(player, blast));
-        this.blast = blast;
+        this.blast = (TileBlast) blast;
     }
 
     /**
