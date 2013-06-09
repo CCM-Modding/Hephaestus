@@ -1,7 +1,6 @@
 package ccm.hephaestus.configuration;
 
-import net.minecraftforge.common.Configuration;
-
+import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
@@ -16,11 +15,11 @@ final class ConfigItems extends Config
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configItems(final Configuration config)
+    protected static void configItems(final AdvConfiguration config)
     {
         Handler.log(Hephaestus.instance, "Loading Items Configs");
-        Properties.itemHandleID = property.getNextUsableItemID(config, "All the Other Items").getInt();
-        Properties.itemIngotID = property.getNextUsableItemID(config, "All the Ingots").getInt();
-        Properties.itemDustID = property.getNextUsableItemID(config, "All the Dusts").getInt();
+        Properties.itemHandleID = config.getItem(config, "All the Other Items").getInt();
+        Properties.itemIngotID = config.getItem(config, "All the Ingots").getInt();
+        Properties.itemDustID = config.getItem(config, "All the Dusts").getInt();
     }
 }

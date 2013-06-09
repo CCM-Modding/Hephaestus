@@ -19,7 +19,7 @@ final class WorldRegistry
      */
     protected static void registerWorld()
     {
-        if (Properties.enableWorldGenAluminum){
+        if (Properties.enableWorldGenWhiteAlabaster){
             registerAluminum();
         }
         if (Properties.enableWorldGenCopper){
@@ -55,7 +55,7 @@ final class WorldRegistry
                                        Properties.aluDensity,
                                        Properties.aluMinHeight,
                                        Properties.aluMaxHeight,
-                                       Properties.enableWorldGenAluminum);
+                                       Properties.enableWorldGenWhiteAlabaster);
     }
 
     private static void registerCopper()

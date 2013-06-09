@@ -1,7 +1,6 @@
 package ccm.hephaestus.configuration;
 
-import net.minecraftforge.common.Configuration;
-
+import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
@@ -16,16 +15,16 @@ final class ConfigBlocks extends Config
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configBlocks(final Configuration config)
+    protected static void configBlocks(final AdvConfiguration config)
     {
         Handler.log(Hephaestus.instance, "Loading Blocks Configs");
-        Properties.oreID = property.getNextUsableBlockID(config, "Ores").getInt();
-        Properties.blocksID = property.getNextUsableBlockID(config, "Blocks").getInt();
+        Properties.oreID = config.getBlock(config, "Ores").getInt();
+        Properties.blocksID = config.getBlock(config, "Blocks").getInt();
 
-        Properties.blockGrinderID = property.getNextUsableBlockID(config, "Grinder").getInt();
-        Properties.blockGrinderRunningID = property.getNextUsableBlockID(config, "Grinder Active").getInt();
+        Properties.blockGrinderID = config.getBlock(config, "Grinder").getInt();
+        Properties.blockGrinderRunningID = config.getBlock(config, "Grinder Active").getInt();
 
-        Properties.blockBlastID = property.getNextUsableBlockID(config, "Blast Furnace").getInt();
-        Properties.blockBlastRunningID = property.getNextUsableBlockID(config, "Blast Furnace Active").getInt();
+        Properties.blockBlastID = config.getBlock(config, "Blast Furnace").getInt();
+        Properties.blockBlastRunningID = config.getBlock(config, "Blast Furnace Active").getInt();
     }
 }

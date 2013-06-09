@@ -55,7 +55,7 @@ public class Properties
      */
 
     // Aluminum
-    public static boolean enableWorldGenAluminum;
+    public static boolean enableWorldGenWhiteAlabaster;
 
     public static int     aluMaxHeight;
 
