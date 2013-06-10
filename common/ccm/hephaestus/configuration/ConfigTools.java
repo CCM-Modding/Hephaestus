@@ -17,11 +17,12 @@ final class ConfigTools extends Config
      */
     protected static void configUsable(final AdvConfiguration config)
     {
+        String stone = "GrindStone";
         Handler.log(Hephaestus.instance, "Loading Tools Configs");
-        Properties.gsStoneID = config.getItem(config, "Grind Stone, Stone").getInt();
-        Properties.gsIronID = config.getItem(config, "Grind Stone, Iron").getInt();
-        Properties.gsBronzeID = config.getItem(config, "Grind Stone, Bronze").getInt();
-        Properties.gsObsidianID = config.getItem(config, "Grind Stone, Obsidian").getInt();
-        Properties.gsDiamondID = config.getItem(config, "Grind Stone, Diamond").getInt();
+        Properties.gsStoneID = config.getItem("Stone" + stone, Properties.itemID).getInt();
+        Properties.gsIronID = config.getItem("Iron" + stone, Properties.itemID).getInt();
+        Properties.gsBronzeID = config.getItem("Bronze" + stone, Properties.itemID).getInt();
+        Properties.gsObsidianID = config.getItem("Obsidian" + stone, Properties.itemID).getInt();
+        Properties.gsDiamondID = config.getItem("Diamond" + stone, Properties.itemID).getInt();
     }
 }

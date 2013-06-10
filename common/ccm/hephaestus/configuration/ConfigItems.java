@@ -18,8 +18,8 @@ final class ConfigItems extends Config
     protected static void configItems(final AdvConfiguration config)
     {
         Handler.log(Hephaestus.instance, "Loading Items Configs");
-        Properties.itemHandleID = config.getItem(config, "All the Other Items").getInt();
-        Properties.itemIngotID = config.getItem(config, "All the Ingots").getInt();
-        Properties.itemDustID = config.getItem(config, "All the Dusts").getInt();
+        Properties.itemHandleID = config.getItem("Items", Properties.itemID).getInt();
+        Properties.itemIngotID = config.getItem("Ingots", Properties.itemID).getInt();
+        Properties.itemDustID = config.getItem("Dusts", Properties.itemID).getInt();
     }
 }

@@ -18,13 +18,13 @@ final class ConfigBlocks extends Config
     protected static void configBlocks(final AdvConfiguration config)
     {
         Handler.log(Hephaestus.instance, "Loading Blocks Configs");
-        Properties.oreID = config.getBlock(config, "Ores").getInt();
-        Properties.blocksID = config.getBlock(config, "Blocks").getInt();
+        Properties.oreID = config.getBlock("Ores", Properties.blocksID).getInt();
+        Properties.blocksID = config.getBlock("Blocks", Properties.blocksID).getInt();
 
-        Properties.blockGrinderID = config.getBlock(config, "Grinder").getInt();
-        Properties.blockGrinderRunningID = config.getBlock(config, "Grinder Active").getInt();
+        Properties.blockGrinderID = config.getBlock("Grinder", Properties.blocksID).getInt();
+        Properties.blockGrinderRunningID = config.getBlock("Grinder_Active", Properties.blocksID).getInt();
 
-        Properties.blockBlastID = config.getBlock(config, "Blast Furnace").getInt();
-        Properties.blockBlastRunningID = config.getBlock(config, "Blast Furnace Active").getInt();
+        Properties.blockBlastID = config.getBlock("BlastFurnace", Properties.blocksID).getInt();
+        Properties.blockBlastRunningID = config.getBlock("BlastFurnace_Active", Properties.blocksID).getInt();
     }
 }
