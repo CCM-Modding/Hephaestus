@@ -1,5 +1,8 @@
 package ccm.hephaestus.utils.language;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import ccm.nucleum_omnium.helper.LanguageHelper;
@@ -9,6 +12,11 @@ import ccm.hephaestus.utils.lib.Locations;
 
 public class HephaestusLanguagePack extends ILanguagePack
 {
+
+    /**
+     * Private {@code List<String>} that contains the languages, Shared with all Language Packs
+     */
+    private List<String> supportedLanguages = new ArrayList<String>();
 
     /**
      * Adds all the supported Languages
