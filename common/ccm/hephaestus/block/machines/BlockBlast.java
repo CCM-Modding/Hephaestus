@@ -14,8 +14,6 @@ import net.minecraftforge.common.ForgeDirection;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import ccm.nucleum_omnium.handler.GUIHandler;
-import ccm.nucleum_omnium.helper.TextureHelper;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
@@ -23,6 +21,8 @@ import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum.handler.GUIHandler;
+import ccm.nucleum.helper.TextureHelper;
 
 public class BlockBlast extends BaseContainerBlock
 {

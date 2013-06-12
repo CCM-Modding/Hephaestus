@@ -3,13 +3,13 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
+import ccm.nucleum.helper.enums.EnumHelper;
 
 final class RecipesSetBlast
 {

@@ -2,12 +2,12 @@ package ccm.hephaestus.utils.registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.item.itemblock.ItemBlockBlock;
 import ccm.hephaestus.item.itemblock.ItemBlockOre;
+import ccm.nucleum.handler.Handler;
 
 final class BlockRegistry
 {

@@ -7,10 +7,10 @@ import net.minecraft.item.ItemHoe;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-import ccm.nucleum_omnium.helper.TextureHelper;
 
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
+import ccm.nucleum.helper.TextureHelper;
 
 public class DummyHoe extends ItemHoe
 {

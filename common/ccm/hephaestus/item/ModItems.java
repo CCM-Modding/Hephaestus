@@ -2,12 +2,12 @@ package ccm.hephaestus.item;
 
 import net.minecraft.item.Item;
 
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.classes.BaseItem;
 import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum.handler.Handler;
 
 public final class ModItems
 {

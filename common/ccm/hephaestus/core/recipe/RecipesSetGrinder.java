@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 import ccm.hephaestus.api.fuels.FuelsGrinder;
 import ccm.hephaestus.api.recipes.RecipesGrinder;
@@ -12,6 +11,7 @@ import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.hephaestus.item.ModItems;
+import ccm.nucleum.helper.enums.EnumHelper;
 
 final class RecipesSetGrinder
 {

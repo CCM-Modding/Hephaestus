@@ -4,12 +4,12 @@ import net.minecraft.tileentity.TileEntity;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.tileentity.TileGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum.handler.Handler;
 
 final class TileRegistry
 {

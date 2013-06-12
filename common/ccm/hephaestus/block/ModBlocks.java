@@ -2,12 +2,12 @@ package ccm.hephaestus.block;
 
 import net.minecraft.block.Block;
 
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum.handler.Handler;
 
 public final class ModBlocks
 {

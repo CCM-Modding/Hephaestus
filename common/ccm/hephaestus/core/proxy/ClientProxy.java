@@ -5,7 +5,6 @@ import net.minecraftforge.common.ForgeDirection;
 
 import cpw.mods.fml.client.FMLClientHandler;
 
-import ccm.nucleum_omnium.handler.GUIHandler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.client.inventory.gui.GUIBlast;
@@ -14,6 +13,7 @@ import ccm.hephaestus.inventory.container.ContainerBlast;
 import ccm.hephaestus.inventory.container.ContainerGrinder;
 import ccm.hephaestus.tileentity.TileBase;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum.handler.GUIHandler;
 
 public class ClientProxy extends CommonProxy
 {

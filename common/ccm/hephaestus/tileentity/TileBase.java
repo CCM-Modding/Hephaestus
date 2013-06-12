@@ -8,11 +8,11 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.ForgeDirection;
 
-import ccm.nucleum_omnium.helper.InventoryHelper;
 
 import ccm.hephaestus.network.PacketTypeHandler;
 import ccm.hephaestus.network.packet.PacketTileUpdate;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum.helper.InventoryHelper;
 
 public abstract class TileBase extends TileEntity implements IInventory
 {

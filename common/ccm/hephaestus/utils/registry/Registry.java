@@ -2,10 +2,10 @@ package ccm.hephaestus.utils.registry;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
 
-import ccm.nucleum_omnium.handler.GUIHandler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.core.recipe.RecipeHandler;
+import ccm.nucleum.handler.GUIHandler;
 
 public final class Registry
 {

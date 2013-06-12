@@ -4,11 +4,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
+import ccm.nucleum.helper.enums.EnumHelper;
 
 final class RecipesSmelting
 {

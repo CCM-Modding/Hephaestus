@@ -15,9 +15,6 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-import ccm.nucleum_omnium.BaseMod;
-import ccm.nucleum_omnium.IMod;
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.configuration.Config;
@@ -29,6 +26,9 @@ import ccm.hephaestus.utils.language.HephaestusLanguagePack;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.registry.Registry;
+import ccm.nucleum.BaseMod;
+import ccm.nucleum.IMod;
+import ccm.nucleum.handler.Handler;
 
 @Mod(modid = Archive.MOD_ID,
      name = Archive.MOD_NAME,

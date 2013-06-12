@@ -4,11 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 
-import ccm.nucleum_omnium.helper.TextureHelper;
-import ccm.nucleum_omnium.helper.enums.IBlockEnum;
 
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.utils.lib.Locations;
+import ccm.nucleum.helper.TextureHelper;
+import ccm.nucleum.helper.enums.IBlockEnum;
 
 public enum EnumOres implements IBlockEnum
 {

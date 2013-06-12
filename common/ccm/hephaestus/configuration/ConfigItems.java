@@ -1,10 +1,10 @@
 package ccm.hephaestus.configuration;
 
-import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.Handler;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum.configuration.AdvConfiguration;
+import ccm.nucleum.handler.Handler;
 
 final class ConfigItems extends Config
 {
