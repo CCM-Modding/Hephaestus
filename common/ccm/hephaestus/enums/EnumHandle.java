@@ -3,15 +3,12 @@ package ccm.hephaestus.enums;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
-
-
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum.helper.TextureHelper;
 import ccm.nucleum.helper.enums.IItemEnum;
 
-public enum EnumHandle implements IItemEnum
-{
+public enum EnumHandle implements IItemEnum {
 
     handleWood,
     handleBronze,
@@ -20,31 +17,26 @@ public enum EnumHandle implements IItemEnum
     handleSteel,
     handleTitanium;
 
-    public static void registerIcons(final IconRegister register)
-    {
-        for (final EnumHandle handle : EnumHandle.values()){
+    public static void registerIcons(final IconRegister register) {
+        for (final EnumHandle handle : EnumHandle.values())
             handle.icon = register.registerIcon(handle.texture);
-        }
     }
 
     private Icon        icon;
 
     public final String texture;
 
-    private EnumHandle()
-    {
+    private EnumHandle() {
         this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE);
     }
 
     @Override
-    public Icon getIcon()
-    {
+    public Icon getIcon() {
         return this.icon;
     }
 
     @Override
-    public Item getBaseItem()
-    {
+    public Item getBaseItem() {
         return ModItems.itemHandle;
     }
 }

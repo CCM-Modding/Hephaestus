@@ -1,13 +1,11 @@
 package ccm.hephaestus.configuration;
 
-
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.configuration.AdvConfiguration;
 import ccm.nucleum.handler.Handler;
 
-final class ConfigTools extends Config
-{
+final class ConfigTools extends Config {
 
     /**
      * Loads or creates the Usable Items in the Configuration file.
@@ -15,9 +13,8 @@ final class ConfigTools extends Config
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configUsable(final AdvConfiguration config)
-    {
-        String stone = "GrindStone";
+    protected static void configUsable(final AdvConfiguration config) {
+        final String stone = "GrindStone";
         Handler.log(Hephaestus.instance, "Loading Tools Configs");
         Properties.gsStoneID = config.getItem("Stone" + stone, Properties.itemID).getInt();
         Properties.gsIronID = config.getItem("Iron" + stone, Properties.itemID).getInt();

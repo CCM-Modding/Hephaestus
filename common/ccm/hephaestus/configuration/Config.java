@@ -2,14 +2,12 @@ package ccm.hephaestus.configuration;
 
 import java.util.logging.Level;
 
-
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum.configuration.AdvConfiguration;
 import ccm.nucleum.handler.Handler;
 
-public class Config
-{
+public class Config {
 
     /**
      * Initializes the Configuration file.
@@ -18,9 +16,8 @@ public class Config
      *            The FMLPreInitializationEvent that is used to get the
      *            ModConfigurationDirectory.
      */
-    public static void init(final AdvConfiguration config)
-    {
-        try{
+    public static void init(final AdvConfiguration config) {
+        try {
             Handler.log(Hephaestus.instance, "Loading configuration");
             // Loads a pre-existing Configuration file.
             config.load();
@@ -28,10 +25,11 @@ public class Config
             ConfigTools.configUsable(config);
             ConfigWorldGen.configWorldGen(config);
             ConfigBlocks.configBlocks(config);
-        }catch(final Exception e){
-            Handler.log(Hephaestus.instance, Level.SEVERE, Archive.MOD_NAME + " has had a problem loading its configuration");
+        } catch (final Exception e) {
+            Handler.log(Hephaestus.instance, Level.SEVERE, Archive.MOD_NAME
+                    + " has had a problem loading its configuration");
             e.printStackTrace();
-        }finally{
+        } finally {
             config.save();
         }
     }

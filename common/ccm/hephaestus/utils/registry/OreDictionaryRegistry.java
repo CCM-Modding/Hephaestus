@@ -1,8 +1,6 @@
 package ccm.hephaestus.utils.registry;
 
 import net.minecraftforge.oredict.OreDictionary;
-
-
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumDusts;
@@ -11,17 +9,16 @@ import ccm.hephaestus.enums.EnumOres;
 import ccm.nucleum.handler.Handler;
 import ccm.nucleum.helper.enums.EnumHelper;
 
-final class OreDictionaryRegistry
-{
+final class OreDictionaryRegistry {
 
     /**
      * Registers all the Entries to the Ore Dictionary.
      */
-    protected static void oreDictionary()
-    {
+    protected static void oreDictionary() {
         Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");
 
-        OreDictionary.registerOre("naturalAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
+        OreDictionary
+                .registerOre("naturalAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
         OreDictionary.registerOre("ingotAluminium", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
         OreDictionary.registerOre("ingotAluminum", EnumHelper.getItemIS(EnumIngots.ingotAluminum));
         OreDictionary.registerOre("ingotCopper", EnumHelper.getItemIS(EnumIngots.ingotCopper));
@@ -44,7 +41,8 @@ final class OreDictionaryRegistry
         OreDictionary.registerOre("dustTitanium", EnumHelper.getItemIS(EnumDusts.dustTitanium));
         OreDictionary.registerOre("dustTungsten", EnumHelper.getItemIS(EnumDusts.dustTungsten));
 
-        OreDictionary.registerOre("blockNaturalAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
+        OreDictionary.registerOre("blockNaturalAluminum",
+                EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
         OreDictionary.registerOre("blockAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
         OreDictionary.registerOre("blockAluminum", EnumHelper.getBlockIS(EnumBlocks.blockAluminum));
         OreDictionary.registerOre("blockCopper", EnumHelper.getBlockIS(EnumBlocks.blockCopper));
@@ -56,7 +54,8 @@ final class OreDictionaryRegistry
         OreDictionary.registerOre("blockTitanium", EnumHelper.getBlockIS(EnumBlocks.blockTitanium));
         OreDictionary.registerOre("blockTungsten", EnumHelper.getBlockIS(EnumBlocks.blockTungsten));
 
-        OreDictionary.registerOre("oreNaturalAluminium", EnumHelper.getBlockIS(EnumOres.oreAluminum));
+        OreDictionary.registerOre("oreNaturalAluminium",
+                EnumHelper.getBlockIS(EnumOres.oreAluminum));
         OreDictionary.registerOre("oreAluminium", EnumHelper.getBlockIS(EnumOres.oreAluminum));
         OreDictionary.registerOre("oreAluminum", EnumHelper.getBlockIS(EnumOres.oreAluminum));
         OreDictionary.registerOre("oreCopper", EnumHelper.getBlockIS(EnumOres.oreCopper));

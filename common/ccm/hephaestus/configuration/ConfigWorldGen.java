@@ -1,11 +1,9 @@
 package ccm.hephaestus.configuration;
 
-
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.configuration.AdvConfiguration;
 
-final class ConfigWorldGen extends Config
-{
+final class ConfigWorldGen extends Config {
 
     final static String gen    = "World Generation  of ";
 
@@ -33,16 +31,24 @@ final class ConfigWorldGen extends Config
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configWorldGen(final AdvConfiguration config)
-    {
+    protected static void configWorldGen(final AdvConfiguration config) {
 
-        Properties.enableWorldGenWhiteAlabaster = config.get(gen + whiteA, "EnableWhiteAlabaster", true).getBoolean(true);
-        Properties.enableWorldGenCopper = config.get(gen + cop, ena + cop, true).getBoolean(true);
-        Properties.enableWorldGenLead = config.get(gen + lead, ena + lead, true).getBoolean(true);
-        Properties.enableWorldGenSilver = config.get(gen + sil, ena + sil, true).getBoolean(true);
-        Properties.enableWorldGenSulfur = config.get(gen + sul, ena + sul, true).getBoolean(true);
-        Properties.enableWorldGenTin = config.get(gen + tin, ena + tin, true).getBoolean(true);
-        Properties.enableWorldGenTitanium = config.get(gen + tit, ena + tit, true).getBoolean(true);
-        Properties.enableWorldGenTungsten = config.get(gen + tun, ena + tun, true).getBoolean(true);
+        Properties.enableWorldGenWhiteAlabaster = config.get(
+                ConfigWorldGen.gen + ConfigWorldGen.whiteA, "EnableWhiteAlabaster", true)
+                .getBoolean(true);
+        Properties.enableWorldGenCopper = config.get(ConfigWorldGen.gen + ConfigWorldGen.cop,
+                ConfigWorldGen.ena + ConfigWorldGen.cop, true).getBoolean(true);
+        Properties.enableWorldGenLead = config.get(ConfigWorldGen.gen + ConfigWorldGen.lead,
+                ConfigWorldGen.ena + ConfigWorldGen.lead, true).getBoolean(true);
+        Properties.enableWorldGenSilver = config.get(ConfigWorldGen.gen + ConfigWorldGen.sil,
+                ConfigWorldGen.ena + ConfigWorldGen.sil, true).getBoolean(true);
+        Properties.enableWorldGenSulfur = config.get(ConfigWorldGen.gen + ConfigWorldGen.sul,
+                ConfigWorldGen.ena + ConfigWorldGen.sul, true).getBoolean(true);
+        Properties.enableWorldGenTin = config.get(ConfigWorldGen.gen + ConfigWorldGen.tin,
+                ConfigWorldGen.ena + ConfigWorldGen.tin, true).getBoolean(true);
+        Properties.enableWorldGenTitanium = config.get(ConfigWorldGen.gen + ConfigWorldGen.tit,
+                ConfigWorldGen.ena + ConfigWorldGen.tit, true).getBoolean(true);
+        Properties.enableWorldGenTungsten = config.get(ConfigWorldGen.gen + ConfigWorldGen.tun,
+                ConfigWorldGen.ena + ConfigWorldGen.tun, true).getBoolean(true);
     }
 }
