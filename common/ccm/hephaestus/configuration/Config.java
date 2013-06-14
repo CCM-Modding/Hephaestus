@@ -4,8 +4,8 @@ import java.util.logging.Level;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Archive;
-import ccm.nucleum.configuration.AdvConfiguration;
-import ccm.nucleum.handler.Handler;
+import ccm.nucleum_omnium.configuration.AdvConfiguration;
+import ccm.nucleum_omnium.handler.Handler;
 
 public class Config {
 

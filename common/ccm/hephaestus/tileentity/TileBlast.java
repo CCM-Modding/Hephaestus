@@ -6,7 +6,7 @@ import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum.helper.InventoryHelper;
+import ccm.nucleum_omnium.helper.InventoryHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

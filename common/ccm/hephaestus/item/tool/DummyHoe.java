@@ -5,7 +5,7 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemHoe;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.helper.TextureHelper;
+import ccm.nucleum_omnium.helper.TextureHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

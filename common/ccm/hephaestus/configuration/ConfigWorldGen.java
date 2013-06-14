@@ -1,7 +1,7 @@
 package ccm.hephaestus.configuration;
 
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.configuration.AdvConfiguration;
+import ccm.nucleum_omnium.configuration.AdvConfiguration;
 
 final class ConfigWorldGen extends Config {
 

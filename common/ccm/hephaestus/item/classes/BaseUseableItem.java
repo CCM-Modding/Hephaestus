@@ -3,7 +3,7 @@ package ccm.hephaestus.item.classes;
 import net.minecraft.client.renderer.texture.IconRegister;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.helper.TextureHelper;
+import ccm.nucleum_omnium.helper.TextureHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

@@ -6,8 +6,8 @@ import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.enums.EnumOres;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.handler.Handler;
-import ccm.nucleum.world.WorldGenerator;
+import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_world.WorldGenerator;
 
 final class WorldRegistry {
 

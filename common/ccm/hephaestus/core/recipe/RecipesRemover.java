@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import ccm.hephaestus.Hephaestus;
-import ccm.nucleum.handler.Handler;
+import ccm.nucleum_omnium.handler.Handler;
 
 final class RecipesRemover {
 

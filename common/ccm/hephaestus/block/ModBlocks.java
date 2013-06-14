@@ -5,7 +5,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.handler.Handler;
+import ccm.nucleum_omnium.handler.Handler;
 
 public final class ModBlocks {
 

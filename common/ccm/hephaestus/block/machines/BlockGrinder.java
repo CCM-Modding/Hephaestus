@@ -16,8 +16,8 @@ import ccm.hephaestus.tileentity.TileGrinder;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum.handler.GUIHandler;
-import ccm.nucleum.helper.TextureHelper;
+import ccm.nucleum_omnium.handler.GUIHandler;
+import ccm.nucleum_omnium.helper.TextureHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

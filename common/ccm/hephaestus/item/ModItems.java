@@ -5,7 +5,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.classes.BaseItem;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.handler.Handler;
+import ccm.nucleum_omnium.handler.Handler;
 
 public final class ModItems {
 

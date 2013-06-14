@@ -5,7 +5,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.inventory.container.ContainerBlast;
 import ccm.hephaestus.inventory.container.ContainerGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum.handler.GUIHandler;
+import ccm.nucleum_omnium.handler.GUIHandler;
 
 public class CommonProxy {
 

@@ -8,7 +8,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
-import ccm.nucleum.helper.enums.EnumHelper;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 final class RecipesCrafting {
 

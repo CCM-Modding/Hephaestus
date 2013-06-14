@@ -7,7 +7,7 @@ import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum.helper.enums.EnumHelper;
+import ccm.nucleum_omnium.helper.enums.EnumHelper;
 
 final class RecipesSetBlast {
 
