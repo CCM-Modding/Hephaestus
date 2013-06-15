@@ -8,7 +8,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
+import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesCrafting {
 
@@ -23,7 +23,7 @@ final class RecipesCrafting {
                 .getInstance()
                 .getRecipeList()
                 .add(new ShapedOreRecipe(new ItemStack(ModBlocks.blockGrinder), new Object[] {
-                        "xxx", "x x", "xxx", 'x', EnumHelper.getItemIS(EnumIngots.ingotSteel) }));
+                        "xxx", "x x", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotSteel) }));
         CraftingManager
                 .getInstance()
                 .getRecipeList()
@@ -40,28 +40,28 @@ final class RecipesCrafting {
         CraftingManager
                 .getInstance()
                 .getRecipeList()
-                .add(new ShapelessOreRecipe(EnumHelper.getItemIS(EnumDusts.dustBronze, 4),
-                        EnumHelper.getItemIS(EnumDusts.dustCopper), EnumHelper
-                                .getItemIS(EnumDusts.dustCopper), EnumHelper
-                                .getItemIS(EnumDusts.dustCopper), EnumHelper
+                .add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDusts.dustBronze, 4),
+                        EnumToItemStack.getItemIS(EnumDusts.dustCopper), EnumToItemStack
+                                .getItemIS(EnumDusts.dustCopper), EnumToItemStack
+                                .getItemIS(EnumDusts.dustCopper), EnumToItemStack
                                 .getItemIS(EnumDusts.dustTin)));
         CraftingManager
                 .getInstance()
                 .getRecipeList()
-                .add(new ShapelessOreRecipe(EnumHelper.getItemIS(EnumDusts.dustHardIron, 5),
-                        EnumHelper.getItemIS(EnumDusts.dustIron), EnumHelper
-                                .getItemIS(EnumDusts.dustIron), EnumHelper
-                                .getItemIS(EnumDusts.dustIron), EnumHelper
-                                .getItemIS(EnumDusts.dustLead), EnumHelper
+                .add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDusts.dustHardIron, 5),
+                        EnumToItemStack.getItemIS(EnumDusts.dustIron), EnumToItemStack
+                                .getItemIS(EnumDusts.dustIron), EnumToItemStack
+                                .getItemIS(EnumDusts.dustIron), EnumToItemStack
+                                .getItemIS(EnumDusts.dustLead), EnumToItemStack
                                 .getItemIS(EnumDusts.dustLead)));
         CraftingManager
                 .getInstance()
                 .getRecipeList()
-                .add(new ShapelessOreRecipe(EnumHelper.getItemIS(EnumDusts.dustTitanite, 5),
-                        EnumHelper.getItemIS(EnumDusts.dustTitanium), EnumHelper
-                                .getItemIS(EnumDusts.dustTitanium), EnumHelper
-                                .getItemIS(EnumDusts.dustTitanium), EnumHelper
-                                .getItemIS(EnumDusts.dustAluminum), EnumHelper
+                .add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDusts.dustTitanite, 5),
+                        EnumToItemStack.getItemIS(EnumDusts.dustTitanium), EnumToItemStack
+                                .getItemIS(EnumDusts.dustTitanium), EnumToItemStack
+                                .getItemIS(EnumDusts.dustTitanium), EnumToItemStack
+                                .getItemIS(EnumDusts.dustAluminum), EnumToItemStack
                                 .getItemIS(EnumDusts.dustAluminum)));
     }
 

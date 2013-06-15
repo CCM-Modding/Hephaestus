@@ -5,7 +5,7 @@ import ccm.hephaestus.enums.EnumHandle;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
+import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 public class HephaestusTabs {
 
@@ -37,9 +37,9 @@ public class HephaestusTabs {
     }
 
     public static void initTabIcons() {
-        HephaestusTabs.tabHephaestusBlocks.init(EnumHelper.getBlockIS(EnumBlocks.blockCopper));
-        HephaestusTabs.tabHephaestusMaterials.init(EnumHelper.getItemIS(EnumIngots.ingotCopper));
-        HephaestusTabs.tabHephaestusParts.init(EnumHelper.getItemIS(EnumHandle.handleWood));
-        HephaestusTabs.tabHephaestusTools.init(EnumHelper.getItemIS(EnumHandle.handleWood));
+        HephaestusTabs.tabHephaestusBlocks.init(EnumToItemStack.getBlockIS(EnumBlocks.blockCopper));
+        HephaestusTabs.tabHephaestusMaterials.init(EnumToItemStack.getItemIS(EnumIngots.ingotCopper));
+        HephaestusTabs.tabHephaestusParts.init(EnumToItemStack.getItemIS(EnumHandle.handleWood));
+        HephaestusTabs.tabHephaestusTools.init(EnumToItemStack.getItemIS(EnumHandle.handleWood));
     }
 }

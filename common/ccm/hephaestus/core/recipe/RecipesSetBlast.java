@@ -7,7 +7,7 @@ import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum_omnium.helper.enums.EnumHelper;
+import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesSetBlast {
 
@@ -18,36 +18,36 @@ final class RecipesSetBlast {
 
     private static void registerFuels() {
         FuelsBlast.registerCoalFuel(new ItemStack(Item.coal));
-        FuelsBlast.registerSulfurFuel(EnumHelper.getItemIS(EnumDusts.dustSulfur));
+        FuelsBlast.registerSulfurFuel(EnumToItemStack.getItemIS(EnumDusts.dustSulfur));
     }
 
     // needs ore dictionary
     private static void registerRecipes() {
 
-        RecipesBlast.smelting().addSmelting(EnumHelper.getBlockIS(EnumOres.oreTitanium),
-                EnumHelper.getItemIS(EnumIngots.ingotTitanium));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getBlockIS(EnumOres.oreTungsten),
-                EnumHelper.getItemIS(EnumIngots.ingotTungsten));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getBlockIS(EnumOres.oreTitanium),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTitanium));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getBlockIS(EnumOres.oreTungsten),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTungsten));
 
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumIngots.ingotHeavyIron),
-                EnumHelper.getItemIS(EnumIngots.ingotHardIron));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumIngots.ingotTitanium),
-                EnumHelper.getItemIS(EnumIngots.ingotTitCarbide));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumIngots.ingotTungsten),
-                EnumHelper.getItemIS(EnumIngots.ingotTunCarbide));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumIngots.ingotHeavyIron),
+                EnumToItemStack.getItemIS(EnumIngots.ingotHardIron));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumIngots.ingotTitanium),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTitCarbide));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumIngots.ingotTungsten),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTunCarbide));
 
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustHardIron),
-                EnumHelper.getItemIS(EnumIngots.ingotHardIron));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustTitanite),
-                EnumHelper.getItemIS(EnumIngots.ingotTitanite));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustTitanium),
-                EnumHelper.getItemIS(EnumIngots.ingotTitanium));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustTitCarbide),
-                EnumHelper.getItemIS(EnumIngots.ingotTitCarbide));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustTunCarbide),
-                EnumHelper.getItemIS(EnumIngots.ingotTunCarbide));
-        RecipesBlast.smelting().addSmelting(EnumHelper.getItemIS(EnumDusts.dustTungsten),
-                EnumHelper.getItemIS(EnumIngots.ingotTungsten));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustHardIron),
+                EnumToItemStack.getItemIS(EnumIngots.ingotHardIron));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustTitanite),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTitanite));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustTitanium),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTitanium));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustTitCarbide),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTitCarbide));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustTunCarbide),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTunCarbide));
+        RecipesBlast.smelting().addSmelting(EnumToItemStack.getItemIS(EnumDusts.dustTungsten),
+                EnumToItemStack.getItemIS(EnumIngots.ingotTungsten));
 
     }
 }

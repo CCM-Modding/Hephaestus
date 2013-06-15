@@ -14,6 +14,7 @@ import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum_omnium.BaseMod;
 import ccm.nucleum_omnium.IMod;
+import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.handler.Handler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.FingerprintWarning;
@@ -38,20 +39,22 @@ import cpw.mods.fml.common.network.NetworkMod;
             channels = Archive.MOD_CHANNEL,
             packetHandler = PacketHandler.class)
 public class Hephaestus extends BaseMod implements IMod {
-
+    
     /**
      * The MoreOres Instance
      */
     @Instance(Archive.MOD_ID)
-    public static Hephaestus  instance;
-
+    public static Hephaestus       instance;
+    
     /**
      * The MoreOres proxy
      */
     @SidedProxy(serverSide = Locations.SERVER_PROXY,
                 clientSide = Locations.CLIENT_PROXY)
-    public static CommonProxy proxy;
-
+    public static CommonProxy      proxy;
+    
+    public static AdvConfiguration config;
+    
     @FingerprintWarning
     public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
         /*
@@ -60,36 +63,43 @@ public class Hephaestus extends BaseMod implements IMod {
          */
         Handler.log(this, Level.SEVERE, Archive.INVALID_FINGERPRINT_MSG);
     }
-
+    
     @PreInit
     public void preInit(final FMLPreInitializationEvent evt) {
         if (!Handler.isModLoaded(this)) {
-
+            
             Handler.initLog(this);
-
-            Config.init(this.initializeConfig(evt));
-
+            
+            config = this.initializeConfig(evt);
+            
+            Config.init(config);
+            
             HephaestusTabs.initTabs();
-
+            
             ModItems.init();
-
+            
             ModBlocks.init();
-
+            
             HephaestusTabs.initTabIcons();
         }
     }
-
+    
     @Init
     public void init(final FMLInitializationEvent event) {
         Hephaestus.proxy.registerGUIs();
-
+        
         Registry.register();
-
+        
         new HephaestusLanguagePack().loadLangs();
     }
-
+    
     @PostInit
     public void PostInit(final FMLPostInitializationEvent event) {
         Handler.loadMod(this);
+    }
+    
+    @Override
+    public AdvConfiguration getConfigFile() {
+        return config;
     }
 }
