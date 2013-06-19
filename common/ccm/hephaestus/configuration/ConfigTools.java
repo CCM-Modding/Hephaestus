@@ -6,7 +6,7 @@ import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.handler.Handler;
 
 final class ConfigTools extends Config {
-
+    
     /**
      * Loads or creates the Usable Items in the Configuration file.
      * 

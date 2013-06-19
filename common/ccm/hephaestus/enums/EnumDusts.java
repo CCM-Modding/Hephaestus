@@ -9,7 +9,7 @@ import ccm.nucleum_omnium.helper.TextureHelper;
 import ccm.nucleum_omnium.helper.enums.IItemEnum;
 
 public enum EnumDusts implements IItemEnum {
-
+    
     dustAluminum,
     dustBronze,
     dustCopper,
@@ -27,25 +27,26 @@ public enum EnumDusts implements IItemEnum {
     dustTitCarbide,
     dustTunCarbide,
     dustTungsten;
-
+    
     public static void registerIcons(final IconRegister register) {
-        for (final EnumDusts dust : EnumDusts.values())
+        for (final EnumDusts dust : EnumDusts.values()) {
             dust.icon = register.registerIcon(dust.texture);
+        }
     }
-
+    
     private Icon        icon;
-
+    
     public final String texture;
-
+    
     private EnumDusts() {
-        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE + "dusts/");
+        texture = TextureHelper.getTextureFromName(name(), Locations.TEXTURE + "dusts/");
     }
-
+    
     @Override
     public Icon getIcon() {
-        return this.icon;
+        return icon;
     }
-
+    
     @Override
     public Item getBaseItem() {
         return ModItems.itemDust;

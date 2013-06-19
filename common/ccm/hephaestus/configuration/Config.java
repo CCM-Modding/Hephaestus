@@ -8,13 +8,12 @@ import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.handler.Handler;
 
 public class Config {
-
+    
     /**
      * Initializes the Configuration file.
      * 
      * @param event
-     *            The FMLPreInitializationEvent that is used to get the
-     *            ModConfigurationDirectory.
+     *            The FMLPreInitializationEvent that is used to get the ModConfigurationDirectory.
      */
     public static void init(final AdvConfiguration config) {
         try {
@@ -26,8 +25,7 @@ public class Config {
             ConfigWorldGen.configWorldGen(config);
             ConfigBlocks.configBlocks(config);
         } catch (final Exception e) {
-            Handler.log(Hephaestus.instance, Level.SEVERE, Archive.MOD_NAME
-                    + " has had a problem loading its configuration");
+            Handler.log(Hephaestus.instance, Level.SEVERE, Archive.MOD_NAME + " has had a problem loading its configuration");
             e.printStackTrace();
         } finally {
             config.save();

@@ -8,7 +8,7 @@ import ccm.nucleum_omnium.handler.Handler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 final class BlockRegistry {
-
+    
     /**
      * Registers all the Blocks.
      */
@@ -16,7 +16,7 @@ final class BlockRegistry {
         Handler.log(Hephaestus.instance, "Registering Blocks");
         GameRegistry.registerBlock(ModBlocks.ores, ItemBlockOre.class, "ORES");
         GameRegistry.registerBlock(ModBlocks.blocks, ItemBlockBlock.class, "BLOCKS");
-
+        
         GameRegistry.registerBlock(ModBlocks.blockGrinder, "blockGrinder");
         GameRegistry.registerBlock(ModBlocks.blockBlast, "blockBlast");
     }

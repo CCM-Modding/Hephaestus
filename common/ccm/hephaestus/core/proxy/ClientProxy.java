@@ -13,28 +13,24 @@ import ccm.nucleum_omnium.handler.GUIHandler;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class ClientProxy extends CommonProxy {
-
+    
     @Override
     public void registerGUIs() {
-
-        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.BLAST_GUID, GUIBlast.class,
-                ContainerBlast.class);
-        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.GRINDER_GUID,
-                GUIGrinder.class, ContainerGrinder.class);
+        
+        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.BLAST_GUID, GUIBlast.class, ContainerBlast.class);
+        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.GRINDER_GUID, GUIGrinder.class, ContainerGrinder.class);
     }
-
+    
     @Override
-    public void handleTileEntityPacket(final int x, final int y, final int z,
-            final ForgeDirection orientation, final short state, final String owner,
-            final String customName) {
-        final TileEntity tileEntity = FMLClientHandler.instance().getClient().theWorld
-                .getBlockTileEntity(x, y, z);
-        if (tileEntity != null)
+    public void handleTileEntityPacket(final int x, final int y, final int z, final ForgeDirection orientation, final short state, final String owner, final String customName) {
+        final TileEntity tileEntity = FMLClientHandler.instance().getClient().theWorld.getBlockTileEntity(x, y, z);
+        if (tileEntity != null) {
             if (tileEntity instanceof TileBase) {
                 ((TileBase) tileEntity).setOrientation(orientation);
                 ((TileBase) tileEntity).setState(state);
                 ((TileBase) tileEntity).setOwner(owner);
                 ((TileBase) tileEntity).setCustomName(customName);
             }
+        }
     }
 }

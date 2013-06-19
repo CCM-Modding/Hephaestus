@@ -9,32 +9,33 @@ import ccm.nucleum_omnium.helper.TextureHelper;
 import ccm.nucleum_omnium.helper.enums.IItemEnum;
 
 public enum EnumHandle implements IItemEnum {
-
+    
     handleWood,
     handleBronze,
     handleHardIron,
     handleIron,
     handleSteel,
     handleTitanium;
-
+    
     public static void registerIcons(final IconRegister register) {
-        for (final EnumHandle handle : EnumHandle.values())
+        for (final EnumHandle handle : EnumHandle.values()) {
             handle.icon = register.registerIcon(handle.texture);
+        }
     }
-
+    
     private Icon        icon;
-
+    
     public final String texture;
-
+    
     private EnumHandle() {
-        this.texture = TextureHelper.getTextureFromName(this.name(), Locations.TEXTURE);
+        texture = TextureHelper.getTextureFromName(name(), Locations.TEXTURE);
     }
-
+    
     @Override
     public Icon getIcon() {
-        return this.icon;
+        return icon;
     }
-
+    
     @Override
     public Item getBaseItem() {
         return ModItems.itemHandle;
