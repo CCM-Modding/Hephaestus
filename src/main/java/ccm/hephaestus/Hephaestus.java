@@ -1,7 +1,6 @@
 package ccm.hephaestus;
 
-import java.util.logging.Level;
-
+import static ccm.hephaestus.utils.lib.Archive.INVALID_FINGERPRINT_MSG;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.configuration.Config;
 import ccm.hephaestus.core.proxy.CommonProxy;
@@ -15,13 +14,11 @@ import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum_omnium.BaseMod;
 import ccm.nucleum_omnium.IMod;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.handler.ModLoadingHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.FingerprintWarning;
-import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLFingerprintViolationEvent;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -55,19 +52,19 @@ public class Hephaestus extends BaseMod implements IMod {
     
     public static AdvConfiguration config;
     
-    @FingerprintWarning
+    @EventHandler
     public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
         /*
          * Report (log) to the user that the version of Harvestry they are using has been changed/tampered with
          */
-        Handler.log(this, Level.SEVERE, Archive.INVALID_FINGERPRINT_MSG);
+    	LogHandler.invalidFP(this, INVALID_FINGERPRINT_MSG);
     }
     
-    @PreInit
+    @EventHandler
     public void preInit(final FMLPreInitializationEvent evt) {
-        if (!Handler.isModLoaded(this)) {
+        if (!ModLoadingHandler.isModLoaded(this)) {
             
-            Handler.initLog(this);
+        	LogHandler.initLog(this);
             
             config = initializeConfig(evt);
             
@@ -83,7 +80,7 @@ public class Hephaestus extends BaseMod implements IMod {
         }
     }
     
-    @Init
+    @EventHandler
     public void init(final FMLInitializationEvent event) {
         Hephaestus.proxy.registerGUIs();
         
@@ -92,9 +89,9 @@ public class Hephaestus extends BaseMod implements IMod {
         new HephaestusLanguagePack().loadLangs();
     }
     
-    @PostInit
+    @EventHandler
     public void PostInit(final FMLPostInitializationEvent event) {
-        Handler.loadMod(this);
+        ModLoadingHandler.loadMod(this);
     }
     
     @Override
