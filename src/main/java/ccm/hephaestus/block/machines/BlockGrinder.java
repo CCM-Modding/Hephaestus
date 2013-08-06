@@ -17,6 +17,7 @@ import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
 import ccm.nucleum_omnium.handler.GUIHandler;
+import ccm.nucleum_omnium.handler.TextureHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -93,8 +94,8 @@ public class BlockGrinder extends BaseContainerBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        this.topIcon = iconRegister.registerIcon(TextureHelper.getTextureFromName(getUnlocalizedName2() + "Top", Locations.TEXTURE + "machine/"));
-        this.bottomIcon = iconRegister.registerIcon(TextureHelper.getTextureFromName(getUnlocalizedName2() + "Bottom", Locations.TEXTURE + "machine/"));
-        this.blockIcon = iconRegister.registerIcon(this.isActive ? TextureHelper.getTextureFromName(getUnlocalizedName2() + "SideOn", Locations.TEXTURE + "machine/") : TextureHelper.getTextureFromName(getUnlocalizedName2() + "SideOff", Locations.TEXTURE + "machine/"));
+        this.topIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(getUnlocalizedName() + "Top", Locations.TEXTURE + "machine/"));
+        this.bottomIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(getUnlocalizedName() + "Bottom", Locations.TEXTURE + "machine/"));
+        this.blockIcon = iconRegister.registerIcon(this.isActive ? TextureHandler.getTextureFromName(getUnlocalizedName() + "SideOn", Locations.TEXTURE + "machine/") : TextureHandler.getTextureFromName(getUnlocalizedName() + "SideOff", Locations.TEXTURE + "machine/"));
     }
 }
