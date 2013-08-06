@@ -9,7 +9,7 @@ import ccm.hephaestus.inventory.container.ContainerBlast;
 import ccm.hephaestus.inventory.container.ContainerGrinder;
 import ccm.hephaestus.tileentity.logic.BaseLogic;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.handler.GUIHandler;
+import ccm.nucleum_omnium.utils.handler.GUIHandler;
 import cpw.mods.fml.client.FMLClientHandler;
 
 public class ClientProxy extends CommonProxy {

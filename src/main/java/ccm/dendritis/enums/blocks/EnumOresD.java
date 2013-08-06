@@ -5,10 +5,10 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import ccm.dendritis.block.ModBlocks;
 import ccm.dendritis.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IBlockEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
 
-public enum EnumOres implements IBlockEnum {
+public enum EnumOresD implements IBlockEnum {
 
     oreAmethyst,
     oreBDiamond,
@@ -31,12 +31,12 @@ public enum EnumOres implements IBlockEnum {
     public final String texture;
 
     public static void registerIcons(final IconRegister register) {
-        for (final EnumOres ore : EnumOres.values()) {
+        for (final EnumOresD ore : EnumOresD.values()) {
             ore.icon = register.registerIcon(ore.texture);
         }
     }
 
-    private EnumOres() {
+    private EnumOresD() {
         this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ore/");
     }
 

@@ -5,7 +5,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.tileentity.logic.BlastLogic;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 final class TileRegistry {

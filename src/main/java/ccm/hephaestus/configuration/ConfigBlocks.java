@@ -3,7 +3,7 @@ package ccm.hephaestus.configuration;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 final class ConfigBlocks extends Config {
 
@@ -15,13 +15,13 @@ final class ConfigBlocks extends Config {
      */
     protected static void configBlocks(final AdvConfiguration config) {
         LogHandler.finest(Hephaestus.instance, "Loading Blocks Configs");
-        Properties.oreID = config.getBlock("Ores", Properties.blocksID).getInt();
-        Properties.blocksID = config.getBlock("Blocks", Properties.blocksID).getInt();
+        Properties.oreHID = config.getBlock("Ores", Properties.oreHID).getInt();
+        Properties.blocksHID = config.getBlock("Blocks", Properties.blocksHID).getInt();
 
-        Properties.blockGrinderID = config.getBlock("Grinder", Properties.blocksID).getInt();
-        Properties.blockGrinderRunningID = config.getBlock("Grinder_Active", Properties.blocksID).getInt();
+        Properties.blockGrinderID = config.getBlock("Grinder", Properties.blockGrinderID).getInt();
+        Properties.blockGrinderRunningID = config.getBlock("Grinder_Active", Properties.blockGrinderRunningID).getInt();
 
-        Properties.blockBlastID = config.getBlock("BlastFurnace", Properties.blocksID).getInt();
-        Properties.blockBlastRunningID = config.getBlock("BlastFurnace_Active", Properties.blocksID).getInt();
+        Properties.blockBlastID = config.getBlock("BlastFurnace", Properties.blockBlastID).getInt();
+        Properties.blockBlastRunningID = config.getBlock("BlastFurnace_Active", Properties.blockBlastRunningID).getInt();
     }
 }

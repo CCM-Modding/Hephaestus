@@ -5,8 +5,8 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
 import ccm.dendritis.item.ModItems;
 import ccm.dendritis.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IItemEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IItemEnum;
 
 public enum EnumMain implements IItemEnum {
 

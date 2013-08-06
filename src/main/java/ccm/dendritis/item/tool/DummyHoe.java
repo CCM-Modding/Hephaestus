@@ -5,7 +5,7 @@ import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemHoe;
 import ccm.dendritis.creativetab.DendritisTabs;
 import ccm.dendritis.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

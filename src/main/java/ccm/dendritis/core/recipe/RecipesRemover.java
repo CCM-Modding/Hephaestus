@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import ccm.dendritis.Dendritis;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 final class RecipesRemover {
 

@@ -7,7 +7,7 @@ import net.minecraft.item.ItemStack;
 import ccm.dendritis.creativetab.DendritisTabs;
 import ccm.dendritis.item.ModArmors;
 import ccm.dendritis.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

@@ -19,7 +19,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.nucleum_omnium.block.tile.TileBase;
+import ccm.hephaestus.tileentity.logic.BaseLogic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -175,10 +175,10 @@ public abstract class BaseContainerBlock extends BlockContainer {
         }
         world.setBlockMetadataWithNotify(x, y, z, direction, 3);
         if (itemStack.hasDisplayName()) {
-            ((TileBase) world.getBlockTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
+            ((BaseLogic) world.getBlockTileEntity(x, y, z)).setCustomName(itemStack.getDisplayName());
         }
-        ((TileBase) world.getBlockTileEntity(x, y, z)).setOwner(living.getEntityName());
-        ((TileBase) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
+        ((BaseLogic) world.getBlockTileEntity(x, y, z)).setOwner(living.getEntityName());
+        ((BaseLogic) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
     }
 
     /**

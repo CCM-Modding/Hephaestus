@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import ccm.dendritis.Dendritis;
 import ccm.dendritis.utils.lib.Archive;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public class Config {
 

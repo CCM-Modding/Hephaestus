@@ -1,9 +1,9 @@
 package ccm.dendritis.configuration;
 
 import ccm.dendritis.Dendritis;
-import ccm.dendritis.utils.lib.Properties;
+import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 final class ConfigArmors extends Config {
 

@@ -9,13 +9,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.dendritis.enums.blocks.EnumBlocks;
+import ccm.dendritis.enums.blocks.EnumBlocksD;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModStrgBlocks extends BaseBlock {
 
-    private static EnumBlocks[] blocks = EnumBlocks.values();
+    private static EnumBlocksD[] blocks = EnumBlocksD.values();
 
     /**
      * Creates a new Block instance capable of being a Block
@@ -35,21 +35,21 @@ public class ModStrgBlocks extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockAmethyst.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockBDiamond.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockCitrine.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockCZirconia.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockFuchsia.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockJet.ordinal(), "pickaxe", 4);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockOlivine.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockOpal.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockRuby.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSapphire.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSQuartz.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSun.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTopaz.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTurquoise.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockWAlabaster.ordinal(), "pickaxe", 4);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockAmethyst.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockBDiamond.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockCitrine.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockCZirconia.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockFuchsia.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockJet.ordinal(), "pickaxe", 4);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockOlivine.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockOpal.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockRuby.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockSapphire.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockSQuartz.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockSun.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockTopaz.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockTurquoise.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksD.blockWAlabaster.ordinal(), "pickaxe", 4);
     }
 
     @Override
@@ -68,12 +68,12 @@ public class ModStrgBlocks extends BaseBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        EnumBlocks.registerIcons(iconRegister);
+        EnumBlocksD.registerIcons(iconRegister);
     }
 
     @Override
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
-        for (int i = 0; i < EnumBlocks.values().length; i++) {
+        for (int i = 0; i < EnumBlocksD.values().length; i++) {
             list.add(new ItemStack(itemId, 1, i));
         }
     }

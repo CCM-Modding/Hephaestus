@@ -2,11 +2,11 @@ package ccm.hephaestus.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import ccm.hephaestus.enums.blocks.EnumBlocks;
+import ccm.hephaestus.enums.blocks.EnumBlocksH;
 
 public class ItemBlockBlock extends ItemBlock {
 
-    private static EnumBlocks[] blocks = EnumBlocks.values();
+    private static EnumBlocksH[] blocks = EnumBlocksH.values();
 
     public ItemBlockBlock(final int par1) {
         super(par1);

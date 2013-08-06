@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IItemEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IItemEnum;
 
-public enum EnumIngots implements IItemEnum {
+public enum EnumIngotsH implements IItemEnum {
 
     ingotAluminum,
     ingotBronze,
@@ -26,7 +26,7 @@ public enum EnumIngots implements IItemEnum {
     ingotTungsten;
 
     public static void registerIcons(final IconRegister register) {
-        for (final EnumIngots ingot : EnumIngots.values()) {
+        for (final EnumIngotsH ingot : EnumIngotsH.values()) {
             ingot.icon = register.registerIcon(ingot.texture);
         }
     }
@@ -35,7 +35,7 @@ public enum EnumIngots implements IItemEnum {
 
     public final String texture;
 
-    private EnumIngots() {
+    private EnumIngotsH() {
         this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
     }
 

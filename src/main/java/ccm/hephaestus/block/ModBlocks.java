@@ -5,7 +5,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public final class ModBlocks {
 
@@ -29,8 +29,8 @@ public final class ModBlocks {
     public static void init() {
         LogHandler.finest(Hephaestus.instance, "Loading Blocks");
 
-        ModBlocks.ores = new ModOres(Properties.oreID);
-        ModBlocks.blocks = new ModStrgBlocks(Properties.blocksID);
+        ModBlocks.ores = new ModOres(Properties.oreHID);
+        ModBlocks.blocks = new ModStrgBlocks(Properties.blocksHID);
 
         ModBlocks.blockGrinder = new BlockGrinder(Properties.blockGrinderID, false).setUnlocalizedName("blockGrinder").setHardness(3.0F);
         ModBlocks.blockGrinderRunning = new BlockGrinder(Properties.blockGrinderRunningID, true).setUnlocalizedName("blockGrinder").setHardness(3.0F);

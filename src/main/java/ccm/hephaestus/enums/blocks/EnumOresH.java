@@ -5,10 +5,10 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IBlockEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
 
-public enum EnumOres implements IBlockEnum {
+public enum EnumOresH implements IBlockEnum {
 
     oreAluminum,
     oreCopper,
@@ -24,12 +24,12 @@ public enum EnumOres implements IBlockEnum {
     public final String texture;
 
     public static void registerIcons(final IconRegister register) {
-        for (final EnumOres ore : EnumOres.values()) {
+        for (final EnumOresH ore : EnumOresH.values()) {
             ore.icon = register.registerIcon(ore.texture);
         }
     }
 
-    private EnumOres() {
+    private EnumOresH() {
         this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ore/");
     }
 

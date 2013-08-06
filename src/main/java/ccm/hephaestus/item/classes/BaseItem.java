@@ -7,9 +7,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.hephaestus.enums.items.EnumDusts;
-import ccm.hephaestus.enums.items.EnumHandle;
-import ccm.hephaestus.enums.items.EnumIngots;
+import ccm.hephaestus.enums.items.EnumDustsH;
+import ccm.hephaestus.enums.items.EnumHandleH;
+import ccm.hephaestus.enums.items.EnumIngotsH;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -17,11 +17,11 @@ public class BaseItem extends BaseItemClass {
 
     private int enumType;
 
-    private static EnumHandle[] currentHandels = EnumHandle.values();
+    private static EnumHandleH[] currentHandels = EnumHandleH.values();
 
-    private static EnumIngots[] currentIngots = EnumIngots.values();
+    private static EnumIngotsH[] currentIngots = EnumIngotsH.values();
 
-    private static EnumDusts[] currentDusts = EnumDusts.values();
+    private static EnumDustsH[] currentDusts = EnumDustsH.values();
 
     /**
      * Creates an Item Instance.
@@ -76,17 +76,17 @@ public class BaseItem extends BaseItemClass {
     public void getSubItems(final int itemID, final CreativeTabs creativeTabs, final List list) {
         switch (this.enumType) {
             case 0:
-                for (int currentMeta = 0; currentMeta < EnumHandle.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumHandleH.values().length; ++currentMeta) {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
             case 1:
-                for (int currentMeta = 0; currentMeta < EnumIngots.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumIngotsH.values().length; ++currentMeta) {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
             case 2:
-                for (int currentMeta = 0; currentMeta < EnumDusts.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumDustsH.values().length; ++currentMeta) {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
@@ -113,8 +113,8 @@ public class BaseItem extends BaseItemClass {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRergister) {
-        EnumHandle.registerIcons(iconRergister);
-        EnumIngots.registerIcons(iconRergister);
-        EnumDusts.registerIcons(iconRergister);
+        EnumHandleH.registerIcons(iconRergister);
+        EnumIngotsH.registerIcons(iconRergister);
+        EnumDustsH.registerIcons(iconRergister);
     }
 }

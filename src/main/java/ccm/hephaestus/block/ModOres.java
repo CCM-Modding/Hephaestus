@@ -10,13 +10,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.hephaestus.enums.blocks.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumOresH;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModOres extends BaseBlock {
 
-    private static EnumOres[] ores = EnumOres.values();
+    private static EnumOresH[] ores = EnumOresH.values();
 
     /**
      * Creates a new Block instance capable of being a Ore
@@ -36,14 +36,14 @@ public class ModOres extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreAluminum.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreCopper.ordinal(), "pickaxe", 1);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreLead.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSilver.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSulfur.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTin.ordinal(), "pickaxe", 1);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTitanium.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTungsten.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreAluminum.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreCopper.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreLead.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreSilver.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreSulfur.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreTin.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreTitanium.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresH.oreTungsten.ordinal(), "pickaxe", 3);
     }
 
     @Override
@@ -58,7 +58,7 @@ public class ModOres extends BaseBlock {
      */
     @Override
     public int idDropped(final int par1, final Random par2Random, final int par3) {
-        // if (this.metadata == (EnumOres.oreSulfur.ordinal())) {
+        // if (this.metadata == (EnumOresH.oreSulfur.ordinal())) {
         // return EnumHelper.getItemIS(EnumDusts.dustSulfur,
         // (MathHelper.getRandomInt(5)));
         // }
@@ -76,12 +76,12 @@ public class ModOres extends BaseBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        EnumOres.registerIcons(iconRegister);
+        EnumOresH.registerIcons(iconRegister);
     }
 
     @Override
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
-        for (int i = 0; i < EnumOres.values().length; i++) {
+        for (int i = 0; i < EnumOresH.values().length; i++) {
             list.add(new ItemStack(itemId, 1, i));
         }
     }

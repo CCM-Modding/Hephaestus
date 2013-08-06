@@ -4,8 +4,8 @@ import net.minecraft.item.Item;
 import ccm.dendritis.Dendritis;
 import ccm.dendritis.creativetab.DendritisTabs;
 import ccm.dendritis.item.classes.BaseItem;
-import ccm.dendritis.utils.lib.Properties;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public final class ModItems {
 

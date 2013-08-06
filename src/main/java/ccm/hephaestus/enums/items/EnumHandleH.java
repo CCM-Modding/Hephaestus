@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IItemEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IItemEnum;
 
-public enum EnumHandle implements IItemEnum {
+public enum EnumHandleH implements IItemEnum {
 
     handleWood,
     handleBronze,
@@ -18,7 +18,7 @@ public enum EnumHandle implements IItemEnum {
     handleTitanium;
 
     public static void registerIcons(final IconRegister register) {
-        for (final EnumHandle handle : EnumHandle.values()) {
+        for (final EnumHandleH handle : EnumHandleH.values()) {
             handle.icon = register.registerIcon(handle.texture);
         }
     }
@@ -27,7 +27,7 @@ public enum EnumHandle implements IItemEnum {
 
     public final String texture;
 
-    private EnumHandle() {
+    private EnumHandleH() {
         this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE);
     }
 

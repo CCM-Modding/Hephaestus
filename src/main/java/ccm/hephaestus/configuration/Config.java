@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public class Config {
 

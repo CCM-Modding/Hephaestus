@@ -8,8 +8,8 @@ import ccm.dendritis.item.tool.DummyPick;
 import ccm.dendritis.item.tool.DummySpade;
 import ccm.dendritis.item.tool.DummySword;
 import ccm.dendritis.item.tool.ToolMaterials;
-import ccm.dendritis.utils.lib.Properties;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public final class ModTools {
 

@@ -4,8 +4,8 @@ import net.minecraft.item.Item;
 import ccm.dendritis.Dendritis;
 import ccm.dendritis.item.armor.ArmorMaterials;
 import ccm.dendritis.item.armor.DummyArmor;
-import ccm.dendritis.utils.lib.Properties;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public final class ModArmors {
 

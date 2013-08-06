@@ -1,14 +1,14 @@
 package ccm.dendritis.creativetab;
 
 import net.minecraft.item.ItemStack;
-import ccm.dendritis.enums.blocks.EnumBlocks;
-import ccm.dendritis.enums.items.EnumGems;
+import ccm.dendritis.enums.blocks.EnumBlocksD;
+import ccm.dendritis.enums.items.EnumGemsD;
 import ccm.dendritis.enums.items.EnumMain;
 import ccm.dendritis.item.ModArmors;
 import ccm.dendritis.item.ModTools;
 import ccm.dendritis.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
-import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
+import ccm.nucleum_omnium.utils.helper.enums.EnumToItemStack;
 
 public class DendritisTabs {
 
@@ -52,8 +52,8 @@ public class DendritisTabs {
     }
 
     public static void initTabIcons() {
-        DendritisTabs.tabDendritisBlocks.init(EnumToItemStack.getBlockIS(EnumBlocks.blockAmethyst));
-        DendritisTabs.tabDendritisGems.init(EnumToItemStack.getItemIS(EnumGems.gemAmethyst));
+        DendritisTabs.tabDendritisBlocks.init(EnumToItemStack.getBlockIS(EnumBlocksD.blockAmethyst));
+        DendritisTabs.tabDendritisGems.init(EnumToItemStack.getItemIS(EnumGemsD.gemAmethyst));
         DendritisTabs.tabDendritisItems.init(EnumToItemStack.getItemIS(EnumMain.handle));
         DendritisTabs.tabDendritisTools.init(new ItemStack(ModTools.swordAmethyst));
         DendritisTabs.tabDendritisArmor.init(new ItemStack(ModArmors.chestAmethyst));

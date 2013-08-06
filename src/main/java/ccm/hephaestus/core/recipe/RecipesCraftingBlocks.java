@@ -3,10 +3,10 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import ccm.hephaestus.enums.blocks.EnumBlocks;
-import ccm.hephaestus.enums.items.EnumDusts;
-import ccm.hephaestus.enums.items.EnumIngots;
-import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
+import ccm.hephaestus.enums.blocks.EnumBlocksH;
+import ccm.hephaestus.enums.items.EnumDustsH;
+import ccm.hephaestus.enums.items.EnumIngotsH;
+import ccm.nucleum_omnium.utils.helper.enums.EnumToItemStack;
 
 final class RecipesCraftingBlocks {
 
@@ -15,21 +15,21 @@ final class RecipesCraftingBlocks {
      */
     private static void addShaped() {
 
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotAluminum) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockBronze), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotBronze) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockCopper), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotCopper) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockHardIron), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotHardIron) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockHeavyIron), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotHeavyIron) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockLead), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotLead) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockSilver), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotSilver) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockSteel), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotSteel) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockSulfur), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumDusts.dustSulfur) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTin), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTin) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTitanite), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTitanite) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTitanium), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTitanium) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTitCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTitCarbide) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTunCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTunCarbide) }));
-        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockTungsten), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotTungsten) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockAluminum), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotAluminum) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockBronze), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotBronze) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockCopper), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotCopper) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockHardIron), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotHardIron) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockHeavyIron), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotHeavyIron) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockLead), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotLead) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockSilver), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotSilver) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockSteel), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotSteel) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockSulfur), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumDustsH.dustSulfur) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTin), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTin) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTitanite), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTitanite) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTitanium), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTitanium) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTitCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTitCarbide) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTunCarbide), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTunCarbide) }));
+        CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksH.blockTungsten), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngotsH.ingotTungsten) }));
     }
 
     /**
@@ -37,21 +37,21 @@ final class RecipesCraftingBlocks {
      */
     private static void addShapeless() {
 
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotAluminum, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotBronze, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockBronze)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotCopper, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockCopper)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotHardIron, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockHardIron)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotHeavyIron, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockHeavyIron)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotLead, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockLead)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotSilver, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockSilver)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotSteel, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockSteel)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDusts.dustSulfur, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockSulfur)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTin, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTin)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTitanite, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTitanite)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTitanium, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTitanium)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTitCarbide, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTitCarbide)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTunCarbide, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTunCarbide)));
-        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotTungsten, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockTungsten)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotAluminum, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockAluminum)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotBronze, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockBronze)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotCopper, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockCopper)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotHardIron, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockHardIron)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotHeavyIron, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockHeavyIron)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotLead, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockLead)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotSilver, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockSilver)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotSteel, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockSteel)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDustsH.dustSulfur, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockSulfur)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTin, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTin)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTitanite, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTitanite)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTitanium, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTitanium)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTitCarbide, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTitCarbide)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTunCarbide, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTunCarbide)));
+        CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngotsH.ingotTungsten, 9), EnumToItemStack.getBlockIS(EnumBlocksH.blockTungsten)));
     }
 
     public RecipesCraftingBlocks() {

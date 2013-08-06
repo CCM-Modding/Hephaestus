@@ -2,11 +2,11 @@ package ccm.hephaestus.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import ccm.hephaestus.enums.blocks.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumOresH;
 
 public class ItemBlockOre extends ItemBlock {
 
-    private static EnumOres[] ores = EnumOres.values();
+    private static EnumOresH[] ores = EnumOresH.values();
 
     public ItemBlockOre(final int par1) {
         super(par1);

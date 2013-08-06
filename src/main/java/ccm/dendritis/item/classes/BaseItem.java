@@ -7,7 +7,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import ccm.dendritis.creativetab.DendritisTabs;
-import ccm.dendritis.enums.items.EnumGems;
+import ccm.dendritis.enums.items.EnumGemsD;
 import ccm.dendritis.enums.items.EnumMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -18,7 +18,7 @@ public class BaseItem extends BaseItemClass {
 
     private static EnumMain[] currentMain = EnumMain.values();
 
-    private static EnumGems[] currentGems = EnumGems.values();
+    private static EnumGemsD[] currentGems = EnumGemsD.values();
 
     /**
      * Creates an Item Instance.
@@ -76,7 +76,7 @@ public class BaseItem extends BaseItemClass {
                 }
                 break;
             case 1:
-                for (int currentMeta = 0; currentMeta < EnumGems.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumGemsD.values().length; ++currentMeta) {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
@@ -101,6 +101,6 @@ public class BaseItem extends BaseItemClass {
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRergister) {
         EnumMain.registerIcons(iconRergister);
-        EnumGems.registerIcons(iconRergister);
+        EnumGemsD.registerIcons(iconRergister);
     }
 }

@@ -5,8 +5,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import ccm.hephaestus.api.recipes.RecipesGrinder;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.helper.InventoryHelper;
-import ccm.nucleum_omnium.helper.ItemHelper;
+import ccm.nucleum_omnium.utils.helper.InventoryHelper;
+import ccm.nucleum_omnium.utils.helper.ItemHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -96,7 +96,7 @@ public class GrinderLogic extends BaseLogic {
     public void updateEntity() {
         if (!this.worldObj.isRemote) {
             if (this.canGrind()) {
-                ItemHelper.damageItem(this.inventory, 1, 2);
+                ItemHelper.damageItem(GrinderLogic, 1, 2);
                 BlockGrinder.updateBlockState(true, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
                 ++this.grinderCookTime;
                 if (this.grinderCookTime == 1000) {

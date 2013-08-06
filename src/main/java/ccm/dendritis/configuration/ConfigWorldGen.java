@@ -1,6 +1,6 @@
 package ccm.dendritis.configuration;
 
-import ccm.dendritis.utils.lib.Properties;
+import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 
 final class ConfigWorldGen extends Config {

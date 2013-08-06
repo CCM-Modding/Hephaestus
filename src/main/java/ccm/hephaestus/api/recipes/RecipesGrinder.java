@@ -58,4 +58,9 @@ public final class RecipesGrinder {
         }
         return null;
     }
+
+    public static RecipesGrinder instance() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

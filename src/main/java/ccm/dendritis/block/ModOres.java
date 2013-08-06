@@ -10,14 +10,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.dendritis.enums.blocks.EnumOres;
-import ccm.dendritis.utils.lib.Properties;
+import ccm.dendritis.enums.blocks.EnumOresD;
+import ccm.hephaestus.utils.lib.Properties;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModOres extends BaseBlock {
 
-    private static EnumOres[] ores = EnumOres.values();
+    private static EnumOresD[] ores = EnumOresD.values();
 
     /**
      * Creates a new Block instance capable of being a Ore
@@ -37,21 +37,21 @@ public class ModOres extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreAmethyst.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreBDiamond.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreCitrine.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreCZirconia.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreFuchsia.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreJet.ordinal(), "pickaxe", 4);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreOlivine.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreOpal.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreRuby.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSapphire.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSQuartz.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreSun.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTopaz.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTurquoise.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreWAlabaster.ordinal(), "pickaxe", 4);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreAmethyst.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreBDiamond.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreCitrine.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreCZirconia.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreFuchsia.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreJet.ordinal(), "pickaxe", 4);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreOlivine.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreOpal.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreRuby.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreSapphire.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreSQuartz.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreSun.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreTopaz.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreTurquoise.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumOresD.oreWAlabaster.ordinal(), "pickaxe", 4);
     }
 
     @Override
@@ -78,12 +78,12 @@ public class ModOres extends BaseBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        EnumOres.registerIcons(iconRegister);
+        EnumOresD.registerIcons(iconRegister);
     }
 
     @Override
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
-        for (int i = 0; i < EnumOres.values().length; i++) {
+        for (int i = 0; i < EnumOresD.values().length; i++) {
             list.add(new ItemStack(itemId, 1, i));
         }
     }

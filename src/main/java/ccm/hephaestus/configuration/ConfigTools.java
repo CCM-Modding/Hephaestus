@@ -3,7 +3,7 @@ package ccm.hephaestus.configuration;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 final class ConfigTools extends Config {
 

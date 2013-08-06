@@ -9,13 +9,13 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraftforge.common.MinecraftForge;
-import ccm.hephaestus.enums.blocks.EnumBlocks;
+import ccm.hephaestus.enums.blocks.EnumBlocksH;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModStrgBlocks extends BaseBlock {
 
-    private static EnumBlocks[] blocks = EnumBlocks.values();
+    private static EnumBlocksH[] blocks = EnumBlocksH.values();
 
     /**
      * Creates a new Block instance capable of being a Block
@@ -35,14 +35,14 @@ public class ModStrgBlocks extends BaseBlock {
         // 2 is iron
         // 3 is diamond
 
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockAluminum.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockCopper.ordinal(), "pickaxe", 1);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockLead.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSilver.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockSulfur.ordinal(), "pickaxe", 2);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTin.ordinal(), "pickaxe", 1);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTitanium.ordinal(), "pickaxe", 3);
-        MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTungsten.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockAluminum.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockCopper.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockLead.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockSilver.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockSulfur.ordinal(), "pickaxe", 2);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockTin.ordinal(), "pickaxe", 1);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockTitanium.ordinal(), "pickaxe", 3);
+        MinecraftForge.setBlockHarvestLevel(this, EnumBlocksH.blockTungsten.ordinal(), "pickaxe", 3);
     }
 
     @Override
@@ -61,12 +61,12 @@ public class ModStrgBlocks extends BaseBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        EnumBlocks.registerIcons(iconRegister);
+        EnumBlocksH.registerIcons(iconRegister);
     }
 
     @Override
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
-        for (int i = 0; i < EnumBlocks.values().length; i++) {
+        for (int i = 0; i < EnumBlocksH.values().length; i++) {
             list.add(new ItemStack(itemId, 1, i));
         }
     }

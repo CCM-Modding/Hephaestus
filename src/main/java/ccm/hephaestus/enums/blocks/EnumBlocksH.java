@@ -5,10 +5,10 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum_omnium.handler.TextureHandler;
-import ccm.nucleum_omnium.helper.enums.IBlockEnum;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
 
-public enum EnumBlocks implements IBlockEnum {
+public enum EnumBlocksH implements IBlockEnum {
 
     blockAluminum,
     blockBronze,
@@ -31,12 +31,12 @@ public enum EnumBlocks implements IBlockEnum {
     public final String texture;
 
     public static void registerIcons(final IconRegister register) {
-        for (final EnumBlocks block : EnumBlocks.values()) {
+        for (final EnumBlocksH block : EnumBlocksH.values()) {
             block.icon = register.registerIcon(block.texture);
         }
     }
 
-    private EnumBlocks() {
+    private EnumBlocksH() {
         this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "block/");
     }
 

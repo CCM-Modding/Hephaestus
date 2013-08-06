@@ -2,11 +2,11 @@ package ccm.dendritis.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import ccm.dendritis.enums.blocks.EnumOres;
+import ccm.dendritis.enums.blocks.EnumOresD;
 
 public class ItemBlockOre extends ItemBlock {
 
-    private static EnumOres[] ores = EnumOres.values();
+    private static EnumOresD[] ores = EnumOresD.values();
 
     public ItemBlockOre(final int par1) {
         super(par1);

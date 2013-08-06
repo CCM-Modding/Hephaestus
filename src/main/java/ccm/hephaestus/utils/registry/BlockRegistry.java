@@ -4,7 +4,7 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
 import ccm.hephaestus.item.itemblock.ItemBlockBlock;
 import ccm.hephaestus.item.itemblock.ItemBlockOre;
-import ccm.nucleum_omnium.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 final class BlockRegistry {
