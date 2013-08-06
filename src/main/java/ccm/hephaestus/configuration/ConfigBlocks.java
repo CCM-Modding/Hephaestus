@@ -5,7 +5,7 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 
-final class ConfigBlocks extends HarvestryConfig {
+final class ConfigBlocks extends HephaestusConfig {
 
     /**
      * Loads or creates the Blocks in the AdvConfiguration file.

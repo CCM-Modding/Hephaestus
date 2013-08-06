@@ -3,7 +3,7 @@ package ccm.hephaestus.configuration;
 import net.minecraftforge.common.Configuration;
 import ccm.hephaestus.utils.lib.Properties;
 
-final class ConfigWorldGen extends HarvestryConfig {
+final class ConfigWorldGen extends HephaestusConfig {
 
     final static String gen = "World Generation";
 

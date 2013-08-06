@@ -9,7 +9,7 @@ import static ccm.hephaestus.utils.lib.Archive.MOD_PREFIX;
 import static ccm.hephaestus.utils.lib.Locations.CLIENT_PROXY;
 import static ccm.hephaestus.utils.lib.Locations.SERVER_PROXY;
 import lib.org.modstats.ModstatInfo;
-import ccm.hephaestus.configuration.HarvestryConfig;
+import ccm.hephaestus.configuration.HephaestusConfig;
 import ccm.hephaestus.core.proxy.CommonProxy;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
@@ -57,7 +57,7 @@ public class Hephaestus extends BaseMod implements IMod {
 
             config = this.initializeConfig(evt);
 
-            ConfigurationHandler.init(this, HarvestryConfig.class);
+            ConfigurationHandler.init(this, HephaestusConfig.class);
 
             HephaestusTabs.initTabs();
 

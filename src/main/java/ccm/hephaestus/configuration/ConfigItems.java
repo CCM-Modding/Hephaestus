@@ -5,7 +5,7 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 
-final class ConfigItems extends HarvestryConfig {
+final class ConfigItems extends HephaestusConfig {
 
     /**
      * Loads or creates the Items in the Configuration file.

@@ -3,7 +3,7 @@ package ccm.hephaestus.configuration;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.config.IConfig;
 
-public class HarvestryConfig implements IConfig {
+public class HephaestusConfig implements IConfig {
 
     private AdvConfiguration config;
 
