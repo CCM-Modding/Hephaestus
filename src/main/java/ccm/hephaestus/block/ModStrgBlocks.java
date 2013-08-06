@@ -14,9 +14,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModStrgBlocks extends BaseBlock {
-    
+
     private static EnumBlocks[] blocks = EnumBlocks.values();
-    
+
     /**
      * Creates a new Block instance capable of being a Block
      * 
@@ -25,16 +25,16 @@ public class ModStrgBlocks extends BaseBlock {
      */
     public ModStrgBlocks(final int id) {
         super(id, Material.iron);
-        setHardness(3.0F);
-        setResistance(5.0F);
-        setStepSound(Block.soundMetalFootstep);
-        
+        this.setHardness(3.0F);
+        this.setResistance(5.0F);
+        this.setStepSound(Block.soundMetalFootstep);
+
         // Sets the required harvest level and tool
         // 0 is wood
         // 1 is stone
         // 2 is iron
         // 3 is diamond
-        
+
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockAluminum.ordinal(), "pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockCopper.ordinal(), "pickaxe", 1);
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockLead.ordinal(), "pickaxe", 2);
@@ -44,26 +44,26 @@ public class ModStrgBlocks extends BaseBlock {
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTitanium.ordinal(), "pickaxe", 3);
         MinecraftForge.setBlockHarvestLevel(this, EnumBlocks.blockTungsten.ordinal(), "pickaxe", 3);
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(final int side, final int meta) {
-        blockIcon = ModStrgBlocks.blocks[meta].getIcon();
-        return blockIcon;
+        this.blockIcon = ModStrgBlocks.blocks[meta].getIcon();
+        return this.blockIcon;
     }
-    
+
     // Makes sure pick block works right
     @Override
     public int damageDropped(final int metadata) {
         return metadata;
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
         EnumBlocks.registerIcons(iconRegister);
     }
-    
+
     @Override
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {

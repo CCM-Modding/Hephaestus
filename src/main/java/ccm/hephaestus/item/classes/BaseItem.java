@@ -14,15 +14,15 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BaseItem extends BaseItemClass {
-    
-    private int                 enumType;
-    
+
+    private int enumType;
+
     private static EnumHandle[] currentHandels = EnumHandle.values();
-    
-    private static EnumIngots[] currentIngots  = EnumIngots.values();
-    
-    private static EnumDusts[]  currentDusts   = EnumDusts.values();
-    
+
+    private static EnumIngots[] currentIngots = EnumIngots.values();
+
+    private static EnumDusts[] currentDusts = EnumDusts.values();
+
     /**
      * Creates an Item Instance.
      * 
@@ -31,11 +31,11 @@ public class BaseItem extends BaseItemClass {
      */
     public BaseItem(final int id) {
         super(id);
-        setHasSubtypes(true);
-        setMaxDamage(0);
-        setCreativeTab(HephaestusTabs.tabHephaestusParts);
+        this.setHasSubtypes(true);
+        this.setMaxDamage(0);
+        this.setCreativeTab(HephaestusTabs.tabHephaestusParts);
     }
-    
+
     /**
      * Creates an Item Instance.
      * 
@@ -44,19 +44,19 @@ public class BaseItem extends BaseItemClass {
      */
     public BaseItem(final int id, final int enumType) {
         super(id);
-        setMaxDamage(0);
-        setHasSubtypes(true);
+        this.setMaxDamage(0);
+        this.setHasSubtypes(true);
         this.enumType = enumType;
-        setCreativeTab(HephaestusTabs.tabHephaestusParts);
+        this.setCreativeTab(HephaestusTabs.tabHephaestusParts);
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     /**
      * Gets an icon index based on an item's damage value
      */
     public Icon getIconFromDamage(final int meta) {
-        switch (enumType) {
+        switch (this.enumType) {
             case 0:
                 return BaseItem.currentHandels[meta].getIcon();
             case 1:
@@ -67,7 +67,7 @@ public class BaseItem extends BaseItemClass {
                 return null;
         }
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -75,7 +75,7 @@ public class BaseItem extends BaseItemClass {
      * returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
      */
     public void getSubItems(final int itemID, final CreativeTabs creativeTabs, final List list) {
-        switch (enumType) {
+        switch (this.enumType) {
             case 0:
                 for (int currentMeta = 0; currentMeta < EnumHandle.values().length; ++currentMeta) {
                     list.add(new ItemStack(itemID, 1, currentMeta));
@@ -93,24 +93,24 @@ public class BaseItem extends BaseItemClass {
                 break;
         }
     }
-    
+
     @Override
     public String getUnlocalizedName(final ItemStack itemStack) {
-        switch (enumType) {
+        switch (this.enumType) {
             case 0:
-                setUnlocalizedName(BaseItem.currentHandels[itemStack.getItemDamage()].name());
+                this.setUnlocalizedName(BaseItem.currentHandels[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             case 1:
-                setUnlocalizedName(BaseItem.currentIngots[itemStack.getItemDamage()].name());
+                this.setUnlocalizedName(BaseItem.currentIngots[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             case 2:
-                setUnlocalizedName(BaseItem.currentDusts[itemStack.getItemDamage()].name());
+                this.setUnlocalizedName(BaseItem.currentDusts[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             default:
                 return null;
         }
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRergister) {

@@ -11,7 +11,7 @@ import ccm.hephaestus.utils.lib.Archive;
 
 public enum PacketTypeHandler {
     TILE(PacketTileUpdate.class);
-    
+
     public static BasePacket buildPacket(final byte[] data) {
         final ByteArrayInputStream bis = new ByteArrayInputStream(data);
         final int selector = bis.read();
@@ -25,7 +25,7 @@ public enum PacketTypeHandler {
         packet.readPopulate(dis);
         return packet;
     }
-    
+
     public static BasePacket buildPacket(final PacketTypeHandler type) {
         BasePacket packet = null;
         try {
@@ -35,7 +35,7 @@ public enum PacketTypeHandler {
         }
         return packet;
     }
-    
+
     public static Packet populatePacket(final BasePacket packet) {
         final byte[] data = packet.populate();
         final Packet250CustomPayload packet250 = new Packet250CustomPayload();
@@ -45,9 +45,9 @@ public enum PacketTypeHandler {
         packet250.isChunkDataPacket = packet.isChunkDataPacket;
         return packet250;
     }
-    
+
     private Class<? extends BasePacket> clazz;
-    
+
     PacketTypeHandler(final Class<? extends BasePacket> clazz) {
         this.clazz = clazz;
     }

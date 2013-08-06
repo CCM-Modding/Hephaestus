@@ -24,25 +24,26 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public abstract class BaseContainerBlock extends BlockContainer {
-    
+
     @SideOnly(Side.CLIENT)
-    protected Icon           topIcon;
-    
+    protected Icon topIcon;
+
     @SideOnly(Side.CLIENT)
-    protected Icon           bottomIcon;
-    
+    protected Icon bottomIcon;
+
     @SideOnly(Side.CLIENT)
-    protected Icon           frontIcon;
-    
-    protected final boolean  isActive;
-    
+    protected Icon frontIcon;
+
+    protected final boolean isActive;
+
     protected static boolean keepInventory = false;
-    
+
     /**
-     * Is the random generator used by all Containers to drop the inventory contents in random directions.
+     * Is the random generator used by all Containers to drop the inventory
+     * contents in random directions.
      */
-    protected Random         rand          = new Random();
-    
+    protected Random rand = new Random();
+
     /**
      * Creates a new Block instance capable of containing a {@link TileEntity}.
      * 
@@ -51,10 +52,10 @@ public abstract class BaseContainerBlock extends BlockContainer {
      */
     public BaseContainerBlock(final int id, final boolean active) {
         super(id, Material.rock);
-        setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
-        isActive = active;
+        this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
+        this.isActive = active;
     }
-    
+
     /**
      * Creates a new Block instance capable of containing a {@link TileEntity}.
      * 
@@ -65,19 +66,19 @@ public abstract class BaseContainerBlock extends BlockContainer {
      */
     public BaseContainerBlock(final int id, final Material material, final boolean active) {
         super(id, material);
-        setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
-        isActive = active;
+        this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
+        this.isActive = active;
     }
-    
+
     @Override
     public void breakBlock(final World world, final int x, final int y, final int z, final int id, final int meta) {
-        dropInventory(world, x, y, z);
+        this.dropInventory(world, x, y, z);
         super.breakBlock(world, x, y, z, id, meta);
     }
-    
+
     @Override
     public abstract TileEntity createNewTileEntity(World world);
-    
+
     /**
      * Drops the Inventory that is contained in the {@link TileEntity}.
      * 
@@ -101,17 +102,17 @@ public abstract class BaseContainerBlock extends BlockContainer {
                 for (int i = 0; i < inventory.getSizeInventory(); i++) {
                     final ItemStack itemStack = inventory.getStackInSlot(i);
                     if ((itemStack != null) && (itemStack.stackSize > 0)) {
-                        final float dX = (rand.nextFloat() * 0.8F) + 0.1F;
-                        final float dY = (rand.nextFloat() * 0.8F) + 0.1F;
-                        final float dZ = (rand.nextFloat() * 0.8F) + 0.1F;
+                        final float dX = (this.rand.nextFloat() * 0.8F) + 0.1F;
+                        final float dY = (this.rand.nextFloat() * 0.8F) + 0.1F;
+                        final float dZ = (this.rand.nextFloat() * 0.8F) + 0.1F;
                         final EntityItem entityItem = new EntityItem(world, x + dX, y + dY, z + dZ, new ItemStack(itemStack.itemID, itemStack.stackSize, itemStack.getItemDamage()));
                         if (itemStack.hasTagCompound()) {
                             entityItem.getEntityItem().setTagCompound((NBTTagCompound) itemStack.getTagCompound().copy());
                         }
                         final float factor = 0.05F;
-                        entityItem.motionX = rand.nextGaussian() * factor;
-                        entityItem.motionY = (rand.nextGaussian() * factor) + 0.2F;
-                        entityItem.motionZ = rand.nextGaussian() * factor;
+                        entityItem.motionX = this.rand.nextGaussian() * factor;
+                        entityItem.motionY = (this.rand.nextGaussian() * factor) + 0.2F;
+                        entityItem.motionZ = this.rand.nextGaussian() * factor;
                         world.spawnEntityInWorld(entityItem);
                         itemStack.stackSize = 0;
                     }
@@ -119,30 +120,23 @@ public abstract class BaseContainerBlock extends BlockContainer {
             }
         }
     }
-    
+
     /**
-     * From the specified side and block metadata retrieves the blocks texture. Args: side, metadata
+     * From the specified side and block metadata retrieves the blocks texture.
+     * Args: side, metadata
      */
     @Override
     @SideOnly(Side.CLIENT)
     public abstract Icon getIcon(int side, int metadata);
-    
+
     @Override
     public abstract ItemStack getPickBlock(MovingObjectPosition target, World world, int x, int y, int z);
-    
+
     @Override
     public abstract int idDropped(int meta, Random random, int fortune);
-    
+
     @Override
-    public boolean onBlockActivated(final World world,
-                                    final int x,
-                                    final int y,
-                                    final int z,
-                                    final EntityPlayer player,
-                                    final int wut,
-                                    final float clickX,
-                                    final float clickY,
-                                    final float clockZ) {
+    public boolean onBlockActivated(final World world, final int x, final int y, final int z, final EntityPlayer player, final int wut, final float clickX, final float clickY, final float clockZ) {
         if (world.isRemote) {
             return true;
         }
@@ -152,13 +146,13 @@ public abstract class BaseContainerBlock extends BlockContainer {
             return true;
         }
     }
-    
+
     @Override
     public void onBlockAdded(final World world, final int x, final int y, final int z) {
         super.onBlockAdded(world, x, y, z);
-        setDefaultDirection(world, x, y, z);
+        this.setDefaultDirection(world, x, y, z);
     }
-    
+
     /**
      * Sets the direction of the block when placed
      */
@@ -186,14 +180,14 @@ public abstract class BaseContainerBlock extends BlockContainer {
         ((TileBase) world.getBlockTileEntity(x, y, z)).setOwner(living.getEntityName());
         ((TileBase) world.getBlockTileEntity(x, y, z)).setOrientation(direction);
     }
-    
+
     /**
      * Registers the Icon for the Block
      */
     @Override
     @SideOnly(Side.CLIENT)
     public abstract void registerIcons(IconRegister iconRegister);
-    
+
     /**
      * set a blocks direction
      */

@@ -5,12 +5,12 @@ import java.util.HashSet;
 import net.minecraft.item.ItemStack;
 
 public class FuelsGrinder {
-    
+
     /**
      * Grinder Fuels
      */
     private static HashSet<ItemStack> grinderList = new HashSet<ItemStack>();
-    
+
     /**
      * Checks if a item is a Grind Stone.
      * 
@@ -26,7 +26,7 @@ public class FuelsGrinder {
         }
         return false;
     }
-    
+
     /**
      * Registers a new Grind Stone.
      * 

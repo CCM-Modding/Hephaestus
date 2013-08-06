@@ -15,9 +15,9 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModOres extends BaseBlock {
-    
+
     private static EnumOres[] ores = EnumOres.values();
-    
+
     /**
      * Creates a new Block instance capable of being a Ore
      * 
@@ -26,16 +26,16 @@ public class ModOres extends BaseBlock {
      */
     public ModOres(final int id) {
         super(id, Material.rock);
-        setHardness(3.0F);
-        setResistance(5.0F);
-        setStepSound(Block.soundStoneFootstep);
-        
+        this.setHardness(3.0F);
+        this.setResistance(5.0F);
+        this.setStepSound(Block.soundStoneFootstep);
+
         // Sets the required harvest level and tool
         // 0 is wood
         // 1 is stone
         // 2 is iron
         // 3 is diamond
-        
+
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreAluminum.ordinal(), "pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreCopper.ordinal(), "pickaxe", 1);
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreLead.ordinal(), "pickaxe", 2);
@@ -45,14 +45,14 @@ public class ModOres extends BaseBlock {
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTitanium.ordinal(), "pickaxe", 3);
         MinecraftForge.setBlockHarvestLevel(this, EnumOres.oreTungsten.ordinal(), "pickaxe", 3);
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public Icon getIcon(final int side, final int meta) {
-        blockIcon = ModOres.ores[meta].getIcon();
-        return blockIcon;
+        this.blockIcon = ModOres.ores[meta].getIcon();
+        return this.blockIcon;
     }
-    
+
     /**
      * Returns the ID of the items to drop on destruction.
      */
@@ -63,22 +63,22 @@ public class ModOres extends BaseBlock {
         // (MathHelper.getRandomInt(5)));
         // }
         // else {
-        return blockID;
+        return this.blockID;
         // }
     }
-    
+
     // Makes sure pick block works right
     @Override
     public int damageDropped(final int metadata) {
         return metadata;
     }
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
         EnumOres.registerIcons(iconRegister);
     }
-    
+
     @Override
     @SuppressWarnings({ "rawtypes", "unchecked" })
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {

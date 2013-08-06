@@ -9,7 +9,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class BaseBlock extends Block {
-    
+
     /**
      * Creates a new Block Instance.
      * 
@@ -18,9 +18,9 @@ public class BaseBlock extends Block {
      */
     public BaseBlock(final int id) {
         super(id, Material.ground);
-        setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
+        this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
     }
-    
+
     /**
      * Creates a new Block Instance.
      * 
@@ -31,15 +31,15 @@ public class BaseBlock extends Block {
      */
     public BaseBlock(final int id, final Material material) {
         super(id, material);
-        setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
+        this.setCreativeTab(HephaestusTabs.tabHephaestusBlocks);
     }
-    
+
     /**
      * Registers the Icon for the Block
      */
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        blockIcon = iconRegister.registerIcon(Locations.TEXTURE + getUnlocalizedName2());
+        this.blockIcon = iconRegister.registerIcon(Locations.TEXTURE + this.getUnlocalizedName());
     }
 }

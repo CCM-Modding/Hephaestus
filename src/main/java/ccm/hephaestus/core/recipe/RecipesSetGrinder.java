@@ -12,12 +12,12 @@ import ccm.hephaestus.item.ModItems;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesSetGrinder {
-    
+
     public RecipesSetGrinder() {
         RecipesSetGrinder.registerFuels();
         RecipesSetGrinder.registerRecipes();
     }
-    
+
     private static void registerFuels() {
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsStone));
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsIron));
@@ -25,13 +25,13 @@ final class RecipesSetGrinder {
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsObsidian));
         FuelsGrinder.registerGrinderFuel(new ItemStack(ModItems.gsDiamond));
     }
-    
+
     // needs ore dictionary
     private static void registerRecipes() {
-        
+
         RecipesGrinder.grinding().addGrinding(new ItemStack(Block.oreGold), EnumToItemStack.getItemIS(EnumDusts.dustGold, 2));
         RecipesGrinder.grinding().addGrinding(new ItemStack(Block.oreIron), EnumToItemStack.getItemIS(EnumDusts.dustIron, 2));
-        
+
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreAluminum), EnumToItemStack.getItemIS(EnumDusts.dustAluminum, 2));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreCopper), EnumToItemStack.getItemIS(EnumDusts.dustCopper, 2));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreLead), EnumToItemStack.getItemIS(EnumDusts.dustLead, 2));
@@ -40,10 +40,10 @@ final class RecipesSetGrinder {
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreTin), EnumToItemStack.getItemIS(EnumDusts.dustTin, 2));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreTitanium), EnumToItemStack.getItemIS(EnumDusts.dustTitanium, 2));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getBlockIS(EnumOres.oreTungsten), EnumToItemStack.getItemIS(EnumDusts.dustTungsten, 2));
-        
+
         RecipesGrinder.grinding().addGrinding(new ItemStack(Item.ingotIron), EnumToItemStack.getItemIS(EnumDusts.dustGold));
         RecipesGrinder.grinding().addGrinding(new ItemStack(Item.ingotGold), EnumToItemStack.getItemIS(EnumDusts.dustIron));
-        
+
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotAluminum), EnumToItemStack.getItemIS(EnumDusts.dustAluminum));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotBronze), EnumToItemStack.getItemIS(EnumDusts.dustBronze));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotCopper), EnumToItemStack.getItemIS(EnumDusts.dustCopper));
@@ -57,6 +57,6 @@ final class RecipesSetGrinder {
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotTitCarbide), EnumToItemStack.getItemIS(EnumDusts.dustTitCarbide));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotTunCarbide), EnumToItemStack.getItemIS(EnumDusts.dustTunCarbide));
         RecipesGrinder.grinding().addGrinding(EnumToItemStack.getItemIS(EnumIngots.ingotTungsten), EnumToItemStack.getItemIS(EnumDusts.dustTungsten));
-        
+
     }
 }

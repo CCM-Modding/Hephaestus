@@ -4,27 +4,27 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 
 final class ConfigWorldGen extends Config {
-    
-    final static String gen    = "World Generation  of ";
-    
-    final static String ena    = "Enable";
-    
+
+    final static String gen = "World Generation  of ";
+
+    final static String ena = "Enable";
+
     final static String whiteA = "White Alabaster";
-    
-    final static String cop    = "Copper";
-    
-    final static String lead   = "Lead";
-    
-    final static String sil    = "Silver";
-    
-    final static String sul    = "Sulfur";
-    
-    final static String tin    = "Tin";
-    
-    final static String tit    = "Titanium";
-    
-    final static String tun    = "Tungsten";
-    
+
+    final static String cop = "Copper";
+
+    final static String lead = "Lead";
+
+    final static String sil = "Silver";
+
+    final static String sul = "Sulfur";
+
+    final static String tin = "Tin";
+
+    final static String tit = "Titanium";
+
+    final static String tun = "Tungsten";
+
     /**
      * Loads or creates the World Generation Section in the Configuration file.
      * 
@@ -32,7 +32,7 @@ final class ConfigWorldGen extends Config {
      *            The Configuration file that is being edited.
      */
     protected static void configWorldGen(final AdvConfiguration config) {
-        
+
         Properties.enableWorldGenWhiteAlabaster = config.get(ConfigWorldGen.gen + ConfigWorldGen.whiteA, "EnableWhiteAlabaster", true).getBoolean(true);
         Properties.enableWorldGenCopper = config.get(ConfigWorldGen.gen + ConfigWorldGen.cop, ConfigWorldGen.ena + ConfigWorldGen.cop, true).getBoolean(true);
         Properties.enableWorldGenLead = config.get(ConfigWorldGen.gen + ConfigWorldGen.lead, ConfigWorldGen.ena + ConfigWorldGen.lead, true).getBoolean(true);

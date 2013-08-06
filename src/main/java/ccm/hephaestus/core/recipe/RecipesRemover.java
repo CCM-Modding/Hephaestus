@@ -7,12 +7,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import ccm.hephaestus.Hephaestus;
-import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.handler.LogHandler;
 
 final class RecipesRemover {
-    
+
     public static void delete(final List<String> noCraft) {
-        Handler.log(Hephaestus.instance, "Overwriting Food Stuffs!");
+        LogHandler.finest(Hephaestus.instance, "Overwriting Food Stuffs!");
         int id;
         int meta;
         final ArrayList<ItemStack> items = new ArrayList<ItemStack>();
@@ -39,7 +39,8 @@ final class RecipesRemover {
             }
         }
         /*
-         * Iterate over recipe list, and remove a recipe when its output matches one of our ItemStacks.
+         * Iterate over recipe list, and remove a recipe when its output matches
+         * one of our ItemStacks.
          */
         @SuppressWarnings("unchecked")
         final List<IRecipe> minecraftRecipes = CraftingManager.getInstance().getRecipeList();
@@ -50,11 +51,12 @@ final class RecipesRemover {
             if (result != null) {
                 for (final ItemStack removedItem : items) {
                     /*
-                     * Remove the item if the ID & meta match, OR if the IDs match, and banned meta is -1.
+                     * Remove the item if the ID & meta match, OR if the IDs
+                     * match, and banned meta is -1.
                      */
                     if ((result.itemID == removedItem.itemID) && ((removedItem.getItemDamage() == -1) || (result.getItemDamage() == removedItem.getItemDamage()))) {
                         minecraftRecipes.remove(i);
-                        Handler.log(Hephaestus.instance, "Recipes removed for item " + removedItem.itemID);
+                        LogHandler.finest(Hephaestus.instance, "Recipes removed for item " + removedItem.itemID);
                         --i;
                     }
                 }

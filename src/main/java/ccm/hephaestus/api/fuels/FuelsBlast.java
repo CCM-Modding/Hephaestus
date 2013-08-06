@@ -5,14 +5,14 @@ import java.util.HashSet;
 import net.minecraft.item.ItemStack;
 
 public class FuelsBlast {
-    
+
     /**
      * Blast Fuels
      */
-    private static HashSet<ItemStack> coalList   = new HashSet<ItemStack>();
-    
+    private static HashSet<ItemStack> coalList = new HashSet<ItemStack>();
+
     private static HashSet<ItemStack> sulfurList = new HashSet<ItemStack>();
-    
+
     /**
      * Checks if a item is a Coal fuel.
      * 
@@ -28,7 +28,7 @@ public class FuelsBlast {
         }
         return false;
     }
-    
+
     /**
      * Checks if a item is a Sulfur fuel.
      * 
@@ -44,7 +44,7 @@ public class FuelsBlast {
         }
         return false;
     }
-    
+
     /**
      * Registers a new Coal fuel.
      * 
@@ -54,7 +54,7 @@ public class FuelsBlast {
     public static void registerCoalFuel(final ItemStack stack) {
         FuelsBlast.coalList.add(stack);
     }
-    
+
     /**
      * Registers a new Sulfur fuel.
      * 
@@ -64,7 +64,7 @@ public class FuelsBlast {
     public static void registerSulfurFuel(final ItemStack stack) {
         FuelsBlast.sulfurList.add(stack);
     }
-    
+
     /**
      * Gets the burn time of a Coal fuel.
      * 
@@ -73,7 +73,7 @@ public class FuelsBlast {
     public static int getCoalValue(final ItemStack stack) {
         return 1600;
     }
-    
+
     /**
      * Gets the burn time of a Sulfur fuel.
      * 

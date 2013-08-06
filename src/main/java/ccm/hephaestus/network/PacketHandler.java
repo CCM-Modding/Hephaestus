@@ -7,12 +7,14 @@ import cpw.mods.fml.common.network.IPacketHandler;
 import cpw.mods.fml.common.network.Player;
 
 public final class PacketHandler implements IPacketHandler {
-    
+
     /***
-     * Handles Packet250CustomPayload packets that are registered to an Dendritis network channel
+     * Handles Packet250CustomPayload packets that are registered to an
+     * Dendritis network channel
      * 
      * @param manager
-     *            The NetworkManager associated with the current platform (client/server)
+     *            The NetworkManager associated with the current platform
+     *            (client/server)
      * @param packet
      *            The Packet250CustomPayload that was received
      * @param player
@@ -21,7 +23,8 @@ public final class PacketHandler implements IPacketHandler {
     @Override
     public void onPacketData(final INetworkManager manager, final Packet250CustomPayload packet, final Player player) {
         /*
-         * Build a BasePacket object from the data contained within the Packet250CustomPayload packet
+         * Build a BasePacket object from the data contained within the
+         * Packet250CustomPayload packet
          */
         final BasePacket basePacket = PacketTypeHandler.buildPacket(packet.data);
         // Execute the appropriate actions based on the BasePacket type

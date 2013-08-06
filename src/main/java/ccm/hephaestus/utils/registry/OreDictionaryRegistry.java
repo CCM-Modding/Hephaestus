@@ -6,17 +6,17 @@ import ccm.hephaestus.enums.EnumBlocks;
 import ccm.hephaestus.enums.EnumDusts;
 import ccm.hephaestus.enums.EnumIngots;
 import ccm.hephaestus.enums.EnumOres;
-import ccm.nucleum_omnium.handler.Handler;
+import ccm.nucleum_omnium.handler.LogHandler;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class OreDictionaryRegistry {
-    
+
     /**
      * Registers all the Entries to the Ore Dictionary.
      */
     protected static void oreDictionary() {
-        Handler.log(Hephaestus.instance, "Adding Ore Dictionary Entries");
-        
+        LogHandler.finest(Hephaestus.instance, "Adding Ore Dictionary Entries");
+
         OreDictionary.registerOre("naturalAluminum", EnumToItemStack.getItemIS(EnumIngots.ingotAluminum));
         OreDictionary.registerOre("ingotAluminium", EnumToItemStack.getItemIS(EnumIngots.ingotAluminum));
         OreDictionary.registerOre("ingotAluminum", EnumToItemStack.getItemIS(EnumIngots.ingotAluminum));
@@ -26,7 +26,7 @@ final class OreDictionaryRegistry {
         OreDictionary.registerOre("ingotTin", EnumToItemStack.getItemIS(EnumIngots.ingotTin));
         OreDictionary.registerOre("ingotTitanium", EnumToItemStack.getItemIS(EnumIngots.ingotTitanium));
         OreDictionary.registerOre("ingotTungsten", EnumToItemStack.getItemIS(EnumIngots.ingotTungsten));
-        
+
         OreDictionary.registerOre("dustAluminium", EnumToItemStack.getItemIS(EnumDusts.dustAluminum));
         OreDictionary.registerOre("dustAluminum", EnumToItemStack.getItemIS(EnumDusts.dustAluminum));
         OreDictionary.registerOre("dustCopper", EnumToItemStack.getItemIS(EnumDusts.dustCopper));
@@ -39,7 +39,7 @@ final class OreDictionaryRegistry {
         OreDictionary.registerOre("dustTin", EnumToItemStack.getItemIS(EnumDusts.dustTin));
         OreDictionary.registerOre("dustTitanium", EnumToItemStack.getItemIS(EnumDusts.dustTitanium));
         OreDictionary.registerOre("dustTungsten", EnumToItemStack.getItemIS(EnumDusts.dustTungsten));
-        
+
         OreDictionary.registerOre("blockNaturalAluminum", EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum));
         OreDictionary.registerOre("blockAluminum", EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum));
         OreDictionary.registerOre("blockAluminum", EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum));
@@ -51,7 +51,7 @@ final class OreDictionaryRegistry {
         OreDictionary.registerOre("blockTin", EnumToItemStack.getBlockIS(EnumBlocks.blockTin));
         OreDictionary.registerOre("blockTitanium", EnumToItemStack.getBlockIS(EnumBlocks.blockTitanium));
         OreDictionary.registerOre("blockTungsten", EnumToItemStack.getBlockIS(EnumBlocks.blockTungsten));
-        
+
         OreDictionary.registerOre("oreNaturalAluminium", EnumToItemStack.getBlockIS(EnumOres.oreAluminum));
         OreDictionary.registerOre("oreAluminium", EnumToItemStack.getBlockIS(EnumOres.oreAluminum));
         OreDictionary.registerOre("oreAluminum", EnumToItemStack.getBlockIS(EnumOres.oreAluminum));

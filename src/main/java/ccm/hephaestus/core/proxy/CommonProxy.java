@@ -8,12 +8,12 @@ import ccm.hephaestus.utils.lib.TileConstants;
 import ccm.nucleum_omnium.handler.GUIHandler;
 
 public class CommonProxy {
-    
+
     public void registerGUIs() {
-        
+
         GUIHandler.registerGuiServer(Hephaestus.instance, TileConstants.BLAST_GUID, ContainerBlast.class);
         GUIHandler.registerGuiServer(Hephaestus.instance, TileConstants.GRINDER_GUID, ContainerGrinder.class);
     }
-    
+
     public void handleTileEntityPacket(final int x, final int y, final int z, final ForgeDirection orientation, final short state, final String player, final String customName) {}
 }
