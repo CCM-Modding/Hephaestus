@@ -11,7 +11,6 @@ final class RecipesCraftingTools {
     /**
      * Adds all the Shaped recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShaped() {
 
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ModTools.axeAmethyst), new Object[] { "xx", "xy", " y", 'x', "gemAmethyst", 'y', "stickWood" }));

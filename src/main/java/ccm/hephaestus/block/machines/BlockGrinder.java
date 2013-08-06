@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
+import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
@@ -49,7 +50,7 @@ public class BlockGrinder extends BaseContainerBlock {
 
     @Override
     public TileEntity createNewTileEntity(final World world) {
-        return new TileGrinder();
+        return new GrinderLogic();
     }
 
     /**
@@ -81,7 +82,7 @@ public class BlockGrinder extends BaseContainerBlock {
     @Override
     public boolean onBlockActivated(final World world, final int x, final int y, final int z, final EntityPlayer player, final int wut, final float clickX, final float clickY, final float clockZ) {
         super.onBlockActivated(world, x, y, z, player, wut, clockZ, clockZ, clockZ);
-        final TileGrinder grinder = (TileGrinder) world.getBlockTileEntity(x, y, z);
+        final GrinderLogic grinder = (GrinderLogic) world.getBlockTileEntity(x, y, z);
         if (grinder != null) {
             GUIHandler.openGui(Hephaestus.instance, TileConstants.GRINDER_GUID, player, world, x, y, z);
             return true;

@@ -65,7 +65,6 @@ public class BaseItem extends BaseItemClass {
 
     @Override
     @SideOnly(Side.CLIENT)
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     /**
      * returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
      */

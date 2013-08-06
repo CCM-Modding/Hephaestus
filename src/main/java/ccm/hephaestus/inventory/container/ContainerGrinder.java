@@ -8,12 +8,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.inventory.slot.SlotGrinder;
 import ccm.hephaestus.inventory.slot.SlotOutput;
+import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ContainerGrinder extends ContainerBase {
 
-    private final TileGrinder grinder;
+    private final GrinderLogic grinder;
 
     private int lastGrindTime;
 
@@ -28,7 +29,7 @@ public class ContainerGrinder extends ContainerBase {
      */
     public ContainerGrinder(final InventoryPlayer player, final TileEntity grinder) {
         super(player, grinder, 8, 84, 142);
-        this.grinder = (TileGrinder) grinder;
+        this.grinder = (GrinderLogic) grinder;
         // (Input)
         this.addSlotToContainer(new Slot(this.grinder, 0, 57, 35));
         // (Grinding)

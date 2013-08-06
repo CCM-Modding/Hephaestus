@@ -8,11 +8,12 @@ import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
 import ccm.hephaestus.inventory.container.ContainerGrinder;
+import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.hephaestus.utils.lib.TileConstants;
 
 public class GUIGrinder extends GuiContainer {
 
-    private final TileGrinder grinder;
+    private final GrinderLogic grinder;
 
     /**
      * Creates the Grinder's GUI
@@ -20,12 +21,12 @@ public class GUIGrinder extends GuiContainer {
      * @param player
      *            The Player looking at the GUI
      * @param grinder
-     *            The {@link TileGrinder} instance that the player is looking
+     *            The {@link GrinderLogic} instance that the player is looking
      *            at.
      */
     public GUIGrinder(final InventoryPlayer player, final TileEntity grinder) {
         super(new ContainerGrinder(player, grinder));
-        this.grinder = (TileGrinder) grinder;
+        this.grinder = (GrinderLogic) grinder;
     }
 
     /**

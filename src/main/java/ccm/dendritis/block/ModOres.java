@@ -82,7 +82,6 @@ public class ModOres extends BaseBlock {
     }
 
     @Override
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     public void getSubBlocks(final int itemId, final CreativeTabs tab, final List list) {
         for (int i = 0; i < EnumOres.values().length; i++) {
             list.add(new ItemStack(itemId, 1, i));

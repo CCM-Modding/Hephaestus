@@ -1,6 +1,7 @@
 package ccm.dendritis.creativetab;
 
 import net.minecraft.item.ItemStack;
+import ccm.dendritis.enums.blocks.EnumBlocks;
 import ccm.dendritis.enums.items.EnumGems;
 import ccm.dendritis.enums.items.EnumMain;
 import ccm.dendritis.item.ModArmors;

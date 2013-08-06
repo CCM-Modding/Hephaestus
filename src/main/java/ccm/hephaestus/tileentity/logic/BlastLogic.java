@@ -6,12 +6,11 @@ import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.block.tile.TileBase;
 import ccm.nucleum_omnium.helper.InventoryHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlastLogic extends TileBase {
+public class BlastLogic extends BaseLogic {
 
     private final RecipesBlast recipe = RecipesBlast.smelting();
 

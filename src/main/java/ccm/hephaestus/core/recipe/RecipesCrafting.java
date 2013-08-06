@@ -15,7 +15,6 @@ final class RecipesCrafting {
     /**
      * Adds all the Shaped recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShaped() {
 
         // needs proper recipe
@@ -26,7 +25,6 @@ final class RecipesCrafting {
     /**
      * Adds all the Shapeless recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShapeless() {
 
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDusts.dustBronze, 4), EnumToItemStack.getItemIS(EnumDusts.dustCopper), EnumToItemStack.getItemIS(EnumDusts.dustCopper), EnumToItemStack.getItemIS(EnumDusts.dustCopper), EnumToItemStack.getItemIS(EnumDusts.dustTin)));

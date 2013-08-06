@@ -11,7 +11,6 @@ final class RecipesCraftingArmor {
     /**
      * Adds all the Shaped recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShaped() {
 
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ModArmors.headAmethyst), new Object[] { "xxx", "x x", 'x', "gemAmethyst" }));

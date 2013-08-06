@@ -5,13 +5,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import ccm.hephaestus.api.recipes.RecipesGrinder;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.block.tile.TileBase;
 import ccm.nucleum_omnium.helper.InventoryHelper;
 import ccm.nucleum_omnium.helper.ItemHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class GrinderLogic extends TileBase {
+public class GrinderLogic extends BaseLogic {
 
     private final RecipesGrinder recipe = RecipesGrinder.grinding();
 

@@ -13,7 +13,6 @@ final class RecipesCraftingBlocks {
     /**
      * Adds all the Shaped recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShaped() {
 
         CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngots.ingotAluminum) }));
@@ -36,7 +35,6 @@ final class RecipesCraftingBlocks {
     /**
      * Adds all the Shapeless recipes in the Mod.
      */
-    @SuppressWarnings("unchecked")
     private static void addShapeless() {
 
         CraftingManager.getInstance().getRecipeList().add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngots.ingotAluminum, 9), EnumToItemStack.getBlockIS(EnumBlocks.blockAluminum)));

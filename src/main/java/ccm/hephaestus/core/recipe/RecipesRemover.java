@@ -42,7 +42,6 @@ final class RecipesRemover {
          * Iterate over recipe list, and remove a recipe when its output matches
          * one of our ItemStacks.
          */
-        @SuppressWarnings("unchecked")
         final List<IRecipe> minecraftRecipes = CraftingManager.getInstance().getRecipeList();
         ItemStack result;
         for (int i = 0; i < minecraftRecipes.size(); ++i) {

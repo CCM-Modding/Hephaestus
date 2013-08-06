@@ -9,12 +9,13 @@ import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.inventory.slot.SlotBlastCoal;
 import ccm.hephaestus.inventory.slot.SlotBlastSulfur;
 import ccm.hephaestus.inventory.slot.SlotOutput;
+import ccm.hephaestus.tileentity.logic.BlastLogic;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ContainerBlast extends ContainerBase {
 
-    private final TileBlast blast;
+    private final BlastLogic blast;
 
     private int lastSmeltTime;
 
@@ -29,7 +30,7 @@ public class ContainerBlast extends ContainerBase {
      */
     public ContainerBlast(final InventoryPlayer player, final TileEntity blast) {
         super(player, blast, 8, 84, 142);
-        this.blast = (TileBlast) blast;
+        this.blast = (BlastLogic) blast;
         // (Input)
         this.addSlotToContainer(new Slot(this.blast, 0, 57, 35));
         // (Coal)

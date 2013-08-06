@@ -8,11 +8,12 @@ import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
 import ccm.hephaestus.inventory.container.ContainerBlast;
+import ccm.hephaestus.tileentity.logic.BlastLogic;
 import ccm.hephaestus.utils.lib.TileConstants;
 
 public class GUIBlast extends GuiContainer {
 
-    private final TileBlast blast;
+    private final BlastLogic blast;
 
     /**
      * Creates the Blast Furnace's GUI
@@ -24,7 +25,7 @@ public class GUIBlast extends GuiContainer {
      */
     public GUIBlast(final InventoryPlayer player, final TileEntity blast) {
         super(new ContainerBlast(player, blast));
-        this.blast = (TileBlast) blast;
+        this.blast = (BlastLogic) blast;
     }
 
     /**
