@@ -22,7 +22,5 @@ final class ConfigBlocks extends HephaestusConfig {
         Properties.stgBlockID = config.getBlock("StorageBlocks", id++).getInt();
 
         Properties.machineBlockID = config.getBlock("Machines", id++).getInt();
-
-        Properties.modeledBlockID = config.getBlock("ModeledMachines", id++).getInt();
     }
 }

@@ -52,8 +52,6 @@ public class Properties {
 
     public static int machineBlockID;
 
-    public static int modeledBlockID;
-
     /*
      * World Generation Stuff
      */
@@ -73,15 +71,9 @@ public class Properties {
 
     public static boolean enableWorldGenTungsten;
 
-    public static boolean enableWorldGenAmethyst;
-
-    public static boolean enableWorldGenBDiamond;
-
     public static boolean enableWorldGenCitrine;
 
     public static boolean enableWorldGenCZirconia;
-
-    public static boolean enableWorldGenFuchsia;
 
     public static boolean enableWorldGenJet;
 
@@ -93,13 +85,9 @@ public class Properties {
 
     public static boolean enableWorldGenSapphire;
 
-    public static boolean enableWorldGenSQuartz;
-
     public static boolean enableWorldGenSun;
 
     public static boolean enableWorldGenTopaz;
-
-    public static boolean enableWorldGenTurquoise;
 
     public static boolean enableWorldGenWAlabaster;
 }
