@@ -19,7 +19,7 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.hephaestus.tileentity.TileBase;
+import ccm.nucleum_omnium.block.tile.TileBase;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

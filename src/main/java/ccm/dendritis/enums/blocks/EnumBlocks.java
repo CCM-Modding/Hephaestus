@@ -1,30 +1,30 @@
-package ccm.hephaestus.enums;
+package ccm.dendritis.enums.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.Icon;
-import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.utils.lib.Locations;
+import ccm.dendritis.block.ModBlocks;
+import ccm.dendritis.utils.lib.Locations;
 import ccm.nucleum_omnium.handler.TextureHandler;
 import ccm.nucleum_omnium.helper.enums.IBlockEnum;
 
 public enum EnumBlocks implements IBlockEnum {
 
-    blockAluminum,
-    blockBronze,
-    blockCopper,
-    blockHardIron,
-    blockHeavyIron,
-    blockLead,
-    blockSilver,
-    blockSteel,
-    blockSulfur,
-    blockTin,
-    blockTitanite,
-    blockTitanium,
-    blockTitCarbide,
-    blockTunCarbide,
-    blockTungsten;
+    blockAmethyst,
+    blockBDiamond,
+    blockCitrine,
+    blockCZirconia,
+    blockFuchsia,
+    blockJet,
+    blockOlivine,
+    blockOpal,
+    blockRuby,
+    blockSapphire,
+    blockSQuartz,
+    blockSun,
+    blockTopaz,
+    blockTurquoise,
+    blockWAlabaster;
 
     private Icon icon;
 

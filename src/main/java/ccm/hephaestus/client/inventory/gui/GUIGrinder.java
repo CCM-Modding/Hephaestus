@@ -8,7 +8,6 @@ import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
 import ccm.hephaestus.inventory.container.ContainerGrinder;
-import ccm.hephaestus.tileentity.TileGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
 
 public class GUIGrinder extends GuiContainer {

@@ -3,7 +3,7 @@ package ccm.hephaestus.utils.registry;
 import net.minecraft.item.ItemStack;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.enums.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumOres;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.handler.LogHandler;

@@ -1,4 +1,4 @@
-package ccm.hephaestus.tileentity;
+package ccm.hephaestus.tileentity.logic;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -6,11 +6,12 @@ import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
 import ccm.hephaestus.block.machines.BlockBlast;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum_omnium.block.tile.TileBase;
 import ccm.nucleum_omnium.helper.InventoryHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileBlast extends TileBase {
+public class BlastLogic extends TileBase {
 
     private final RecipesBlast recipe = RecipesBlast.smelting();
 
@@ -27,10 +28,10 @@ public class TileBlast extends TileBase {
     private static final int invSize = 4;
 
     /**
-     * Creates a new {@link TileBlast} Instance.
+     * Creates a new {@link BlastLogic} Instance.
      */
-    public TileBlast() {
-        super(TileBlast.invSize, TileConstants.BLAST_UNLOCALIZED);
+    public BlastLogic() {
+        super(BlastLogic.invSize, TileConstants.BLAST_UNLOCALIZED);
     }
 
     /**
@@ -93,7 +94,7 @@ public class TileBlast extends TileBase {
     @Override
     public void readFromNBT(final NBTTagCompound nbt) {
         super.readFromNBT(nbt);
-        this.setInventory(InventoryHelper.readInventoryFromNBT(nbt.getTagList(TileConstants.INVENTORY), TileBlast.invSize));
+        this.setInventory(InventoryHelper.readInventoryFromNBT(nbt.getTagList(TileConstants.INVENTORY), BlastLogic.invSize));
     }
 
     /**
@@ -135,7 +136,7 @@ public class TileBlast extends TileBase {
         }
         if (!this.worldObj.isRemote) {
             if ((this.blastBurnTime == 0) && this.canSmelt()) {
-                this.currentSmeltTime = this.blastBurnTime = TileBlast.getItemBurnTime(this.inventory[1]);
+                this.currentSmeltTime = this.blastBurnTime = BlastLogic.getItemBurnTime(this.inventory[1]);
                 if (this.blastBurnTime > 0) {
                     flag1 = true;
                     if (this.inventory[1] != null) {
@@ -230,7 +231,7 @@ public class TileBlast extends TileBase {
      * Return true if item is a fuel source (getItemBurnTime() > 0).
      */
     public static boolean isItemFuel(final ItemStack stack) {
-        return TileBlast.getItemBurnTime(stack) > 0;
+        return BlastLogic.getItemBurnTime(stack) > 0;
     }
 
     @Override

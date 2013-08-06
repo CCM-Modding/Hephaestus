@@ -2,10 +2,10 @@ package ccm.hephaestus.utils.registry;
 
 import net.minecraftforge.oredict.OreDictionary;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.enums.EnumBlocks;
-import ccm.hephaestus.enums.EnumDusts;
-import ccm.hephaestus.enums.EnumIngots;
-import ccm.hephaestus.enums.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumBlocks;
+import ccm.hephaestus.enums.blocks.EnumOres;
+import ccm.hephaestus.enums.items.EnumDusts;
+import ccm.hephaestus.enums.items.EnumIngots;
 import ccm.nucleum_omnium.handler.LogHandler;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 

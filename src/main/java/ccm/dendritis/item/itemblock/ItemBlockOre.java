@@ -2,7 +2,7 @@ package ccm.dendritis.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import ccm.dendritis.enums.EnumOres;
+import ccm.dendritis.enums.blocks.EnumOres;
 
 public class ItemBlockOre extends ItemBlock {
 

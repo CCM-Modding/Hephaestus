@@ -8,7 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.inventory.slot.SlotGrinder;
 import ccm.hephaestus.inventory.slot.SlotOutput;
-import ccm.hephaestus.tileentity.TileGrinder;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

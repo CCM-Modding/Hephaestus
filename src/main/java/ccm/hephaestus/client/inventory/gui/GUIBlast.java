@@ -8,7 +8,6 @@ import net.minecraft.util.StatCollector;
 import org.lwjgl.opengl.GL11;
 
 import ccm.hephaestus.inventory.container.ContainerBlast;
-import ccm.hephaestus.tileentity.TileBlast;
 import ccm.hephaestus.utils.lib.TileConstants;
 
 public class GUIBlast extends GuiContainer {

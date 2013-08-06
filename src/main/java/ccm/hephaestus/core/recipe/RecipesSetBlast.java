@@ -4,9 +4,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import ccm.hephaestus.api.fuels.FuelsBlast;
 import ccm.hephaestus.api.recipes.RecipesBlast;
-import ccm.hephaestus.enums.EnumDusts;
-import ccm.hephaestus.enums.EnumIngots;
-import ccm.hephaestus.enums.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumOres;
+import ccm.hephaestus.enums.items.EnumDusts;
+import ccm.hephaestus.enums.items.EnumIngots;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesSetBlast {

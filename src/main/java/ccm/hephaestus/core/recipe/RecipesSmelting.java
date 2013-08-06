@@ -3,9 +3,9 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import ccm.hephaestus.enums.EnumDusts;
-import ccm.hephaestus.enums.EnumIngots;
-import ccm.hephaestus.enums.EnumOres;
+import ccm.hephaestus.enums.blocks.EnumOres;
+import ccm.hephaestus.enums.items.EnumDusts;
+import ccm.hephaestus.enums.items.EnumIngots;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesSmelting {

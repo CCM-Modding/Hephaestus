@@ -9,8 +9,6 @@ import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.inventory.slot.SlotBlastCoal;
 import ccm.hephaestus.inventory.slot.SlotBlastSulfur;
 import ccm.hephaestus.inventory.slot.SlotOutput;
-import ccm.hephaestus.tileentity.TileBlast;
-import ccm.hephaestus.tileentity.TileGrinder;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

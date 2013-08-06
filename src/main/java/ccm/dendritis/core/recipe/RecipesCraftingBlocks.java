@@ -3,8 +3,8 @@ package ccm.dendritis.core.recipe;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import ccm.dendritis.enums.EnumBlocks;
-import ccm.dendritis.enums.EnumGems;
+import ccm.dendritis.enums.blocks.EnumBlocks;
+import ccm.dendritis.enums.items.EnumGems;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesCraftingBlocks {

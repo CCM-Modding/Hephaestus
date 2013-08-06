@@ -7,8 +7,8 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import ccm.dendritis.creativetab.DendritisTabs;
-import ccm.dendritis.enums.EnumGems;
-import ccm.dendritis.enums.EnumMain;
+import ccm.dendritis.enums.items.EnumGems;
+import ccm.dendritis.enums.items.EnumMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

@@ -2,7 +2,7 @@ package ccm.hephaestus.item.itemblock;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-import ccm.hephaestus.enums.EnumBlocks;
+import ccm.hephaestus.enums.blocks.EnumBlocks;
 
 public class ItemBlockBlock extends ItemBlock {
 

@@ -2,9 +2,9 @@ package ccm.dendritis.utils.registry;
 
 import net.minecraftforge.oredict.OreDictionary;
 import ccm.dendritis.Dendritis;
-import ccm.dendritis.enums.EnumBlocks;
-import ccm.dendritis.enums.EnumGems;
-import ccm.dendritis.enums.EnumOres;
+import ccm.dendritis.enums.blocks.EnumBlocks;
+import ccm.dendritis.enums.blocks.EnumOres;
+import ccm.dendritis.enums.items.EnumGems;
 import ccm.nucleum_omnium.handler.LogHandler;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 

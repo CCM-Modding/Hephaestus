@@ -1,8 +1,8 @@
 package ccm.hephaestus.creativetab;
 
-import ccm.hephaestus.enums.EnumBlocks;
-import ccm.hephaestus.enums.EnumHandle;
-import ccm.hephaestus.enums.EnumIngots;
+import ccm.hephaestus.enums.blocks.EnumBlocks;
+import ccm.hephaestus.enums.items.EnumHandle;
+import ccm.hephaestus.enums.items.EnumIngots;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;

@@ -3,7 +3,7 @@ package ccm.dendritis.utils.registry;
 import net.minecraft.item.ItemStack;
 import ccm.dendritis.Dendritis;
 import ccm.dendritis.block.ModBlocks;
-import ccm.dendritis.enums.EnumOres;
+import ccm.dendritis.enums.blocks.EnumOres;
 import ccm.dendritis.utils.lib.Archive;
 import ccm.dendritis.utils.lib.Properties;
 import ccm.nucleum_omnium.handler.LogHandler;

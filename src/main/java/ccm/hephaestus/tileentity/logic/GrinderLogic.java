@@ -1,16 +1,17 @@
-package ccm.hephaestus.tileentity;
+package ccm.hephaestus.tileentity.logic;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import ccm.hephaestus.api.recipes.RecipesGrinder;
 import ccm.hephaestus.block.machines.BlockGrinder;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum_omnium.block.tile.TileBase;
 import ccm.nucleum_omnium.helper.InventoryHelper;
 import ccm.nucleum_omnium.helper.ItemHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class TileGrinder extends TileBase {
+public class GrinderLogic extends TileBase {
 
     private final RecipesGrinder recipe = RecipesGrinder.grinding();
 
@@ -21,10 +22,10 @@ public class TileGrinder extends TileBase {
     private static final int invSize = 3;
 
     /**
-     * Creates a new {@link TileGrinder} Instance.
+     * Creates a new {@link GrinderLogic} Instance.
      */
-    public TileGrinder() {
-        super(TileGrinder.invSize, TileConstants.GRINDER_UNLOCALIZED);
+    public GrinderLogic() {
+        super(GrinderLogic.invSize, TileConstants.GRINDER_UNLOCALIZED);
     }
 
     /**
@@ -89,7 +90,7 @@ public class TileGrinder extends TileBase {
     @Override
     public void readFromNBT(final NBTTagCompound nbt) {
         super.readFromNBT(nbt);
-        this.setInventory(InventoryHelper.readInventoryFromNBT(nbt.getTagList(TileConstants.INVENTORY), TileGrinder.invSize));
+        this.setInventory(InventoryHelper.readInventoryFromNBT(nbt.getTagList(TileConstants.INVENTORY), GrinderLogic.invSize));
     }
 
     @Override

@@ -40,6 +40,6 @@ public class BaseBlock extends Block {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        this.blockIcon = iconRegister.registerIcon(Locations.TEXTURE + getUnlocalizedName());
+        this.blockIcon = iconRegister.registerIcon(Locations.TEXTURE + this.getUnlocalizedName());
     }
 }

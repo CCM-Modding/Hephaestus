@@ -1,4 +1,4 @@
-package ccm.hephaestus.enums;
+package ccm.hephaestus.enums.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;

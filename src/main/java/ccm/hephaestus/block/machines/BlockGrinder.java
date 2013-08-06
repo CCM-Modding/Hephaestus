@@ -12,7 +12,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeDirection;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.tileentity.TileGrinder;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.hephaestus.utils.lib.TileConstants;
@@ -94,8 +93,8 @@ public class BlockGrinder extends BaseContainerBlock {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister iconRegister) {
-        this.topIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(getUnlocalizedName() + "Top", Locations.TEXTURE + "machine/"));
-        this.bottomIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(getUnlocalizedName() + "Bottom", Locations.TEXTURE + "machine/"));
-        this.blockIcon = iconRegister.registerIcon(this.isActive ? TextureHandler.getTextureFromName(getUnlocalizedName() + "SideOn", Locations.TEXTURE + "machine/") : TextureHandler.getTextureFromName(getUnlocalizedName() + "SideOff", Locations.TEXTURE + "machine/"));
+        this.topIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(this.getUnlocalizedName() + "Top", Locations.TEXTURE + "machine/"));
+        this.bottomIcon = iconRegister.registerIcon(TextureHandler.getTextureFromName(this.getUnlocalizedName() + "Bottom", Locations.TEXTURE + "machine/"));
+        this.blockIcon = iconRegister.registerIcon(this.isActive ? TextureHandler.getTextureFromName(this.getUnlocalizedName() + "SideOn", Locations.TEXTURE + "machine/") : TextureHandler.getTextureFromName(this.getUnlocalizedName() + "SideOff", Locations.TEXTURE + "machine/"));
     }
 }

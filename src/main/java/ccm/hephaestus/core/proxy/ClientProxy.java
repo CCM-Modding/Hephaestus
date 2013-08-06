@@ -7,8 +7,8 @@ import ccm.hephaestus.client.inventory.gui.GUIBlast;
 import ccm.hephaestus.client.inventory.gui.GUIGrinder;
 import ccm.hephaestus.inventory.container.ContainerBlast;
 import ccm.hephaestus.inventory.container.ContainerGrinder;
-import ccm.hephaestus.tileentity.TileBase;
 import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum_omnium.block.tile.TileBase;
 import ccm.nucleum_omnium.handler.GUIHandler;
 import cpw.mods.fml.client.FMLClientHandler;
 

@@ -3,9 +3,9 @@ package ccm.hephaestus.core.recipe;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
-import ccm.hephaestus.enums.EnumBlocks;
-import ccm.hephaestus.enums.EnumDusts;
-import ccm.hephaestus.enums.EnumIngots;
+import ccm.hephaestus.enums.blocks.EnumBlocks;
+import ccm.hephaestus.enums.items.EnumDusts;
+import ccm.hephaestus.enums.items.EnumIngots;
 import ccm.nucleum_omnium.helper.enums.EnumToItemStack;
 
 final class RecipesCraftingBlocks {

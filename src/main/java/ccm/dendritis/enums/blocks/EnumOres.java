@@ -1,4 +1,4 @@
-package ccm.dendritis.enums;
+package ccm.dendritis.enums.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
