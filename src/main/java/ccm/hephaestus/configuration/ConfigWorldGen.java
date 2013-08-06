@@ -22,7 +22,7 @@ final class ConfigWorldGen extends HephaestusConfig {
         Properties.enableWorldGenTin = config.get(ConfigWorldGen.gen, "EnableTin", true).getBoolean(true);
         Properties.enableWorldGenTitanium = config.get(ConfigWorldGen.gen, "EnableTitanium", true).getBoolean(true);
         Properties.enableWorldGenTungsten = config.get(ConfigWorldGen.gen, "EnableTungsten", true).getBoolean(true);
-        
+
         Properties.enableWorldGenCitrine = config.get(ConfigWorldGen.gen, "EnableCitrine", true).getBoolean(true);
         Properties.enableWorldGenCZirconia = config.get(ConfigWorldGen.gen, "EnableCZirconia", true).getBoolean(true);
         Properties.enableWorldGenJet = config.get(ConfigWorldGen.gen, "EnableJet", true).getBoolean(true);

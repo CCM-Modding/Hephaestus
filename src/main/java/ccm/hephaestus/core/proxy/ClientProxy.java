@@ -3,7 +3,7 @@ package ccm.hephaestus.core.proxy;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.inventory.Container;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.block.enums.EnumMachines;
+import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.client.inventory.gui.GUIGrinder;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.nucleum_omnium.utils.handler.TextureHandler;
@@ -15,9 +15,9 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerGUIs() {
 
-        registerGUI(EnumMachines.machineGrinder, GUIGrinder.class, GrinderContainer.class);
+        registerGUI(EnumModeled.machineGrinder, GUIGrinder.class, GrinderContainer.class);
 
-        this.addGUITexture(EnumMachines.machineGrinder);
+        this.addGUITexture(EnumModeled.machineGrinder);
     }
 
     private static void registerGUI(final Enum<?> enu, final Class<? extends GuiContainer> gui, final Class<? extends Container> container) {

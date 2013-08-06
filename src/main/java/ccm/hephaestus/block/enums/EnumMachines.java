@@ -5,7 +5,7 @@ import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
 
 public enum EnumMachines implements IBlockEnum {
     // Make sure to keep this lower than 16 AT ALL TIMES
-    machineGrinder;
+    nul;
 
     private static Block mainBlock;
 

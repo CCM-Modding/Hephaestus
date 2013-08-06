@@ -3,7 +3,7 @@ package ccm.hephaestus.core.proxy;
 import net.minecraft.inventory.Container;
 import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.block.enums.EnumMachines;
+import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.nucleum_omnium.tileentity.ActiveTE;
@@ -20,7 +20,7 @@ public class CommonProxy {
     public void registerGUIs() {
         LogHandler.finest(Hephaestus.instance, "Registering GUIs");
 
-        registerGUI(EnumMachines.machineGrinder, GrinderContainer.class);
+        registerGUI(EnumModeled.machineGrinder, GrinderContainer.class);
     }
 
     private static void registerGUI(final Enum<?> enu, final Class<? extends Container> container) {
@@ -33,7 +33,7 @@ public class CommonProxy {
     public void registerTEs() {
         LogHandler.finest(Hephaestus.instance, "Registering Tile Entities");
 
-        registerTE(EnumMachines.machineGrinder, new ActiveTE().setLogic(GrinderLogic.class).setInventorySize(4));
+        registerTE(EnumModeled.machineGrinder, new ActiveTE().setLogic(GrinderLogic.class).setInventorySize(4));
     }
 
     private static void registerTE(final Enum<?> enu, final TileEntity te) {

@@ -52,6 +52,8 @@ public class Properties {
 
     public static int machineBlockID;
 
+    public static int modeledBlockID;
+
     /*
      * World Generation Stuff
      */
