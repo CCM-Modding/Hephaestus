@@ -1,36 +1,36 @@
 package ccm.hephaestus.core.proxy;
 
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.inventory.Container;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.client.inventory.gui.GUIBlast;
+import ccm.hephaestus.block.enums.EnumMachines;
 import ccm.hephaestus.client.inventory.gui.GUIGrinder;
-import ccm.hephaestus.inventory.container.ContainerBlast;
-import ccm.hephaestus.inventory.container.ContainerGrinder;
-import ccm.hephaestus.tileentity.logic.BaseLogic;
-import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.utils.handler.GUIHandler;
-import cpw.mods.fml.client.FMLClientHandler;
+import ccm.hephaestus.inventory.container.GrinderContainer;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.handler.gui.GUIHandler;
+import ccm.nucleum_omnium.utils.helper.enums.EnumHelper;
 
 public class ClientProxy extends CommonProxy {
 
     @Override
     public void registerGUIs() {
 
-        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.BLAST_GUID, GUIBlast.class, ContainerBlast.class);
-        GUIHandler.registerGuiClient(Hephaestus.instance, TileConstants.GRINDER_GUID, GUIGrinder.class, ContainerGrinder.class);
+        registerGUI(EnumMachines.machineGrinder, GUIGrinder.class, GrinderContainer.class);
+
+        this.addGUITexture(EnumMachines.machineGrinder);
+    }
+
+    private static void registerGUI(final Enum<?> enu, final Class<? extends GuiContainer> gui, final Class<? extends Container> container) {
+        GUIHandler.registerGuiClient(EnumHelper.getTileID(enu), gui, container);
+    }
+
+    private void addGUITexture(final Enum<?> enu) {
+        TextureHandler.addGUITexture(Hephaestus.instance, enu.name());
     }
 
     @Override
-    public void handleTileEntityPacket(final int x, final int y, final int z, final ForgeDirection orientation, final short state, final String owner, final String customName) {
-        final TileEntity tileEntity = FMLClientHandler.instance().getClient().theWorld.getBlockTileEntity(x, y, z);
-        if (tileEntity != null) {
-            if (tileEntity instanceof BaseLogic) {
-                ((BaseLogic) tileEntity).setOrientation(orientation);
-                ((BaseLogic) tileEntity).setState(state);
-                ((BaseLogic) tileEntity).setOwner(owner);
-                ((BaseLogic) tileEntity).setCustomName(customName);
-            }
-        }
+    public void registerTEs() {
+        super.registerTEs();
+
     }
 }

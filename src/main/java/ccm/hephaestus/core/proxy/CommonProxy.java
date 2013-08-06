@@ -1,19 +1,42 @@
 package ccm.hephaestus.core.proxy;
 
-import net.minecraftforge.common.ForgeDirection;
+import net.minecraft.inventory.Container;
+import net.minecraft.tileentity.TileEntity;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.inventory.container.ContainerBlast;
-import ccm.hephaestus.inventory.container.ContainerGrinder;
-import ccm.hephaestus.utils.lib.TileConstants;
-import ccm.nucleum_omnium.utils.handler.GUIHandler;
+import ccm.hephaestus.block.enums.EnumMachines;
+import ccm.hephaestus.inventory.container.GrinderContainer;
+import ccm.hephaestus.tileentity.logic.GrinderLogic;
+import ccm.nucleum_omnium.tileentity.ActiveTE;
+import ccm.nucleum_omnium.utils.handler.LogHandler;
+import ccm.nucleum_omnium.utils.handler.TileHandler;
+import ccm.nucleum_omnium.utils.handler.gui.GUIHandler;
+import ccm.nucleum_omnium.utils.helper.enums.EnumHelper;
 
 public class CommonProxy {
 
+    /**
+     * Registers all the GUIs
+     */
     public void registerGUIs() {
+        LogHandler.finest(Hephaestus.instance, "Registering GUIs");
 
-        GUIHandler.registerGuiServer(Hephaestus.instance, TileConstants.BLAST_GUID, ContainerBlast.class);
-        GUIHandler.registerGuiServer(Hephaestus.instance, TileConstants.GRINDER_GUID, ContainerGrinder.class);
+        registerGUI(EnumMachines.machineGrinder, GrinderContainer.class);
     }
 
-    public void handleTileEntityPacket(final int x, final int y, final int z, final ForgeDirection orientation, final short state, final String player, final String customName) {}
+    private static void registerGUI(final Enum<?> enu, final Class<? extends Container> container) {
+        GUIHandler.registerGuiServer(EnumHelper.getTileID(enu), container);
+    }
+
+    /**
+     * Registers all the {@link TileEntity}s
+     */
+    public void registerTEs() {
+        LogHandler.finest(Hephaestus.instance, "Registering Tile Entities");
+
+        registerTE(EnumMachines.machineGrinder, new ActiveTE().setLogic(GrinderLogic.class).setInventorySize(4));
+    }
+
+    private static void registerTE(final Enum<?> enu, final TileEntity te) {
+        TileHandler.registerTileEntity(EnumHelper.getTileID(enu), te);
+    }
 }

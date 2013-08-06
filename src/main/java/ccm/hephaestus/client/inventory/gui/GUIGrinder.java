@@ -7,13 +7,19 @@ import net.minecraft.util.StatCollector;
 
 import org.lwjgl.opengl.GL11;
 
-import ccm.hephaestus.inventory.container.ContainerGrinder;
+import ccm.hephaestus.block.enums.EnumMachines;
+import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
-import ccm.hephaestus.utils.lib.TileConstants;
+import ccm.nucleum_omnium.tileentity.ActiveTE;
+import ccm.nucleum_omnium.tileentity.interfaces.IGUITileLogic;
+import ccm.nucleum_omnium.utils.handler.TextureHandler;
+import ccm.nucleum_omnium.utils.lib.TileConstants;
 
 public class GUIGrinder extends GuiContainer {
 
-    private final GrinderLogic grinder;
+    private final ActiveTE grinder;
+
+    private final IGUITileLogic grinderL;
 
     /**
      * Creates the Grinder's GUI
@@ -25,8 +31,9 @@ public class GUIGrinder extends GuiContainer {
      *            at.
      */
     public GUIGrinder(final InventoryPlayer player, final TileEntity grinder) {
-        super(new ContainerGrinder(player, grinder));
-        this.grinder = (GrinderLogic) grinder;
+        super(new GrinderContainer(player, grinder));
+        this.grinder = (ActiveTE) grinder;
+        this.grinderL = (IGUITileLogic) this.grinder.getTileLogic();
     }
 
     /**
@@ -36,14 +43,14 @@ public class GUIGrinder extends GuiContainer {
     @Override
     protected void drawGuiContainerBackgroundLayer(final float opacity, final int x, final int y) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.renderEngine.bindTexture(TileConstants.GRINDER_GUI);
+        this.mc.func_110434_K().func_110577_a(TextureHandler.getGUI(EnumMachines.machineGrinder.name()));
         final int xStart = (this.width - this.xSize) / 2;
         final int yStart = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(xStart, yStart, 0, 0, this.xSize, this.ySize);
         int scale;
-        if (this.grinder.canGrind()) {
-            scale = this.grinder.getGrindProgressScaled(35);
-            this.drawTexturedModalRect(xStart + 79, yStart + 35, 176, 0, scale, 15);
+        if (this.grinderL.canRun()) {
+            scale = this.grinderL.getProgressScaled(24);
+            this.drawTexturedModalRect(xStart + 79, yStart + 31, 176, 0, 20, scale);
         }
     }
 
@@ -53,7 +60,14 @@ public class GUIGrinder extends GuiContainer {
      */
     @Override
     protected void drawGuiContainerForegroundLayer(final int x, final int y) {
-        final String containerName = this.grinder.isInvNameLocalized() ? this.grinder.getInvName() : StatCollector.translateToLocal(this.grinder.getInvName());
+        final String containerName;
+
+        if (this.grinder.isInvNameLocalized()) {
+            containerName = this.grinder.getInvName();
+        } else {
+            containerName = StatCollector.translateToLocal(this.grinder.getInvName());
+        }
+
         this.fontRenderer.drawString(containerName, (this.xSize / 2) - (this.fontRenderer.getStringWidth(containerName) / 2), 3, 4210752);
         this.fontRenderer.drawString(StatCollector.translateToLocal(TileConstants.INVENTORY), 9, (this.ySize - 96) + 3, 4210752);
     }

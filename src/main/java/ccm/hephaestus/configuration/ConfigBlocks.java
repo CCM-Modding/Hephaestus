@@ -5,23 +5,24 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 
-final class ConfigBlocks extends Config {
+final class ConfigBlocks extends HarvestryConfig {
 
     /**
-     * Loads or creates the Blocks in the Configuration file.
+     * Loads or creates the Blocks in the AdvConfiguration file.
      * 
      * @param config
-     *            The Configuration file that is being edited.
+     *            The AdvConfiguration file that is being edited.
      */
     protected static void configBlocks(final AdvConfiguration config) {
-        LogHandler.finest(Hephaestus.instance, "Loading Blocks Configs");
-        Properties.oreHID = config.getBlock("Ores", Properties.oreHID).getInt();
-        Properties.blocksHID = config.getBlock("Blocks", Properties.blocksHID).getInt();
+        LogHandler.finest(Hephaestus.instance, "Loading Block Configs");
+        int id = Properties.blockID;
 
-        Properties.blockGrinderID = config.getBlock("Grinder", Properties.blockGrinderID).getInt();
-        Properties.blockGrinderRunningID = config.getBlock("Grinder_Active", Properties.blockGrinderRunningID).getInt();
+        Properties.oreID = config.getBlock("Ores", id++).getInt();
 
-        Properties.blockBlastID = config.getBlock("BlastFurnace", Properties.blockBlastID).getInt();
-        Properties.blockBlastRunningID = config.getBlock("BlastFurnace_Active", Properties.blockBlastRunningID).getInt();
+        Properties.stgBlockID = config.getBlock("StorageBlocks", id++).getInt();
+
+        Properties.machineBlockID = config.getBlock("Machines", id++).getInt();
+
+        Properties.modeledBlockID = config.getBlock("ModeledMachines", id++).getInt();
     }
 }

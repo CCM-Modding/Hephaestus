@@ -2,18 +2,21 @@ package ccm.hephaestus.item;
 
 import net.minecraft.item.Item;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.classes.BaseItem;
+import ccm.hephaestus.item.classes.BaseUseableItem;
+import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 
 public final class ModItems {
 
-    public static Item itemHandle;
+    public static Item mainItems;
 
-    public static Item itemIngot;
+    public static Item gemItems;
 
-    public static Item itemDust;
+    public static Item ingotItems;
+
+    public static Item dustItems;
 
     public static Item gsStone;
 
@@ -30,14 +33,20 @@ public final class ModItems {
      */
     public static void init() {
         LogHandler.finest(Hephaestus.instance, "Loading Items");
-        ModItems.itemHandle = new BaseItem(Properties.itemHandleID, 0);
-        ModItems.itemIngot = new BaseItem(Properties.itemIngotID, 1).setCreativeTab(HephaestusTabs.tabHephaestusMaterials);
-        ModItems.itemDust = new BaseItem(Properties.itemDustID, 2).setCreativeTab(HephaestusTabs.tabHephaestusMaterials);
+        ModItems.mainItems = new BaseItem(Properties.mainItemID, 0);
+        ModItems.gemItems = new BaseItem(Properties.gemItemID, 1);
+        ModItems.ingotItems = new BaseItem(Properties.ingotItemID, 2);
+        ModItems.dustItems = new BaseItem(Properties.dustItemID, 3);
+        ModItems.gsStone = new BaseUseableItem(Properties.gsStoneID, EnumModTool.gsStone.duration).setUnlocalizedName(EnumModTool.gsStone.name());
+        ModItems.gsIron = new BaseUseableItem(Properties.gsIronID, EnumModTool.gsIron.duration).setUnlocalizedName(EnumModTool.gsIron.name());
+        ModItems.gsBronze = new BaseUseableItem(Properties.gsBronzeID, EnumModTool.gsBronze.duration).setUnlocalizedName(EnumModTool.gsBronze.name());
+        ModItems.gsObsidian = new BaseUseableItem(Properties.gsObsidianID, EnumModTool.gsObsidian.duration).setUnlocalizedName(EnumModTool.gsObsidian.name());
+        ModItems.gsDiamond = new BaseUseableItem(Properties.gsDiamondID, EnumModTool.gsDiamond.duration).setUnlocalizedName(EnumModTool.gsDiamond.name());
 
-        ModItems.gsStone = new BaseItem(Properties.gsStoneID).setUnlocalizedName("gsStone").setMaxDamage(250).setCreativeTab(HephaestusTabs.tabHephaestusTools);
-        ModItems.gsIron = new BaseItem(Properties.gsIronID).setUnlocalizedName("gsIron").setMaxDamage(400).setCreativeTab(HephaestusTabs.tabHephaestusTools);
-        ModItems.gsBronze = new BaseItem(Properties.gsBronzeID).setUnlocalizedName("gsBronze").setMaxDamage(600).setCreativeTab(HephaestusTabs.tabHephaestusTools);
-        ModItems.gsObsidian = new BaseItem(Properties.gsObsidianID).setUnlocalizedName("gsObsidian").setMaxDamage(2000).setCreativeTab(HephaestusTabs.tabHephaestusTools);
-        ModItems.gsDiamond = new BaseItem(Properties.gsDiamondID).setUnlocalizedName("gsDiamond").setMaxDamage(3000).setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        initModCompat();
+    }
+
+    static void initModCompat() {
+
     }
 }

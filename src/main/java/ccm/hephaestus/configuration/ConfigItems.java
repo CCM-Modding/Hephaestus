@@ -5,7 +5,7 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 
-final class ConfigItems extends Config {
+final class ConfigItems extends HarvestryConfig {
 
     /**
      * Loads or creates the Items in the Configuration file.
@@ -14,9 +14,11 @@ final class ConfigItems extends Config {
      *            The Configuration file that is being edited.
      */
     protected static void configItems(final AdvConfiguration config) {
-        LogHandler.finest(Hephaestus.instance, "Loading Items Configs");
-        Properties.itemHandleID = config.getItem("Items", Properties.itemID).getInt();
-        Properties.itemIngotID = config.getItem("Ingots", Properties.itemID).getInt();
-        Properties.itemDustID = config.getItem("Dusts", Properties.itemID).getInt();
+        LogHandler.finest(Hephaestus.instance, "Loading Item Configs");
+        int id = Properties.itemID;
+        Properties.mainItemID = config.getItem("All the Items that Stack up to 64", id++).getInt();
+        Properties.gemItemID = config.getItem("All the Gems", id++).getInt();
+        Properties.ingotItemID = config.getItem("All the Ingots", id++).getInt();
+        Properties.dustItemID = config.getItem("All the Dusts", id++).getInt();
     }
 }

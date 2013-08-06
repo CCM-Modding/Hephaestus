@@ -1,9 +1,9 @@
 package ccm.hephaestus.item.tool;
 
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemHoe;
-import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum_omnium.utils.handler.TextureHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -13,7 +13,7 @@ public class DummyHoe extends ItemHoe {
 
     public DummyHoe(final int par1, final EnumToolMaterial par2EnumToolMaterial) {
         super(par1, par2EnumToolMaterial);
-        this.setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        this.setCreativeTab(CreativeTabs.tabTools);
         // TODO Auto-generated constructor stub
     }
 

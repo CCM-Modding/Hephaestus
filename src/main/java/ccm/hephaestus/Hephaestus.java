@@ -1,21 +1,24 @@
 package ccm.hephaestus;
 
 import static ccm.hephaestus.utils.lib.Archive.INVALID_FINGERPRINT_MSG;
-import ccm.hephaestus.block.ModBlocks;
-import ccm.hephaestus.configuration.Config;
+import static ccm.hephaestus.utils.lib.Archive.MOD_DEPENDANCIES;
+import static ccm.hephaestus.utils.lib.Archive.MOD_FIGERPRINT;
+import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
+import static ccm.hephaestus.utils.lib.Archive.MOD_NAME;
+import static ccm.hephaestus.utils.lib.Archive.MOD_PREFIX;
+import static ccm.hephaestus.utils.lib.Locations.CLIENT_PROXY;
+import static ccm.hephaestus.utils.lib.Locations.SERVER_PROXY;
+import lib.org.modstats.ModstatInfo;
+import ccm.hephaestus.configuration.HarvestryConfig;
 import ccm.hephaestus.core.proxy.CommonProxy;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
-import ccm.hephaestus.network.PacketHandler;
-import ccm.hephaestus.utils.language.HephaestusLP;
-import ccm.hephaestus.utils.lib.Archive;
-import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum_omnium.BaseMod;
 import ccm.nucleum_omnium.IMod;
-import ccm.nucleum_omnium.configuration.AdvConfiguration;
 import ccm.nucleum_omnium.utils.handler.LogHandler;
 import ccm.nucleum_omnium.utils.handler.ModLoadingHandler;
+import ccm.nucleum_omnium.utils.handler.config.ConfigurationHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -26,23 +29,16 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = Archive.MOD_ID, name = Archive.MOD_NAME, version = Archive.MOD_VERSION, dependencies = Archive.MOD_DEPENDANCIES, certificateFingerprint = Archive.MOD_FIGERPRINT)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = Archive.MOD_CHANNEL, packetHandler = PacketHandler.class)
+@Mod(modid = MOD_ID, name = MOD_NAME, certificateFingerprint = MOD_FIGERPRINT, dependencies = MOD_DEPENDANCIES, useMetadata = true)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@ModstatInfo(prefix = MOD_PREFIX)
 public class Hephaestus extends BaseMod implements IMod {
 
-    /**
-     * The MoreOres Instance
-     */
-    @Instance(Archive.MOD_ID)
+    @Instance(MOD_ID)
     public static Hephaestus instance;
 
-    /**
-     * The MoreOres proxy
-     */
-    @SidedProxy(serverSide = Locations.SERVER_PROXY, clientSide = Locations.CLIENT_PROXY)
+    @SidedProxy(serverSide = SERVER_PROXY, clientSide = CLIENT_PROXY)
     public static CommonProxy proxy;
-
-    public static AdvConfiguration config;
 
     @EventHandler
     public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
@@ -61,13 +57,15 @@ public class Hephaestus extends BaseMod implements IMod {
 
             config = this.initializeConfig(evt);
 
-            Config.init(config);
+            ConfigurationHandler.init(this, HarvestryConfig.class);
 
             HephaestusTabs.initTabs();
 
             ModItems.init();
 
-            ModBlocks.init();
+            proxy.registerTEs();
+
+            Registry.register();
 
             HephaestusTabs.initTabIcons();
         }
@@ -77,19 +75,10 @@ public class Hephaestus extends BaseMod implements IMod {
     public void init(final FMLInitializationEvent event) {
 
         proxy.registerGUIs();
-
-        Registry.register();
-
-        HephaestusLP.init();
     }
 
     @EventHandler
     public void PostInit(final FMLPostInitializationEvent event) {
         ModLoadingHandler.loadMod(this);
-    }
-
-    @Override
-    public AdvConfiguration getConfigFile() {
-        return config;
     }
 }

@@ -1,8 +1,7 @@
 package ccm.hephaestus.creativetab;
 
-import ccm.hephaestus.enums.blocks.EnumBlocksH;
-import ccm.hephaestus.enums.items.EnumHandleH;
-import ccm.hephaestus.enums.items.EnumIngotsH;
+import ccm.hephaestus.block.enums.EnumBlocksM;
+import ccm.hephaestus.item.enums.EnumIngot;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.nucleum_omnium.creativetab.CreativeTab;
 import ccm.nucleum_omnium.utils.helper.enums.EnumToItemStack;
@@ -15,31 +14,31 @@ public class HephaestusTabs {
     public static CreativeTab tabHephaestusBlocks;
 
     /**
-     * Contains All the Gems Items
+     * Contains All the 64 Items
      */
-    public static CreativeTab tabHephaestusMaterials;
+    public static CreativeTab tabHephaestusItems;
 
     /**
-     * Contains All the Misc Items
-     */
-    public static CreativeTab tabHephaestusParts;
-
-    /**
-     * Contains All the Tools Items
+     * Contains All the Food Items
      */
     public static CreativeTab tabHephaestusTools;
 
+    /**
+     * Contains All the Usable Items
+     */
+    public static CreativeTab tabHephaestusParts;
+
     public static void initTabs() {
         HephaestusTabs.tabHephaestusBlocks = new CreativeTab(Archive.TAB_HEPHAESTUS_BLOCK);
-        HephaestusTabs.tabHephaestusMaterials = new CreativeTab(Archive.TAB_HEPHAESTUS_MATERIAL);
-        HephaestusTabs.tabHephaestusParts = new CreativeTab(Archive.TAB_HEPHAESTUS_PART);
-        HephaestusTabs.tabHephaestusTools = new CreativeTab(Archive.TAB_HEPHAESTUS_TOOL);
+        HephaestusTabs.tabHephaestusItems = new CreativeTab(Archive.TAB_HEPHAESTUS_ITEMS);
+        HephaestusTabs.tabHephaestusTools = new CreativeTab(Archive.TAB_HEPHAESTUS_TOOLS);
+        HephaestusTabs.tabHephaestusParts = new CreativeTab(Archive.TAB_HEPHAESTUS_PARTS);
     }
 
     public static void initTabIcons() {
-        HephaestusTabs.tabHephaestusBlocks.init(EnumToItemStack.getBlockIS(EnumBlocksH.blockCopper));
-        HephaestusTabs.tabHephaestusMaterials.init(EnumToItemStack.getItemIS(EnumIngotsH.ingotCopper));
-        HephaestusTabs.tabHephaestusParts.init(EnumToItemStack.getItemIS(EnumHandleH.handleWood));
-        HephaestusTabs.tabHephaestusTools.init(EnumToItemStack.getItemIS(EnumHandleH.handleWood));
+        HephaestusTabs.tabHephaestusBlocks.init(EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum));
+        HephaestusTabs.tabHephaestusItems.init(EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
+        HephaestusTabs.tabHephaestusTools.init(EnumToItemStack.getBlockIS(EnumBlocksM.blockSteel));
+        HephaestusTabs.tabHephaestusParts.init(EnumToItemStack.getItemIS(EnumIngot.ingotSteel));
     }
 }
