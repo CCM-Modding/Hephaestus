@@ -1,0 +1,18 @@
+Hephaestus' Workshop Other Materials
+
+This is a list of things that will be an add-on or a config option.
+NEED more stuff on this list for some reason.
+
+Librum ??? (Book of ???) - In game book that describes the other available materials and their alloys.
+
+Metals
+•	Orichalcum ---- Strong metal used for tools, armor
+•	Ebony --------- Strong volcanic glass used for tools and armor after smelted in blast furnace
+•	Malachite ----- Above average volcanic glass used for tools and armor
+•	Mercury ------- Very soft metal
+•	Moonstone ----- Average stone used for tools, armor
+•	???
+
+Alloys
+•	Soldarium ----- Soft metal used for tools, very effective against endermen and the undead, good fortune aspect, created by mixing silver and mercury (3:1) = 4
+•	???
