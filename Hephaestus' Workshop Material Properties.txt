@@ -1,0 +1,64 @@
+Hephaestus' Workshop Material Properties
+
+*vanilla, their generation will not be affected
+
+Weight, Speed, Durability, Sharpness
+
+Metals
+•	Tin --------------- Light ---- Normal ---- Weak -------- Dull
+•	Aluminium  -------- Light ---- Fast ------ Weak -------- Dull
+•	Silver ------------ Average -- Fast ------ Weak -------- Dull
+    ~ Effective against the undead, Slight fortune aspect
+•	Copper ------------ Light ---- Slow ------ Weak -------- Dull
+•	Titanium ---------- Heavy ---- Normal ---- Strong ------ Sharp
+•	Tungsten ---------- Average -- Normal ---- Strong ------ Average
+•	Lead -------------- Heavy ---- Slow ------ Average ----- Average
+•	Orichalcum -------- Average -- Normal ---- Average ----- Average
+•	Mercury ----------- Light ---- Very fast - Weak -------- Dull
+    ~ Slight fortune aspect, Generates as very small lakes
+
+•	*Iron ------------- Average -- Normal ---- Average ----- Average
+•	*Gold ------------- Heavy ---- Fast ------ Weak -------- Dull
+
+Other
+•	Sulphur ----------- Yellow dust, Used for creating extreme heat, Generates near lava
+•	Ebony ------------- Average -- Normal ---- Strong ------ Very sharp
+    ~ Volcanic glass, Generates near lava
+•	Malachite --------- Average -- Normal ---- Average ----- Sharp
+    ~ Volcanic glass, Generates near lava
+•	Gravitas ---------- Heavy ---- Slow ------ Strong ------ Average
+    ~ Stone, Can only be mined with hight strength tools, Only found at extreme depths
+
+•	*Obsidian --------- Heavy ---- Slow ------ Strong ------ Sharp
+    ~ Volcanic glass
+
+Alloys
+•	Soldarium --------- Average -- Very fast - Average ----- Sharp
+    ~ Very effective against endermen and the undead, Good fortune aspect
+•	Electrum ---------- Average -- Very fast - Average ----- Sharp
+    ~ Very effective against the undead, Very good fortune aspect
+•	Bronze ------------ Average -- Normal ---- Average ----- Average
+•	Heavy Iron -------- Heavy ---- Slow ------ Strong ------ Average
+•	Steel ------------- Average -- Normal ---- Average ----- Average
+•	Hardened Iron ----- Heavy ---- Normal ---- Strong ------ Average
+•	Titanite ---------- Average -- Fast ------ Strong ------ Sharp
+•	Titanium Carbide -- Heavy ---- Normal ---- Very strong - Very sharp
+•	Tungsten Carbide -- Average -- Normal ---- Very strong - Sharp
+
+All gems are brittle unless added to a tool of another material
+
+Gems
+•	Citrine ----------- Light ---- Fast ------ Brittle ----- Sharp
+•	Cubic Zirconia ---- Light ---- Fast ------ Weak -------- Very sharp
+•	Jet --------------- Light ---- Very fast - Brittle ----- Very sharp
+•	Olivine ----------- Light ---- Fast ------ Brittle ----- Sharp
+•	Opal -------------- Light ---- Very fast - Weak -------- Sharp
+•	Ruby -------------- Light ---- Normal ---- Brittle ----- Sharp
+•	Sapphire ---------- Light ---- Normal ---- Brittle ----- Sharp
+•	Sun --------------- Light ---- Fast ------ Brittle ----- Sharp
+•	Topaz ------------- Light ---- Normal ---- Brittle ----- Sharp
+•	White Alabaster --- Light ---- Very fast - Weak -------- Very sharp
+
+•	*Diamond ---------- Light ---- Very fast - Brittle ----- Sharp
+•	*Emerald ---------- Light ---- Very fast - Brittle ----- Very sharp
+•	*Quartz ----------- Light ---- Normal ---- Brittle ----- Sharp

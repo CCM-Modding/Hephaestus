@@ -2,60 +2,19 @@ Hephaestus' Workshop
 
 Forge Master's Notebook - In game book describing how all the blocks work and are made.
 
-Librum ??? (Book of Metals) - In game book that describes the available metals and alloys.
-
-Librum Dentritis (Book of Gems) - In game book that describes the available gems.
-
 "Machines"
-•	Forge ------------- Used for heating the metals for use on anvil. Multi Block
-•	Anvil ------------- Used to create tools and armor parts.
-•	Blast furnace ----- Used to make steel and other metals. Multi Block
+•	Forge ------------- Used for heating the metals for use on anvil/alloy table. Multi Block
+•	Anvil ------------- Used to create tool and armor parts.
+•	Blast furnace ----- Used to make more advanced materials. Multi Block
 •	Grinder ----------- Used to make dusts, VERY SLOW.
 •	Gem Setting Table - Used for creating gem tool heads or adding gems to existing tools.
 •	Alloy Table ------- Used for creating alloys.
 
-Metals
-•	Tin --------------- Soft metal used for alloys
-•	Aluminium  -------- Soft metal used for alloys
-•	Copper ------------ Soft metal used for tools, armor, and alloys
-•	Titanium ---------- Strong metal used for tools, armor, and alloys (titanite)
-•	Tungsten ---------- Strong metal used for tools and armor after smelted in blast furnace
-•	Silver ------------ Soft metal used for tools, effective against endermen and the undead, slight fortune aspect
-•	Sulphur ----------- Dust like material used for creating extreme heat, used as fuel in forge and blast furnace
-•	Lead -------------- Heavy metal used in alloys
-
-Gems
-•	Citrine ----------- yellow gem
-•	Cubic Zirconia ---- light-teal gem
-•	Jet --------------- black gem
-•	Olivine ----------- green gem
-•	Opal -------------- pearl gem
-•	Ruby -------------- red gem
-•	Sapphire ---------- blue gem
-•	Sun --------------- yellow-orange gem
-•	Topaz ------------- orange gem
-•	White Alabaster --- white gem
-
-•	*Diamond ---------- teal gem
-•	*Emerald ---------- green gem
-•	*Quartz ----------- pearl gem
-
-Alloys
-•	Bronze ------------ Above average metal used for tools and armor, created by mixing copper and tin (3:1) = 4
-•	Heavy Iron -------- Strong metal used for tools and armor, created by mixing iron and lead (3:2) = 5
-•	Steel ------------- Strong metal used for tools and armor, created by smelting iron in the blast furnace
-•	Hardened Iron ----- Strong metal used for tools and armor, created by smelting heavy iron in the blast furnace
-•	Titanite ---------- Very strong metal used for tools and armor, created by mixing titanium and aluminium (3:2) = 5
-•	Titanium Carbide -- Very strong metal used for tools and armor, created by smelting titanium in the blast furnace
-•	Tungsten Carbide -- Very strong metal used for tools and armor, created by smelting tungsten in the blast furnace
-
 Armor
 •	Forge Master's Mask
-    ~ optional may or may not do
+    ~ optional, may or may not do
 •	Forge Master's Apron w/ gloves
     ~ needs special renderer, the apron needs to extend down more than the basic chest-plate
-•	Forge Master's Pants
-•	Forge Master's Boots
 
 Tools
 •	Tongs - Used for picking up hot ingots created in the forge
@@ -91,19 +50,22 @@ Recipes
 
 Metal Working (Forge)
 •	Uses Charcoal, Coal, and Sulphur for fuel
-•	Charcoal/Coal - Heats most metals
-•	Sulphur - Heats more advanced metals
-    ~ May have a heat meter like the thermionic fabricator from Forestry
+•	Coal - Heats basic materials
+•	Charcoal - Heats most materials
+•	Sulphur - Heats more advanced materials
+•	Blaze Powder - Heats more the most advanced materials
+    ~ will need a heat meter like the thermionic fabricator from Forestry
 •	GUI: Similar to furnace, Slot for input, fuel, and output
 
 Anvil
 •	GUI: input, 2 output, and hammer slot with arrows and a box to select the part to be made
-    ~ put the hammer and the tongs in and select the part you would like to make, output and excess show up to be collected
+    ~ put the hammer and the tongs in and select the part you would like to make, output shows up to be collected
 
 Blast Furnace
 •	GUI: 2 fuel slots an input and an output
-•	Fuel is sulphur and coal, NEED both for it to work
-    ~ can create steel and carbide
+•	Fuel is blaze powder/sulphur and charcoal, NEED both for it to work
+    ~ is used for smelting more advanced materials into ingots and hardening other materials
+    ~ for very heat resistant materials like stone or volcanic glass blaze powder is needed instead of sulphur
 
 Grinder
 •	GUI: an input and an output slot
@@ -115,8 +77,8 @@ Gem Setting Table
 •	GUI: ???
     ~ used to great tool heads out of gems or add gems to created tools
 	~ gem tool heads will have a low durability but tools with gems added will not have durability change
-	~ gems will have/add a high mining level and break much easier than metal
-	~ metal tools with gems added will have the gems break off before the tool itself breaks
+	~ gems will have/add a high mining level and break much easier than other materials
+	~ tools with gems added will have the gems break off before the tool itself breaks
 
 Alloy Table
 •	GUI: ???
