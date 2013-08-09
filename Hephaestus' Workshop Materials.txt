@@ -12,9 +12,7 @@ Metals
 •	Silver ------------ Used for tools and alloys
 •	Copper ------------ Used for tools, armor, and alloys
 •	Titanium ---------- Used for tools, armor, and alloys (titanite)
-•	Tungsten ---------- Used for tools and armor after smelted in blast furnace
 •	Lead -------------- Used for alloys
-•	Orichalcum -------- Used for tools and armor
 •	Mercury ----------- Used for alloys
 
 •	*Iron ------------- Used for tools and armor
@@ -22,9 +20,9 @@ Metals
 
 Other
 •	Sulphur ----------- Used in forge and blast furnace
-•	Ebony ------------- Used for tools and armor
-•	Malachite --------- Used for tools and armor
+•	Dark Obsidian ----- Used for tools and armor
 •	Gravitas ---------- Used for tools
+•	Childarium -------- Used for tools
 
 •	*Obsidian --------- Used for tools
 
@@ -32,26 +30,18 @@ Alloys
 •	Soldarium --------- Used for tools, created by mixing silver and mercury (5:2) = 6
 •	Electrum ---------- Used for tools, created by mixing silver and gold (1:1) = 2
 •	Bronze ------------ Used for tools and armor, created by mixing copper and tin (3:1) = 4
-•	Heavy Iron -------- Used for tools and armor, created by mixing iron and lead (2:1) = 3
 •	Steel ------------- Used for tools and armor, created by smelting iron in the blast furnace
-•	Hardened Iron ----- Used for tools and armor, created by smelting heavy iron in the blast furnace
 •	Titanite ---------- Used for tools and armor, created by mixing titanium and aluminium (3:2) = 4
-•	Titanium Carbide -- Used for tools and armor, created by smelting titanium in the blast furnace
-•	Tungsten Carbide -- Used for tools and armor, created by smelting tungsten in the blast furnace
 
-Gems are used for brittle tool heads or adding speed and sharpness to existing tools
+Gems are used adding speed and sharpness to existing tools
 
 Gems
 •	Citrine ----------- Yellow gem
 •	Cubic Zirconia ---- Light-Teal gem
-•	Jet --------------- Black gem
 •	Olivine ----------- Green gem
-•	Opal -------------- Pearl gem
 •	Ruby -------------- Red gem
 •	Sapphire ---------- Blue gem
-•	Sun --------------- Yellow-Orange gem
 •	Topaz ------------- Orange gem
-•	White Alabaster --- White gem
 
 •	*Diamond ---------- Teal gem
 •	*Emerald ---------- Green gem
