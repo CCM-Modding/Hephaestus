@@ -30,7 +30,6 @@ final class RecipesCrafting {
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotAluminum) }));
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksA.blockBronze), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotBronze) }));
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksM.blockCopper), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotCopper) }));
-        this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksM.blockLead), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotLead) }));
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksM.blockSilver), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotSilver) }));
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksA.blockSteel), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumIngot.ingotSteel) }));
         this.recipes.add(new ShapedOreRecipe(EnumToItemStack.getBlockIS(EnumBlocksM.blockSulfur), new Object[] { "xxx", "xxx", "xxx", 'x', EnumToItemStack.getItemIS(EnumDust.dustSulfur) }));
@@ -55,7 +54,6 @@ final class RecipesCrafting {
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotAluminum, 9), EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum)));
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotBronze, 9), EnumToItemStack.getBlockIS(EnumBlocksA.blockBronze)));
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotCopper, 9), EnumToItemStack.getBlockIS(EnumBlocksM.blockCopper)));
-        this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotLead, 9), EnumToItemStack.getBlockIS(EnumBlocksM.blockLead)));
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotSilver, 9), EnumToItemStack.getBlockIS(EnumBlocksM.blockSilver)));
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotSteel, 9), EnumToItemStack.getBlockIS(EnumBlocksA.blockSteel)));
         this.recipes.add(new ShapelessOreRecipe(EnumToItemStack.getItemIS(EnumDust.dustSulfur, 9), EnumToItemStack.getBlockIS(EnumBlocksM.blockSulfur)));

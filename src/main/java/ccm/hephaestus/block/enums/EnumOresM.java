@@ -14,7 +14,6 @@ public enum EnumOresM implements IBlockEnum {
     oreSilver(3),
     oreCopper(2),
     oreTitanium(4),
-    oreLead(3),
     oreSulfur(3),
     oreChildarium(2),
     oreCitrine(3),

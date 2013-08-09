@@ -12,7 +12,6 @@ Metals
 •	Silver ------------ Used for tools and alloys
 •	Copper ------------ Used for tools, armor, and alloys
 •	Titanium ---------- Used for tools, armor, and alloys (titanite)
-•	Lead -------------- Used for alloys
 •	Mercury ----------- Used for alloys
 
 •	*Iron ------------- Used for tools and armor

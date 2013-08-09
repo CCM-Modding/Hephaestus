@@ -61,8 +61,6 @@ public class Properties {
 
     public static boolean enableWorldGenCopper;
 
-    public static boolean enableWorldGenLead;
-
     public static boolean enableWorldGenSilver;
 
     public static boolean enableWorldGenSulfur;

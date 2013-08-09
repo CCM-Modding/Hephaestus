@@ -15,7 +15,6 @@ public enum EnumDust implements IItemEnum {
     dustSilver,
     dustCopper,
     dustTitanium,
-    dustLead,
     dustIron,
     dustGold,
     dustSulfur,

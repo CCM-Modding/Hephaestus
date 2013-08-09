@@ -21,9 +21,6 @@ final class WorldRegistry {
         if (Properties.enableWorldGenCopper) {
             WorldRegistry.registerCopper();
         }
-        if (Properties.enableWorldGenLead) {
-            WorldRegistry.registerLead();
-        }
         if (Properties.enableWorldGenSilver) {
             WorldRegistry.registerSilver();
         }
@@ -64,11 +61,6 @@ final class WorldRegistry {
     private static void registerCopper() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Copper");
         register(Archive.MOD_NAME, EnumOresM.oreCopper, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCopper);
-    }
-
-    private static void registerLead() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Lead");
-        register(Archive.MOD_NAME, EnumOresM.oreLead, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenLead);
     }
 
     private static void registerSilver() {

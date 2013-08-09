@@ -23,7 +23,6 @@ final class OreDictionaryRegistry {
         register("ingotAluminium", EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
         register("ingotAluminum", EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
         register("ingotCopper", EnumToItemStack.getItemIS(EnumIngot.ingotCopper));
-        register("ingotLead", EnumToItemStack.getItemIS(EnumIngot.ingotLead));
         register("ingotSilver", EnumToItemStack.getItemIS(EnumIngot.ingotSilver));
         register("ingotTin", EnumToItemStack.getItemIS(EnumIngot.ingotTin));
         register("ingotTitanium", EnumToItemStack.getItemIS(EnumIngot.ingotTitanium));
@@ -33,7 +32,6 @@ final class OreDictionaryRegistry {
         register("dustCopper", EnumToItemStack.getItemIS(EnumDust.dustCopper));
         register("dustGold", EnumToItemStack.getItemIS(EnumDust.dustGold));
         register("dustIron", EnumToItemStack.getItemIS(EnumDust.dustIron));
-        register("dustLead", EnumToItemStack.getItemIS(EnumDust.dustLead));
         register("dustSilver", EnumToItemStack.getItemIS(EnumDust.dustSilver));
         register("dustSulphur", EnumToItemStack.getItemIS(EnumDust.dustSulfur));
         register("dustSulfur", EnumToItemStack.getItemIS(EnumDust.dustSulfur));
@@ -44,7 +42,6 @@ final class OreDictionaryRegistry {
         register("blockAluminum", EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum));
         register("blockAluminum", EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum));
         register("blockCopper", EnumToItemStack.getBlockIS(EnumBlocksM.blockCopper));
-        register("blockLead", EnumToItemStack.getBlockIS(EnumBlocksM.blockLead));
         register("blockSilver", EnumToItemStack.getBlockIS(EnumBlocksM.blockSilver));
         register("blockSulphur", EnumToItemStack.getBlockIS(EnumBlocksM.blockSulfur));
         register("blockSulfur", EnumToItemStack.getBlockIS(EnumBlocksM.blockSulfur));
@@ -55,7 +52,6 @@ final class OreDictionaryRegistry {
         register("oreAluminium", EnumToItemStack.getBlockIS(EnumOresM.oreAluminum));
         register("oreAluminum", EnumToItemStack.getBlockIS(EnumOresM.oreAluminum));
         register("oreCopper", EnumToItemStack.getBlockIS(EnumOresM.oreCopper));
-        register("oreLead", EnumToItemStack.getBlockIS(EnumOresM.oreLead));
         register("oreSilver", EnumToItemStack.getBlockIS(EnumOresM.oreSilver));
         register("oreSulphur", EnumToItemStack.getBlockIS(EnumOresM.oreSulfur));
         register("oreSulfur", EnumToItemStack.getBlockIS(EnumOresM.oreSulfur));

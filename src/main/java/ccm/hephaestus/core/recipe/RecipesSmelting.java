@@ -15,7 +15,6 @@ final class RecipesSmelting {
     public RecipesSmelting() {
         FurnaceRecipes.smelting().addSmelting(EnumOresM.oreAluminum.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotAluminum), 1.0F);
         FurnaceRecipes.smelting().addSmelting(EnumOresM.oreCopper.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotCopper), 1.0F);
-        FurnaceRecipes.smelting().addSmelting(EnumOresM.oreLead.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotLead), 1.0F);
         FurnaceRecipes.smelting().addSmelting(EnumOresM.oreSilver.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotSilver), 1.0F);
         FurnaceRecipes.smelting().addSmelting(EnumOresM.oreTin.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotTin), 1.0F);
 
@@ -25,7 +24,6 @@ final class RecipesSmelting {
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustAluminum.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotAluminum), 0.0F);
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustBronze.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotBronze), 0.0F);
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustCopper.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotCopper), 0.0F);
-        FurnaceRecipes.smelting().addSmelting(EnumDust.dustLead.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotLead), 0.0F);
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustSilver.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotSilver), 0.0F);
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustSteel.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotSteel), 0.0F);
         FurnaceRecipes.smelting().addSmelting(EnumDust.dustTin.ordinal(), EnumToItemStack.getItemIS(EnumIngot.ingotTin), 0.0F);

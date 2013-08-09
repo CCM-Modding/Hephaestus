@@ -11,7 +11,6 @@ Metals
     ~ Effective against the undead, Slight fortune aspect
 •	Copper ------------ Light ---- Slow ------ Weak -------- Dull
 •	Titanium ---------- Heavy ---- Normal ---- Strong ------ Sharp
-•	Lead -------------- Heavy ---- Slow ------ Average ----- Average
 •	Mercury ----------- Light ---- Very fast - Weak -------- Dull
     ~ Effective against endermen, Slight fortune aspect, Generates as very small lakes
 

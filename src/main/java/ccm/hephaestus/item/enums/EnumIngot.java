@@ -15,7 +15,6 @@ public enum EnumIngot implements IItemEnum {
     ingotSilver,
     ingotCopper,
     ingotTitanium,
-    ingotLead,
     ingotSoldarium,
     ingotElectrum,
     ingotBronze,

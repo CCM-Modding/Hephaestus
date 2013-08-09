@@ -16,7 +16,6 @@ final class ConfigWorldGen extends HephaestusConfig {
     protected static void configWorldGen(final Configuration config) {
         Properties.enableWorldGenAluminum = config.get(ConfigWorldGen.gen, "EnableAluminum", true).getBoolean(true);
         Properties.enableWorldGenCopper = config.get(ConfigWorldGen.gen, "EnableCopper", true).getBoolean(true);
-        Properties.enableWorldGenLead = config.get(ConfigWorldGen.gen, "EnableLead", true).getBoolean(true);
         Properties.enableWorldGenSilver = config.get(ConfigWorldGen.gen, "EnableSilver", true).getBoolean(true);
         Properties.enableWorldGenSulfur = config.get(ConfigWorldGen.gen, "EnableSulfur", true).getBoolean(true);
         Properties.enableWorldGenTin = config.get(ConfigWorldGen.gen, "EnableTin", true).getBoolean(true);

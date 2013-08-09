@@ -37,7 +37,6 @@ final class RecipesGrinder extends RecipeRegistry {
 
         this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreAluminum), EnumToItemStack.getItemIS(EnumDust.dustAluminum, 2));
         this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreCopper), EnumToItemStack.getItemIS(EnumDust.dustCopper, 2));
-        this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreLead), EnumToItemStack.getItemIS(EnumDust.dustLead, 2));
         this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreSilver), EnumToItemStack.getItemIS(EnumDust.dustSilver, 2));
         this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreTin), EnumToItemStack.getItemIS(EnumDust.dustTin, 2));
         this.recipes.addRecipe(EnumToItemStack.getBlockIS(EnumOresM.oreTitanium), EnumToItemStack.getItemIS(EnumDust.dustTitanium, 2));
@@ -50,7 +49,6 @@ final class RecipesGrinder extends RecipeRegistry {
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotAluminum), EnumToItemStack.getItemIS(EnumDust.dustAluminum));
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotBronze), EnumToItemStack.getItemIS(EnumDust.dustBronze));
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotCopper), EnumToItemStack.getItemIS(EnumDust.dustCopper));
-        this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotLead), EnumToItemStack.getItemIS(EnumDust.dustLead));
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotSilver), EnumToItemStack.getItemIS(EnumDust.dustSilver));
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotSteel), EnumToItemStack.getItemIS(EnumDust.dustSteel));
         this.recipes.addRecipe(EnumToItemStack.getItemIS(EnumIngot.ingotTin), EnumToItemStack.getItemIS(EnumDust.dustTin));

@@ -14,7 +14,6 @@ public enum EnumBlocksM implements IBlockEnum {
     blockSilver(3),
     blockCopper(2),
     blockTitanium(4),
-    blockLead(3),
     blockSulfur(3),
     blockDarkObsidian(3),
     blockGravitas(3),
