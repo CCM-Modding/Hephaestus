@@ -71,25 +71,15 @@ public class Properties {
 
     public static boolean enableWorldGenTitanium;
 
-    public static boolean enableWorldGenTungsten;
-
     public static boolean enableWorldGenCitrine;
 
     public static boolean enableWorldGenCZirconia;
 
-    public static boolean enableWorldGenJet;
-
     public static boolean enableWorldGenOlivine;
-
-    public static boolean enableWorldGenOpal;
 
     public static boolean enableWorldGenRuby;
 
     public static boolean enableWorldGenSapphire;
 
-    public static boolean enableWorldGenSun;
-
     public static boolean enableWorldGenTopaz;
-
-    public static boolean enableWorldGenWAlabaster;
 }

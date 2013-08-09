@@ -7,15 +7,19 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum_omnium.block.sub.SubBlock;
 import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
 
-public enum EnumBlocksD implements IBlockEnum {
+public enum EnumBlocksA implements IBlockEnum {
     // Make sure to keep this lower than 16 AT ALL TIMES
-    blockSulfur(3);
+    blockSoldarium(3),
+    blockElectrum(3),
+    blockBronze(3),
+    blockSteel(3),
+    blockTitanite(4);
 
-    private EnumBlocksD() {
+    private EnumBlocksA() {
         this(1);
     }
 
-    private EnumBlocksD(final float hardness) {
+    private EnumBlocksA(final float hardness) {
         SubBlock.createAndSetUp(this, Properties.stgBlockID, Locations.TEXTURE).setCreativeTab(HephaestusTabs.tabHephaestusBlocks).setHardness(hardness);
     }
 

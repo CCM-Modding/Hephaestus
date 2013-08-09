@@ -1,5 +1,6 @@
 package ccm.hephaestus.creativetab;
 
+import ccm.hephaestus.block.enums.EnumBlocksA;
 import ccm.hephaestus.block.enums.EnumBlocksM;
 import ccm.hephaestus.item.enums.EnumIngot;
 import ccm.hephaestus.utils.lib.Archive;
@@ -38,7 +39,7 @@ public class HephaestusTabs {
     public static void initTabIcons() {
         HephaestusTabs.tabHephaestusBlocks.init(EnumToItemStack.getBlockIS(EnumBlocksM.blockAluminum));
         HephaestusTabs.tabHephaestusItems.init(EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
-        HephaestusTabs.tabHephaestusTools.init(EnumToItemStack.getBlockIS(EnumBlocksM.blockSteel));
+        HephaestusTabs.tabHephaestusTools.init(EnumToItemStack.getBlockIS(EnumBlocksA.blockSteel));
         HephaestusTabs.tabHephaestusParts.init(EnumToItemStack.getItemIS(EnumIngot.ingotSteel));
     }
 }

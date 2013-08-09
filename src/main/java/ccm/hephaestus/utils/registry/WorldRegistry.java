@@ -2,8 +2,6 @@ package ccm.hephaestus.utils.registry;
 
 import net.minecraft.item.ItemStack;
 import ccm.hephaestus.Hephaestus;
-import ccm.hephaestus.block.enums.EnumOresD;
-import ccm.hephaestus.block.enums.EnumOresG;
 import ccm.hephaestus.block.enums.EnumOresM;
 import ccm.hephaestus.utils.lib.Archive;
 import ccm.hephaestus.utils.lib.Properties;
@@ -38,23 +36,14 @@ final class WorldRegistry {
         if (Properties.enableWorldGenTitanium) {
             WorldRegistry.registerTitanium();
         }
-        if (Properties.enableWorldGenTungsten) {
-            WorldRegistry.registerTungsten();
-        }
         if (Properties.enableWorldGenCitrine) {
             WorldRegistry.registerCitrine();
         }
         if (Properties.enableWorldGenCZirconia) {
             WorldRegistry.registerCZirconia();
         }
-        if (Properties.enableWorldGenJet) {
-            WorldRegistry.registerJet();
-        }
         if (Properties.enableWorldGenOlivine) {
             WorldRegistry.registerOlivine();
-        }
-        if (Properties.enableWorldGenOpal) {
-            WorldRegistry.registerOpal();
         }
         if (Properties.enableWorldGenRuby) {
             WorldRegistry.registerRuby();
@@ -62,14 +51,8 @@ final class WorldRegistry {
         if (Properties.enableWorldGenSapphire) {
             WorldRegistry.registerSapphire();
         }
-        if (Properties.enableWorldGenSun) {
-            WorldRegistry.registerSun();
-        }
         if (Properties.enableWorldGenTopaz) {
             WorldRegistry.registerTopaz();
-        }
-        if (Properties.enableWorldGenWAlabaster) {
-            WorldRegistry.registerWAlabaster();
         }
     }
 
@@ -95,7 +78,7 @@ final class WorldRegistry {
 
     private static void registerSulfur() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Sulfur");
-        register(Archive.MOD_NAME, EnumOresD.oreSulfur, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSulfur);
+        register(Archive.MOD_NAME, EnumOresM.oreSulfur, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSulfur);
     }
 
     private static void registerTin() {
@@ -108,59 +91,33 @@ final class WorldRegistry {
         register(Archive.MOD_NAME, EnumOresM.oreTitanium, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTitanium);
     }
 
-    private static void registerTungsten() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Tungsten");
-        register(Archive.MOD_NAME, EnumOresM.oreTungsten, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTungsten);
-    }
-
     private static void registerCitrine() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Citrine");
-        register(Archive.MOD_NAME, EnumOresG.oreCitrine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCitrine);
+        register(Archive.MOD_NAME, EnumOresM.oreCitrine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCitrine);
     }
 
     private static void registerCZirconia() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for CubicZirconia");
-        register(Archive.MOD_NAME, EnumOresG.oreCZirconia, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCZirconia);
-    }
-
-    private static void registerJet() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Jet");
-        register(Archive.MOD_NAME, EnumOresG.oreJet, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenJet);
+        register(Archive.MOD_NAME, EnumOresM.oreCZirconia, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCZirconia);
     }
 
     private static void registerOlivine() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Olivine");
-        register(Archive.MOD_NAME, EnumOresG.oreOlivine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenOlivine);
-    }
-
-    private static void registerOpal() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Opal");
-        register(Archive.MOD_NAME, EnumOresG.oreOpal, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenOpal);
+        register(Archive.MOD_NAME, EnumOresM.oreOlivine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenOlivine);
     }
 
     private static void registerRuby() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Ruby");
-        register(Archive.MOD_NAME, EnumOresG.oreRuby, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenRuby);
+        register(Archive.MOD_NAME, EnumOresM.oreRuby, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenRuby);
     }
-
     private static void registerSapphire() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Sapphire");
-        register(Archive.MOD_NAME, EnumOresG.oreSapphire, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSapphire);
-    }
-
-    private static void registerSun() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Sun");
-        register(Archive.MOD_NAME, EnumOresG.oreSun, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSun);
+        register(Archive.MOD_NAME, EnumOresM.oreSapphire, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSapphire);
     }
 
     private static void registerTopaz() {
         LogHandler.finest(Hephaestus.instance, "Registering World Generation for Topaz");
-        register(Archive.MOD_NAME, EnumOresG.oreTopaz, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTopaz);
-    }
-
-    private static void registerWAlabaster() {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for WhiteAlabaster");
-        register(Archive.MOD_NAME, EnumOresG.oreWAlabaster, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenWAlabaster);
+        register(Archive.MOD_NAME, EnumOresM.oreTopaz, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTopaz);
     }
 
     private static void register(final String modName, final Enum<? extends IBlockEnum> enu, final int oreID, final int clusterSize, final int numClusters, final int minY, final int maxY, final boolean enable) {

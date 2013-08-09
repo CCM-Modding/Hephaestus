@@ -10,23 +10,20 @@ import ccm.nucleum_omnium.utils.helper.enums.IItemEnum;
 
 public enum EnumDust implements IItemEnum {
     // Items (Stack up to 64)
-    dustAluminum,
-    dustBronze,
-    dustCopper,
-    dustGold,
-    dustHardIron,
-    dustHeavyIron,
-    dustIron,
-    dustLead,
-    dustSilver,
-    dustSteel,
-    dustSulfur,
     dustTin,
-    dustTitanite,
+    dustAluminum,
+    dustSilver,
+    dustCopper,
     dustTitanium,
-    dustTitCarbide,
-    dustTunCarbide,
-    dustTungsten;
+    dustLead,
+    dustIron,
+    dustGold,
+    dustSulfur,
+    dustSoldarium,
+    dustElectrum,
+    dustBronze,
+    dustSteel,
+    dustTitanite;
 
     public static void registerIcons(final IconRegister register) {
         for (final EnumDust item : EnumDust.values()) {
