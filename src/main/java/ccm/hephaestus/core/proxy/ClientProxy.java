@@ -7,7 +7,7 @@ import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.client.inventory.gui.GUIGrinder;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.nucleum_omnium.utils.handler.TextureHandler;
-import ccm.nucleum_omnium.utils.handler.gui.GUIHandler;
+import ccm.nucleum_omnium.utils.handler.gui.GuiHandler;
 import ccm.nucleum_omnium.utils.helper.enums.EnumHelper;
 
 public class ClientProxy extends CommonProxy {
@@ -21,7 +21,7 @@ public class ClientProxy extends CommonProxy {
     }
 
     private static void registerGUI(final Enum<?> enu, final Class<? extends GuiContainer> gui, final Class<? extends Container> container) {
-        GUIHandler.registerGuiClient(EnumHelper.getTileID(enu), gui, container);
+        GuiHandler.registerGuiClient(EnumHelper.getTileID(enu), gui, container);
     }
 
     private void addGUITexture(final Enum<?> enu) {

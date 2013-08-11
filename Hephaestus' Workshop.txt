@@ -37,29 +37,25 @@ Item
 
 Recipes
 •	Anvil - An "I" shape with iron and logs
-    ~ [xxx] [ x ] [yyy] x=iron y=logs
-•	Forge - Multi block made out of unknown: 3x3x3
-    ~ [yxy] [x x] [yxy]
-	~ [xxx] [x x] [x x]
-	~ [xxx] [xxx] [xyx] x=block y=half block
-	~ construction of Forge subject to change
+    ~ [xzx] [ x ] [yyy] x=iron y=logs z=iron block
+•	Forge - Multi block 3x3x1
+    ~ [xxx] [xyx] [xxx] x=cobble y=coal block
 •	Blast Furnace - Multi Block 3x3x4 two inside blocks hollow, bottom one is lava
     ~ made out of unknown
 •	Grinder - unknown
 •	Gem Setting Table - unknown
 
-Metal Working (Forge)
-•	Uses Charcoal, Coal, and Sulphur for fuel
+Anvil
+•	GUI: input, 2 output, and hammer slot with arrows and a box to select the part to be made
+    ~ put the hammer and the tongs in and select the part you would like to make, output shows up to be collected
+
+Forge
 •	Coal - Heats basic materials
 •	Charcoal - Heats most materials
 •	Sulphur - Heats more advanced materials
 •	Blaze Powder - Heats more the most advanced materials
     ~ will need a heat meter like the thermionic fabricator from Forestry
-•	GUI: Similar to furnace, Slot for input, fuel, and output
-
-Anvil
-•	GUI: input, 2 output, and hammer slot with arrows and a box to select the part to be made
-    ~ put the hammer and the tongs in and select the part you would like to make, output shows up to be collected
+•	GUI: 
 
 Blast Furnace
 •	GUI: 2 fuel slots an input and an output
