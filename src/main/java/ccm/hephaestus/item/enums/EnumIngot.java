@@ -32,7 +32,7 @@ public enum EnumIngot implements IItemEnum {
     public final String texture;
 
     private EnumIngot() {
-        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "items/");
+        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
     }
 
     @Override

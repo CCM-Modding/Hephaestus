@@ -29,7 +29,7 @@ public enum EnumGem implements IItemEnum {
     public final String texture;
 
     private EnumGem() {
-        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "items/");
+        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "gems/");
     }
 
     @Override

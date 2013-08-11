@@ -35,7 +35,7 @@ public enum EnumDust implements IItemEnum {
     public final String texture;
 
     private EnumDust() {
-        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "items/");
+        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "dusts/");
     }
 
     @Override
