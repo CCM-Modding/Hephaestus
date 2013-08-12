@@ -1,4 +1,4 @@
-package ccm.hephaestus.core.recipe;
+package ccm.hephaestus.utils.registry.recipe;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

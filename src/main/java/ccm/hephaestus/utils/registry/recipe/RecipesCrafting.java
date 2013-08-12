@@ -1,4 +1,4 @@
-package ccm.hephaestus.core.recipe;
+package ccm.hephaestus.utils.registry.recipe;
 
 import java.util.List;
 

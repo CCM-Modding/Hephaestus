@@ -1,6 +1,6 @@
 package ccm.hephaestus.utils.registry;
 
-import ccm.hephaestus.core.recipe.RecipeHandler;
+import ccm.hephaestus.utils.registry.recipe.RecipeHandler;
 
 public final class Registry {
 

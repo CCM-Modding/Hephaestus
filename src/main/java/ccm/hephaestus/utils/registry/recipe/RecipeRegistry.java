@@ -1,4 +1,4 @@
-package ccm.hephaestus.core.recipe;
+package ccm.hephaestus.utils.registry.recipe;
 
 import ccm.nucleum_omnium.api.fuels.IFuelRegistry;
 import ccm.nucleum_omnium.api.recipes.IRecipeContainer;
