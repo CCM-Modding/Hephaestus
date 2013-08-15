@@ -1,6 +1,5 @@
 package ccm.hephaestus;
 
-import static ccm.hephaestus.utils.lib.Archive.INVALID_FINGERPRINT_MSG;
 import static ccm.hephaestus.utils.lib.Archive.MOD_DEPENDANCIES;
 import static ccm.hephaestus.utils.lib.Archive.MOD_FIGERPRINT;
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
@@ -29,7 +28,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-@Mod(modid = MOD_ID, name = MOD_NAME, certificateFingerprint = MOD_FIGERPRINT, dependencies = MOD_DEPENDANCIES, useMetadata = true)
+@Mod(modid = MOD_ID, name = MOD_NAME, useMetadata = true)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @ModstatInfo(prefix = MOD_PREFIX)
 public class Hephaestus extends BaseMod implements IMod {
@@ -39,15 +38,6 @@ public class Hephaestus extends BaseMod implements IMod {
 
     @SidedProxy(serverSide = SERVER_PROXY, clientSide = CLIENT_PROXY)
     public static CommonProxy proxy;
-
-    @EventHandler
-    public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
-        /*
-         * Report (log) to the user that the version of Hephaestus they are using
-         * has been changed/tampered with
-         */
-        LogHandler.invalidFP(this, INVALID_FINGERPRINT_MSG);
-    }
 
     @EventHandler
     public void preInit(final FMLPreInitializationEvent evt) {
