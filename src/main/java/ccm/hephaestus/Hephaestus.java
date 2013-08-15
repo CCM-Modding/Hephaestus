@@ -43,7 +43,7 @@ public class Hephaestus extends BaseMod implements IMod {
     @EventHandler
     public void invalidFingerprint(final FMLFingerprintViolationEvent event) {
         /*
-         * Report (log) to the user that the version of Harvestry they are using
+         * Report (log) to the user that the version of Hephaestus they are using
          * has been changed/tampered with
          */
         LogHandler.invalidFP(this, INVALID_FINGERPRINT_MSG);
