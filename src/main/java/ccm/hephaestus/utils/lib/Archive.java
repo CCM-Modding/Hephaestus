@@ -8,11 +8,7 @@ public final class Archive {
 
     public static final String MOD_NAME = "Hephaestus";
 
-    public static final String MOD_FIGERPRINT = "@FINGERPRINT@";
-
     public static final String MOD_CHANNEL = "CCM";
-
-    public static final String MOD_DEPENDANCIES = "required-after:nucleum_world";
 
     public static final String TAB_HEPHAESTUS = "tab" + MOD_NAME;
 
@@ -23,6 +19,4 @@ public final class Archive {
     public static final String TAB_HEPHAESTUS_TOOLS = TAB_HEPHAESTUS + "Tools";
 
     public static final String TAB_HEPHAESTUS_PARTS = TAB_HEPHAESTUS + "Parts";
-
-    public static final String INVALID_FINGERPRINT_MSG = "error.invalid.fingerPrint";
 }
