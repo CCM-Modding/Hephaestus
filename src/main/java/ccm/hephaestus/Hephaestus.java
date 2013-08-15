@@ -1,7 +1,5 @@
 package ccm.hephaestus;
 
-import static ccm.hephaestus.utils.lib.Archive.MOD_DEPENDANCIES;
-import static ccm.hephaestus.utils.lib.Archive.MOD_FIGERPRINT;
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
 import static ccm.hephaestus.utils.lib.Archive.MOD_NAME;
 import static ccm.hephaestus.utils.lib.Archive.MOD_PREFIX;
