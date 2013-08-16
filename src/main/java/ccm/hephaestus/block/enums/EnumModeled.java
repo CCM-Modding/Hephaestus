@@ -2,9 +2,9 @@ package ccm.hephaestus.block.enums;
 
 import net.minecraft.block.Block;
 import ccm.hephaestus.Hephaestus;
-import ccm.nucleum_omnium.client.model.AdvancedBaseModel;
-import ccm.nucleum_omnium.utils.handler.TextureHandler;
-import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
+import ccm.nucleum.omnium.client.model.AdvancedBaseModel;
+import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 
 /**
  * EnumModeled

@@ -6,7 +6,7 @@ import ccm.hephaestus.item.classes.BaseItem;
 import ccm.hephaestus.item.classes.BaseUseableItem;
 import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.utils.handler.LogHandler;
 
 public final class ModItems {
 

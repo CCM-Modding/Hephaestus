@@ -6,9 +6,9 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.client.inventory.gui.GUIGrinder;
 import ccm.hephaestus.inventory.container.GrinderContainer;
-import ccm.nucleum_omnium.utils.handler.TextureHandler;
-import ccm.nucleum_omnium.utils.handler.gui.GuiHandler;
-import ccm.nucleum_omnium.utils.helper.enums.EnumHelper;
+import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.gui.GuiHandler;
+import ccm.nucleum.omnium.utils.helper.enums.EnumHelper;
 
 public class ClientProxy extends CommonProxy {
 

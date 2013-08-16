@@ -10,10 +10,10 @@ import org.lwjgl.opengl.GL11;
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
-import ccm.nucleum_omnium.tileentity.ActiveTE;
-import ccm.nucleum_omnium.tileentity.interfaces.IGUITileLogic;
-import ccm.nucleum_omnium.utils.handler.TextureHandler;
-import ccm.nucleum_omnium.utils.lib.TileConstants;
+import ccm.nucleum.omnium.tileentity.ActiveTE;
+import ccm.nucleum.omnium.tileentity.interfaces.IGUITileLogic;
+import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.lib.TileConstants;
 
 public class GUIGrinder extends GuiContainer {
 

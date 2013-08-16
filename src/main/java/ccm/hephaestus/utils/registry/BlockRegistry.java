@@ -4,11 +4,11 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.block.sub.SubBlock;
-import ccm.nucleum_omnium.block.sub.SubModelled;
-import ccm.nucleum_omnium.block.tile.TileLogic;
-import ccm.nucleum_omnium.utils.handler.LogHandler;
-import ccm.nucleum_omnium.utils.handler.TileHandler;
+import ccm.nucleum.omnium.block.sub.SubBlock;
+import ccm.nucleum.omnium.block.sub.SubModelled;
+import ccm.nucleum.omnium.block.tile.TileLogic;
+import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.utils.handler.TileHandler;
 
 final class BlockRegistry {
 

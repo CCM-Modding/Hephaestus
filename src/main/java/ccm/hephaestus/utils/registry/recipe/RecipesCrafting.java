@@ -11,7 +11,7 @@ import ccm.hephaestus.block.enums.EnumBlocksM;
 import ccm.hephaestus.item.enums.EnumDust;
 import ccm.hephaestus.item.enums.EnumGem;
 import ccm.hephaestus.item.enums.EnumIngot;
-import ccm.nucleum_omnium.utils.helper.enums.EnumToItemStack;
+import ccm.nucleum.omnium.utils.helper.enums.EnumToItemStack;
 
 final class RecipesCrafting {
 

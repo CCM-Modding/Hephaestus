@@ -11,16 +11,15 @@ import ccm.hephaestus.core.proxy.CommonProxy;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.registry.Registry;
-import ccm.nucleum_omnium.BaseMod;
-import ccm.nucleum_omnium.IMod;
-import ccm.nucleum_omnium.utils.handler.LogHandler;
-import ccm.nucleum_omnium.utils.handler.ModLoadingHandler;
-import ccm.nucleum_omnium.utils.handler.config.ConfigurationHandler;
+import ccm.nucleum.omnium.BaseMod;
+import ccm.nucleum.omnium.IMod;
+import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
+import ccm.nucleum.omnium.utils.handler.config.ConfigurationHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLFingerprintViolationEvent;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -43,8 +42,7 @@ public class Hephaestus extends BaseMod implements IMod {
 
             LogHandler.initLog(this);
 
-            config = this.initializeConfig(evt);
-
+            initializeConfig(evt);
             ConfigurationHandler.init(this, HephaestusConfig.class);
 
             HephaestusTabs.initTabs();

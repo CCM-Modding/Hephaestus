@@ -6,7 +6,7 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import ccm.hephaestus.block.enums.EnumOresM;
 import ccm.hephaestus.item.enums.EnumDust;
 import ccm.hephaestus.item.enums.EnumIngot;
-import ccm.nucleum_omnium.utils.helper.enums.EnumToItemStack;
+import ccm.nucleum.omnium.utils.helper.enums.EnumToItemStack;
 
 final class RecipesSmelting {
 

@@ -1,7 +1,7 @@
 package ccm.hephaestus.utils.registry.recipe;
 
-import ccm.nucleum_omnium.api.fuels.IFuelRegistry;
-import ccm.nucleum_omnium.api.recipes.IRecipeContainer;
+import ccm.nucleum.omnium.api.fuels.IFuelRegistry;
+import ccm.nucleum.omnium.api.recipes.IRecipeContainer;
 
 /**
  * RecipeRegistry.java

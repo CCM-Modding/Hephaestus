@@ -1,7 +1,7 @@
 package ccm.hephaestus.block.enums;
 
 import net.minecraft.block.Block;
-import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
+import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 
 public enum EnumMachines implements IBlockEnum {
     // Make sure to keep this lower than 16 AT ALL TIMES

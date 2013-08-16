@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.block.sub.SubBlock;
-import ccm.nucleum_omnium.utils.helper.enums.IBlockEnum;
+import ccm.nucleum.omnium.block.sub.SubBlock;
+import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 
 public enum EnumBlocksA implements IBlockEnum {
     // Make sure to keep this lower than 16 AT ALL TIMES

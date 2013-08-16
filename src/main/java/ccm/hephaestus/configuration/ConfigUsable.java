@@ -3,8 +3,8 @@ package ccm.hephaestus.configuration;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum_omnium.configuration.AdvConfiguration;
-import ccm.nucleum_omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.configuration.AdvConfiguration;
+import ccm.nucleum.omnium.utils.handler.LogHandler;
 
 final class ConfigUsable extends HephaestusConfig {
 

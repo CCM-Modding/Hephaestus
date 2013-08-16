@@ -6,11 +6,11 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
-import ccm.nucleum_omnium.tileentity.ActiveTE;
-import ccm.nucleum_omnium.utils.handler.LogHandler;
-import ccm.nucleum_omnium.utils.handler.TileHandler;
-import ccm.nucleum_omnium.utils.handler.gui.GuiHandler;
-import ccm.nucleum_omnium.utils.helper.enums.EnumHelper;
+import ccm.nucleum.omnium.tileentity.ActiveTE;
+import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.utils.handler.TileHandler;
+import ccm.nucleum.omnium.utils.handler.gui.GuiHandler;
+import ccm.nucleum.omnium.utils.helper.enums.EnumHelper;
 
 public class CommonProxy {
 
