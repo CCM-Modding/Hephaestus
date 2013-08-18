@@ -42,7 +42,7 @@ public class Hephaestus extends BaseMod implements IMod {
 
             LogHandler.initLog(this);
 
-            initializeConfig(evt);
+            this.initializeConfig(evt);
             ConfigurationHandler.init(this, HephaestusConfig.class);
 
             HephaestusTabs.initTabs();
