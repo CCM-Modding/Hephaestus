@@ -23,7 +23,6 @@ import ccm.hephaestus.tconstruct.TConstructHandler;
 import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum.omnium.BaseMod;
 import ccm.nucleum.omnium.IMod;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
 import ccm.nucleum.omnium.utils.handler.config.ConfigurationHandler;
 import ccm.nucleum.omnium.utils.handler.mods.ModHandler;
@@ -46,8 +45,6 @@ public class Hephaestus extends BaseMod implements IMod
     public void preInit(final FMLPreInitializationEvent evt)
     {
         ModLoadingHandler.loadMod(this);
-
-        LogHandler.initLog(this);
 
         initializeConfig(evt);
         ConfigurationHandler.init(this, HephaestusConfig.class);
