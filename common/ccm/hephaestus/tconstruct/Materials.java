@@ -4,9 +4,8 @@ import tconstruct.library.TConstructRegistry;
 
 public class Materials  {
 
-    void registerMaterials ()
+    static void registerMaterials ()
     {
-
         TConstructRegistry.addToolMaterial(20, "Silver", 1, 200, 700, 2, 0.6F, 1, -1f, "\u00A7f", "");
         TConstructRegistry.addToolMaterial(21, "Titanium", 3, 900, 600, 3, 1.5F, 2, 0f, "\u00A7f", "");
         TConstructRegistry.addToolMaterial(22, "DObsidian", 4, 300, 950, 4, 0.9F, 4, 0f, "\u00A7f", "");
