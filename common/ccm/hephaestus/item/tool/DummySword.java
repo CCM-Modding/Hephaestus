@@ -5,7 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSword;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -23,6 +23,6 @@ public class DummySword extends ItemSword {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister register) {
-        this.itemIcon = register.registerIcon(TextureHandler.getTextureFromName(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
+        this.itemIcon = register.registerIcon(ResourceHandler.getTextureFromName(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
     }
 }

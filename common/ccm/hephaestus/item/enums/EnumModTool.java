@@ -4,7 +4,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
 public enum EnumModTool implements IItemEnum {
@@ -28,7 +28,7 @@ public enum EnumModTool implements IItemEnum {
     private Icon icon;
 
     private EnumModTool(final int duration) {
-        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE);
+        this.texture = ResourceHandler.getTextureFromName(this.name(), Locations.TEXTURE);
         this.duration = duration;
     }
 

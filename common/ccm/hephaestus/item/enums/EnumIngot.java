@@ -5,7 +5,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
 public enum EnumIngot implements IItemEnum {
@@ -32,7 +32,7 @@ public enum EnumIngot implements IItemEnum {
     public final String texture;
 
     private EnumIngot() {
-        this.texture = TextureHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
+        this.texture = ResourceHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
     }
 
     @Override

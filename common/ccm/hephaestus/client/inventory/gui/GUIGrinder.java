@@ -12,7 +12,7 @@ import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.nucleum.omnium.tileentity.ActiveTE;
 import ccm.nucleum.omnium.tileentity.interfaces.IGUITileLogic;
-import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.lib.NBTConstants;
 
 public class GUIGrinder extends GuiContainer {
@@ -43,7 +43,7 @@ public class GUIGrinder extends GuiContainer {
     @Override
     protected void drawGuiContainerBackgroundLayer(final float opacity, final int x, final int y) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        this.mc.func_110434_K().func_110577_a(TextureHandler.getGUI(EnumModeled.machineGrinder.name()));
+        this.mc.func_110434_K().func_110577_a(ResourceHandler.getGUI(EnumModeled.machineGrinder.name()));
         final int xStart = (this.width - this.xSize) / 2;
         final int yStart = (this.height - this.ySize) / 2;
         this.drawTexturedModalRect(xStart, yStart, 0, 0, this.xSize, this.ySize);

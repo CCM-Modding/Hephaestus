@@ -21,7 +21,7 @@ import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.tconstruct.TConstructHandler;
 import ccm.hephaestus.utils.registry.Registry;
-import ccm.nucleum.omnium.BaseMod;
+import ccm.nucleum.omnium.CCMMod;
 import ccm.nucleum.omnium.IMod;
 import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
 import ccm.nucleum.omnium.utils.handler.config.ConfigurationHandler;
@@ -32,7 +32,7 @@ import lib.org.modstats.ModstatInfo;
 @Mod(modid = MOD_ID, name = MOD_NAME, useMetadata = true)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 @ModstatInfo(prefix = MOD_PREFIX)
-public class Hephaestus extends BaseMod implements IMod
+public class Hephaestus extends CCMMod implements IMod
 {
 
     @Instance(MOD_ID)

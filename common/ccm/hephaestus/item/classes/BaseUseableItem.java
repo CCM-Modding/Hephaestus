@@ -3,7 +3,7 @@ package ccm.hephaestus.item.classes;
 import net.minecraft.client.renderer.texture.IconRegister;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.TextureHandler;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -23,7 +23,7 @@ public class BaseUseableItem extends BaseItemClass {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister register) {
-        this.itemIcon = register.registerIcon(TextureHandler.getTexture(this, Locations.TEXTURE));
+        this.itemIcon = register.registerIcon(ResourceHandler.getTexture(this, Locations.TEXTURE));
     }
 
     @Override
