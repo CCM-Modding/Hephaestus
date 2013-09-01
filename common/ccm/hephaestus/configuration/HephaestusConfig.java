@@ -1,26 +1,9 @@
 package ccm.hephaestus.configuration;
 
-import ccm.nucleum.omnium.configuration.AdvConfiguration;
 import ccm.nucleum.omnium.utils.handler.config.IConfig;
 
-public class HephaestusConfig implements IConfig
+public class HephaestusConfig extends IConfig
 {
-
-    private AdvConfiguration config;
-
-    @Override
-    public IConfig setConfiguration(final AdvConfiguration config)
-    {
-        this.config = config;
-        return this;
-    }
-
-    @Override
-    public AdvConfiguration getConfiguration()
-    {
-        return config;
-    }
-
     @Override
     public void init()
     {
