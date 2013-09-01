@@ -8,7 +8,7 @@ import ccm.nucleum.omnium.block.sub.SubBlock;
 import ccm.nucleum.omnium.block.sub.SubModelled;
 import ccm.nucleum.omnium.block.tile.TileLogic;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
-import ccm.nucleum.omnium.utils.handler.TileHandler;
+import ccm.nucleum.omnium.utils.helper.enums.EnumHelper;
 
 final class BlockRegistry
 {
@@ -32,7 +32,7 @@ final class BlockRegistry
         LogHandler.finest(Hephaestus.instance, "Making Sub Blocks, Stage 3");
 
         SubBlock.setUp(EnumModeled.machineGrinder,
-                new SubModelled(Properties.modeledBlockID, EnumModeled.machineGrinder.ordinal(), new TileLogic()).setTileEntity(TileHandler.getEnumTE(EnumModeled.machineGrinder))
+                new SubModelled(Properties.modeledBlockID, EnumModeled.machineGrinder.ordinal(), new TileLogic()).setTileEntity(EnumHelper.getTile(EnumModeled.machineGrinder))
                         .setCreativeTab(HephaestusTabs.tabHephaestusBlocks).setUnlocalizedName(EnumModeled.machineGrinder).setHardness(3.0F));
 
     }
