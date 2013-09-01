@@ -7,7 +7,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.ResourceHandler;
+import ccm.nucleum.omnium.utils.helper.TextureHelper;
 
 public class BaseUseableItem extends BaseItemClass
 {
@@ -28,7 +28,7 @@ public class BaseUseableItem extends BaseItemClass
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister register)
     {
-        itemIcon = register.registerIcon(ResourceHandler.getTexture(this, Locations.TEXTURE));
+        itemIcon = register.registerIcon(TextureHelper.getTexture(this, Locations.TEXTURE));
     }
 
     @Override

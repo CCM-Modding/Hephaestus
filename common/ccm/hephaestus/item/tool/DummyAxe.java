@@ -9,7 +9,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.ResourceHandler;
+import ccm.nucleum.omnium.utils.helper.TextureHelper;
 
 public class DummyAxe extends ItemAxe
 {
@@ -28,6 +28,6 @@ public class DummyAxe extends ItemAxe
     @SideOnly(Side.CLIENT)
     public void registerIcons(final IconRegister register)
     {
-        itemIcon = register.registerIcon(ResourceHandler.getTextureFromName(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
+        itemIcon = register.registerIcon(TextureHelper.getTexture(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
     }
 }

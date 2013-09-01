@@ -6,7 +6,7 @@ import net.minecraft.util.Icon;
 
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.ResourceHandler;
+import ccm.nucleum.omnium.utils.helper.TextureHelper;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
 public enum EnumGem implements IItemEnum
@@ -34,7 +34,7 @@ public enum EnumGem implements IItemEnum
 
     private EnumGem()
     {
-        texture = ResourceHandler.getTextureFromName(name(), Locations.TEXTURE + "gems/");
+        texture = TextureHelper.getTexture(name(), Locations.TEXTURE + "gems/");
     }
 
     @Override

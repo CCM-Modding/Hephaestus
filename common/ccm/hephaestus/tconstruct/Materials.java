@@ -1,5 +1,6 @@
 package ccm.hephaestus.tconstruct;
 
+import tconstruct.library.TConstructRegistry;
 
 public class Materials
 {

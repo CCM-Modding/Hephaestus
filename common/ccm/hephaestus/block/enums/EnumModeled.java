@@ -24,8 +24,7 @@ public enum EnumModeled implements IBlockEnum
      */
     private EnumModeled()
     {
-        ResourceHandler.addModel(Hephaestus.instance, this);
-        ResourceHandler.addModelTexture(Hephaestus.instance, this);
+        ResourceHandler.addModel(Hephaestus.instance, name());
         model = new AdvancedBaseModel(this);
     }
 
