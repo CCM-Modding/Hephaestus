@@ -2,6 +2,7 @@ package ccm.hephaestus.utils.registry;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumBlocksM;
 import ccm.hephaestus.block.enums.EnumOresM;
@@ -11,12 +12,14 @@ import ccm.hephaestus.item.enums.EnumIngot;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.helper.enums.EnumToItemStack;
 
-final class OreDictionaryRegistry {
+final class OreDictionaryRegistry
+{
 
     /**
      * Registers all the Entries to the Ore Dictionary.
      */
-    protected static void oreDictionary() {
+    protected static void oreDictionary()
+    {
         LogHandler.finest(Hephaestus.instance, "Adding Ore Dictionary Entries");
 
         register("naturalAluminum", EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
@@ -80,7 +83,8 @@ final class OreDictionaryRegistry {
         register("oreTopaz", EnumToItemStack.getBlockIS(EnumOresM.oreTopaz));
     }
 
-    private static void register(final String name, final ItemStack ore) {
+    private static void register(final String name, final ItemStack ore)
+    {
         OreDictionary.registerOre(name, ore);
     }
 }

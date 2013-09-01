@@ -1,6 +1,7 @@
 package ccm.hephaestus.item;
 
 import net.minecraft.item.Item;
+
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.item.classes.BaseItem;
 import ccm.hephaestus.item.classes.BaseUseableItem;
@@ -8,7 +9,8 @@ import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
 
-public final class ModItems {
+public final class ModItems
+{
 
     public static Item mainItems;
 
@@ -31,7 +33,8 @@ public final class ModItems {
     /**
      * Creates all the Item Objects in the Mod.
      */
-    public static void init() {
+    public static void init()
+    {
         LogHandler.finest(Hephaestus.instance, "Loading Items");
         ModItems.mainItems = new BaseItem(Properties.mainItemID, 0);
         ModItems.gemItems = new BaseItem(Properties.gemItemID, 1);
@@ -46,7 +49,8 @@ public final class ModItems {
         initModCompat();
     }
 
-    static void initModCompat() {
+    static void initModCompat()
+    {
 
     }
 }

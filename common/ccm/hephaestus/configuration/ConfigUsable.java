@@ -6,7 +6,8 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.omnium.configuration.AdvConfiguration;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
 
-final class ConfigUsable extends HephaestusConfig {
+final class ConfigUsable extends HephaestusConfig
+{
 
     /**
      * Loads or creates the Usable Items in the Configuration file.
@@ -14,7 +15,8 @@ final class ConfigUsable extends HephaestusConfig {
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configUsable(final AdvConfiguration config) {
+    protected static void configUsable(final AdvConfiguration config)
+    {
         LogHandler.finest(Hephaestus.instance, "Loading Usable Configs");
         int id = Properties.itemID;
         Properties.gsStoneID = config.getItem(EnumModTool.gsStone.name(), id++).getInt();

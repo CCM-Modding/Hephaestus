@@ -1,20 +1,24 @@
 package ccm.hephaestus.item.classes;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import ccm.hephaestus.creativetab.HephaestusTabs;
-import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.ResourceHandler;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BaseUseableItem extends BaseItemClass {
+import ccm.hephaestus.creativetab.HephaestusTabs;
+import ccm.hephaestus.utils.lib.Locations;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 
-    public BaseUseableItem(final int id, final int maxDamage) {
+public class BaseUseableItem extends BaseItemClass
+{
+
+    public BaseUseableItem(final int id, final int maxDamage)
+    {
         super(id);
-        this.setMaxStackSize(1);
-        this.setHasSubtypes(false);
-        this.setMaxDamage(maxDamage);
-        this.setCreativeTab(HephaestusTabs.tabHephaestusTools);
+        setMaxStackSize(1);
+        setHasSubtypes(false);
+        setMaxDamage(maxDamage);
+        setCreativeTab(HephaestusTabs.tabHephaestusTools);
     }
 
     /**
@@ -22,13 +26,15 @@ public class BaseUseableItem extends BaseItemClass {
      */
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(final IconRegister register) {
-        this.itemIcon = register.registerIcon(ResourceHandler.getTexture(this, Locations.TEXTURE));
+    public void registerIcons(final IconRegister register)
+    {
+        itemIcon = register.registerIcon(ResourceHandler.getTexture(this, Locations.TEXTURE));
     }
 
     @Override
     @SideOnly(Side.CLIENT)
-    public boolean shouldRotateAroundWhenRendering() {
+    public boolean shouldRotateAroundWhenRendering()
+    {
         return true;
     }
 }

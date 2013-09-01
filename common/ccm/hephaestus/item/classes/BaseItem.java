@@ -6,15 +6,18 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.enums.EnumDust;
 import ccm.hephaestus.item.enums.EnumGem;
 import ccm.hephaestus.item.enums.EnumIngot;
 import ccm.hephaestus.item.enums.EnumItem;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class BaseItem extends BaseItemClass {
+public class BaseItem extends BaseItemClass
+{
 
     private int enumType;
 
@@ -32,11 +35,12 @@ public class BaseItem extends BaseItemClass {
      * @param id
      *            The Item ID
      */
-    public BaseItem(final int id) {
+    public BaseItem(final int id)
+    {
         super(id);
-        this.setHasSubtypes(true);
-        this.setMaxDamage(0);
-        this.setCreativeTab(HephaestusTabs.tabHephaestusItems);
+        setHasSubtypes(true);
+        setMaxDamage(0);
+        setCreativeTab(HephaestusTabs.tabHephaestusItems);
     }
 
     /**
@@ -45,12 +49,13 @@ public class BaseItem extends BaseItemClass {
      * @param id
      *            The Item ID
      */
-    public BaseItem(final int id, final int enumType) {
+    public BaseItem(final int id, final int enumType)
+    {
         super(id);
-        this.setMaxDamage(0);
-        this.setHasSubtypes(true);
+        setMaxDamage(0);
+        setHasSubtypes(true);
         this.enumType = enumType;
-        this.setCreativeTab(HephaestusTabs.tabHephaestusItems);
+        setCreativeTab(HephaestusTabs.tabHephaestusItems);
     }
 
     /**
@@ -58,8 +63,10 @@ public class BaseItem extends BaseItemClass {
      */
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIconFromDamage(final int meta) {
-        switch (this.enumType) {
+    public Icon getIconFromDamage(final int meta)
+    {
+        switch (enumType)
+        {
             case 0:
                 return BaseItem.currentBaseItems[meta].getIcon();
             case 1:
@@ -74,30 +81,35 @@ public class BaseItem extends BaseItemClass {
     }
 
     /**
-     * returns a list of items with the same ID, but different meta (eg: dye
-     * returns 16 items)
+     * returns a list of items with the same ID, but different meta (eg: dye returns 16 items)
      */
     @Override
     @SideOnly(Side.CLIENT)
-    public void getSubItems(final int itemID, final CreativeTabs creativeTabs, final List list) {
-        switch (this.enumType) {
+    public void getSubItems(final int itemID, final CreativeTabs creativeTabs, final List list)
+    {
+        switch (enumType)
+        {
             case 0:
-                for (int currentMeta = 0; currentMeta < EnumItem.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumItem.values().length; ++currentMeta)
+                {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
             case 1:
-                for (int currentMeta = 0; currentMeta < EnumGem.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumGem.values().length; ++currentMeta)
+                {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
             case 2:
-                for (int currentMeta = 0; currentMeta < EnumIngot.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumIngot.values().length; ++currentMeta)
+                {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
             case 3:
-                for (int currentMeta = 0; currentMeta < EnumDust.values().length; ++currentMeta) {
+                for (int currentMeta = 0; currentMeta < EnumDust.values().length; ++currentMeta)
+                {
                     list.add(new ItemStack(itemID, 1, currentMeta));
                 }
                 break;
@@ -105,19 +117,21 @@ public class BaseItem extends BaseItemClass {
     }
 
     @Override
-    public String getUnlocalizedName(final ItemStack itemStack) {
-        switch (this.enumType) {
+    public String getUnlocalizedName(final ItemStack itemStack)
+    {
+        switch (enumType)
+        {
             case 0:
-                this.setUnlocalizedName(BaseItem.currentBaseItems[itemStack.getItemDamage()].name());
+                setUnlocalizedName(BaseItem.currentBaseItems[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             case 1:
-                this.setUnlocalizedName(BaseItem.currentGemItems[itemStack.getItemDamage()].name());
+                setUnlocalizedName(BaseItem.currentGemItems[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             case 2:
-                this.setUnlocalizedName(BaseItem.currentIngotItems[itemStack.getItemDamage()].name());
+                setUnlocalizedName(BaseItem.currentIngotItems[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             case 3:
-                this.setUnlocalizedName(BaseItem.currentDustItems[itemStack.getItemDamage()].name());
+                setUnlocalizedName(BaseItem.currentDustItems[itemStack.getItemDamage()].name());
                 return super.getUnlocalizedName();
             default:
                 return null;
@@ -126,7 +140,8 @@ public class BaseItem extends BaseItemClass {
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(final IconRegister iconRergister) {
+    public void registerIcons(final IconRegister iconRergister)
+    {
         EnumItem.registerIcons(iconRergister);
         EnumGem.registerIcons(iconRergister);
         EnumIngot.registerIcons(iconRergister);

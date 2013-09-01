@@ -3,11 +3,13 @@ package ccm.hephaestus.item.enums;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
+
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
-public enum EnumModTool implements IItemEnum {
+public enum EnumModTool implements IItemEnum
+{
     // Grinder "Fuel", TODO Update with the right Damages
     gsStone(250),
     gsIron(400),
@@ -15,8 +17,10 @@ public enum EnumModTool implements IItemEnum {
     gsObsidian(2000),
     gsDiamond(3000);
 
-    public static void registerIcons(final IconRegister register) {
-        for (final EnumModTool item : EnumModTool.values()) {
+    public static void registerIcons(final IconRegister register)
+    {
+        for (final EnumModTool item : EnumModTool.values())
+        {
             item.icon = register.registerIcon(item.texture);
         }
     }
@@ -27,18 +31,21 @@ public enum EnumModTool implements IItemEnum {
 
     private Icon icon;
 
-    private EnumModTool(final int duration) {
-        this.texture = ResourceHandler.getTextureFromName(this.name(), Locations.TEXTURE);
+    private EnumModTool(final int duration)
+    {
+        texture = ResourceHandler.getTextureFromName(name(), Locations.TEXTURE);
         this.duration = duration;
     }
 
     @Override
-    public Icon getIcon() {
-        return this.icon;
+    public Icon getIcon()
+    {
+        return icon;
     }
 
     @Override
-    public Item getBaseItem() {
+    public Item getBaseItem()
+    {
         return null;
     }
 }

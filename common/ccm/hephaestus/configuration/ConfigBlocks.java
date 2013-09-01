@@ -5,7 +5,8 @@ import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.omnium.configuration.AdvConfiguration;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
 
-final class ConfigBlocks extends HephaestusConfig {
+final class ConfigBlocks extends HephaestusConfig
+{
 
     /**
      * Loads or creates the Blocks in the AdvConfiguration file.
@@ -13,7 +14,8 @@ final class ConfigBlocks extends HephaestusConfig {
      * @param config
      *            The AdvConfiguration file that is being edited.
      */
-    protected static void configBlocks(final AdvConfiguration config) {
+    protected static void configBlocks(final AdvConfiguration config)
+    {
         LogHandler.finest(Hephaestus.instance, "Loading Block Configs");
         int id = Properties.blockID;
 

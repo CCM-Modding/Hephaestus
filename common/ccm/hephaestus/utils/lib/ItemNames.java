@@ -1,6 +1,7 @@
 package ccm.hephaestus.utils.lib;
 
-public final class ItemNames {
+public final class ItemNames
+{
 
     // Tools
     public static final String toolFlatShovel = "toolFlatShovel";

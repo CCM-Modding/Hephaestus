@@ -2,13 +2,15 @@ package ccm.hephaestus.tileentity.logic;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
+
 import ccm.hephaestus.api.recipes.GrinderRecipes;
 import ccm.nucleum.omnium.tileentity.ActiveTE;
 import ccm.nucleum.omnium.tileentity.logic.GUILogic;
 import ccm.nucleum.omnium.utils.helper.InventoryHelper;
 import ccm.nucleum.omnium.utils.helper.ItemHelper;
 
-public class GrinderLogic extends GUILogic {
+public class GrinderLogic extends GUILogic
+{
 
     private final ActiveTE te;
 
@@ -20,54 +22,65 @@ public class GrinderLogic extends GUILogic {
 
     private final int outSlot = 2;
 
-    public GrinderLogic(final TileEntity te) {
+    public GrinderLogic(final TileEntity te)
+    {
         this.te = (ActiveTE) te;
     }
 
     @Override
-    public void runLogic() {
+    public void runLogic()
+    {
 
-        if (!this.te.worldObj.isRemote) {
-            if (this.canRun()) {
-                ItemHelper.damageItem(this.te, this.fuelSlot, 3);
-                this.te.setState(true);
-                ++this.progress;
-                if (this.progress == this.getMaxTime(this.te.getStackInSlot(this.inputSlot))) {
-                    this.progress = 0;
-                    this.run();
-                    this.te.onInventoryChanged();
-                    this.te.setState(false);
+        if (!te.worldObj.isRemote)
+        {
+            if (canRun())
+            {
+                ItemHelper.damageItem(te, fuelSlot, 3);
+                te.setState(true);
+                ++progress;
+                if (progress == getMaxTime(te.getStackInSlot(inputSlot)))
+                {
+                    progress = 0;
+                    run();
+                    te.onInventoryChanged();
+                    te.setState(false);
                 }
-            } else {
-                this.progress = 0;
-                this.te.setState(false);
+            } else
+            {
+                progress = 0;
+                te.setState(false);
             }
         }
     }
 
     /**
-     * Returns true if the grinder can grind an item, i.e. has a source item,
-     * destination stack isn't full, etc.
+     * Returns true if the grinder can grind an item, i.e. has a source item, destination stack isn't full, etc.
      */
     @Override
-    public boolean canRun() {
-        if (this.te.getStackInSlot(this.inputSlot) != null) {
-            if (this.te.getStackInSlot(this.fuelSlot) != null) {
-                if (this.recipes.getResult(this.te.getStackInSlot(this.inputSlot)) != null) {
+    public boolean canRun()
+    {
+        if (te.getStackInSlot(inputSlot) != null)
+        {
+            if (te.getStackInSlot(fuelSlot) != null)
+            {
+                if (recipes.getResult(te.getStackInSlot(inputSlot)) != null)
+                {
 
-                    if (this.te.getStackInSlot(this.outSlot) == null) {
+                    if (te.getStackInSlot(outSlot) == null)
+                    {
                         return true;
                     }
 
-                    final ItemStack itemstack = this.recipes.getResult(this.te.getStackInSlot(this.inputSlot)).getOutput();
+                    final ItemStack itemstack = recipes.getResult(te.getStackInSlot(inputSlot)).getOutput();
 
-                    if (!this.te.getStackInSlot(this.outSlot).isItemEqual(itemstack)) {
+                    if (!te.getStackInSlot(outSlot).isItemEqual(itemstack))
+                    {
                         return false;
                     }
 
-                    final int result = this.te.getStackInSlot(this.outSlot).stackSize + itemstack.stackSize;
+                    final int result = te.getStackInSlot(outSlot).stackSize + itemstack.stackSize;
 
-                    return (result <= this.te.getInventoryStackLimit()) && (result <= itemstack.getMaxStackSize());
+                    return (result <= te.getInventoryStackLimit()) && (result <= itemstack.getMaxStackSize());
                 }
             }
         }
@@ -75,26 +88,30 @@ public class GrinderLogic extends GUILogic {
     }
 
     /**
-     * Turn one item from the grinder source stack into the appropriate ground
-     * item in the grinder result stack
+     * Turn one item from the grinder source stack into the appropriate ground item in the grinder result stack
      */
     @Override
-    public void run() {
-        if (this.canRun()) {
+    public void run()
+    {
+        if (canRun())
+        {
 
-            final ItemStack itemstack = this.recipes.getResult(this.te.getStackInSlot(this.inputSlot)).getOutput();
+            final ItemStack itemstack = recipes.getResult(te.getStackInSlot(inputSlot)).getOutput();
 
-            if (this.te.getStackInSlot(this.outSlot) == null) {
-                this.te.setInventorySlotContents(this.outSlot, itemstack.copy());
-            } else if (this.te.getStackInSlot(this.outSlot).isItemEqual(itemstack)) {
-                this.te.setInventorySlotContents(this.outSlot, ItemHelper.getUniun(this.te.getStackInSlot(this.outSlot), itemstack));
+            if (te.getStackInSlot(outSlot) == null)
+            {
+                te.setInventorySlotContents(outSlot, itemstack.copy());
+            } else if (te.getStackInSlot(outSlot).isItemEqual(itemstack))
+            {
+                te.setInventorySlotContents(outSlot, ItemHelper.getUniun(te.getStackInSlot(outSlot), itemstack));
             }
 
-            if (this.te.getStackInSlot(this.inputSlot).stackSize <= 0) {
-                InventoryHelper.setEmty(this.te, this.inputSlot);
+            if (te.getStackInSlot(inputSlot).stackSize <= 0)
+            {
+                InventoryHelper.setEmty(te, inputSlot);
             }
 
-            this.te.decrStackSize(this.inputSlot, 1);
+            te.decrStackSize(inputSlot, 1);
         }
     }
 }

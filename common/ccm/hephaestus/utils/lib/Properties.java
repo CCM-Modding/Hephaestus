@@ -1,6 +1,7 @@
 package ccm.hephaestus.utils.lib;
 
-public class Properties {
+public class Properties
+{
 
     /*
      * Defaluts

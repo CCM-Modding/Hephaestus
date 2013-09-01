@@ -8,14 +8,16 @@ import ccm.nucleum.omnium.api.recipes.IRecipeContainer;
  * 
  * @author Captain_Shadows
  */
-abstract class RecipeRegistry {
+abstract class RecipeRegistry
+{
 
     protected IFuelRegistry fuels;
     protected IRecipeContainer recipes;
 
-    public void register() {
-        this.registerFuels();
-        this.registerRecipes();
+    public void register()
+    {
+        registerFuels();
+        registerRecipes();
     }
 
     abstract void registerFuels();

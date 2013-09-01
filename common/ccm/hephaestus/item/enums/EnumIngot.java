@@ -3,12 +3,14 @@ package ccm.hephaestus.item.enums;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
+
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
-public enum EnumIngot implements IItemEnum {
+public enum EnumIngot implements IItemEnum
+{
     // Items (Stack up to 64)
     ingotTin,
     ingotAluminum,
@@ -21,8 +23,10 @@ public enum EnumIngot implements IItemEnum {
     ingotSteel,
     ingotTitanite;
 
-    public static void registerIcons(final IconRegister register) {
-        for (final EnumIngot item : EnumIngot.values()) {
+    public static void registerIcons(final IconRegister register)
+    {
+        for (final EnumIngot item : EnumIngot.values())
+        {
             item.icon = register.registerIcon(item.texture);
         }
     }
@@ -31,17 +35,20 @@ public enum EnumIngot implements IItemEnum {
 
     public final String texture;
 
-    private EnumIngot() {
-        this.texture = ResourceHandler.getTextureFromName(this.name(), Locations.TEXTURE + "ingots/");
+    private EnumIngot()
+    {
+        texture = ResourceHandler.getTextureFromName(name(), Locations.TEXTURE + "ingots/");
     }
 
     @Override
-    public Icon getIcon() {
-        return this.icon;
+    public Icon getIcon()
+    {
+        return icon;
     }
 
     @Override
-    public Item getBaseItem() {
+    public Item getBaseItem()
+    {
         return ModItems.ingotItems;
     }
 }

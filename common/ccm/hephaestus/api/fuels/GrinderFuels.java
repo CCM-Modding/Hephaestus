@@ -4,10 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import net.minecraft.item.ItemStack;
+
 import ccm.nucleum.omnium.api.fuels.IFuelRegistry;
 import ccm.nucleum.omnium.utils.helper.ItemHelper;
 
-public final class GrinderFuels implements IFuelRegistry {
+public final class GrinderFuels implements IFuelRegistry
+{
 
     /**
      * Grinder Fuels
@@ -16,11 +18,13 @@ public final class GrinderFuels implements IFuelRegistry {
 
     private static final GrinderFuels INSTANCE = new GrinderFuels();
 
-    private GrinderFuels() {
-        this.fuels = new HashSet<ItemStack>();
+    private GrinderFuels()
+    {
+        fuels = new HashSet<ItemStack>();
     }
 
-    public static GrinderFuels instance() {
+    public static GrinderFuels instance()
+    {
         return INSTANCE;
     }
 
@@ -31,8 +35,9 @@ public final class GrinderFuels implements IFuelRegistry {
      *            The Fuel to add.
      */
     @Override
-    public void registerFuel(final ItemStack stack) {
-        this.fuels.add(stack);
+    public void registerFuel(final ItemStack stack)
+    {
+        fuels.add(stack);
     }
 
     /**
@@ -41,9 +46,12 @@ public final class GrinderFuels implements IFuelRegistry {
      * @return true if it is found in the Fuel List.
      */
     @Override
-    public boolean isFuel(final ItemStack stack) {
-        for (final ItemStack i : this.fuels) {
-            if (ItemHelper.equals(i, stack)) {
+    public boolean isFuel(final ItemStack stack)
+    {
+        for (final ItemStack i : fuels)
+        {
+            if (ItemHelper.equals(i, stack))
+            {
                 return true;
             }
         }

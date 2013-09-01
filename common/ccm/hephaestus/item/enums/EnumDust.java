@@ -3,12 +3,14 @@ package ccm.hephaestus.item.enums;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.util.Icon;
+
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.utils.lib.Locations;
 import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 
-public enum EnumDust implements IItemEnum {
+public enum EnumDust implements IItemEnum
+{
     // Items (Stack up to 64)
     dustTin,
     dustAluminum,
@@ -24,8 +26,10 @@ public enum EnumDust implements IItemEnum {
     dustSteel,
     dustTitanite;
 
-    public static void registerIcons(final IconRegister register) {
-        for (final EnumDust item : EnumDust.values()) {
+    public static void registerIcons(final IconRegister register)
+    {
+        for (final EnumDust item : EnumDust.values())
+        {
             item.icon = register.registerIcon(item.texture);
         }
     }
@@ -34,17 +38,20 @@ public enum EnumDust implements IItemEnum {
 
     public final String texture;
 
-    private EnumDust() {
-        this.texture = ResourceHandler.getTextureFromName(this.name(), Locations.TEXTURE + "dusts/");
+    private EnumDust()
+    {
+        texture = ResourceHandler.getTextureFromName(name(), Locations.TEXTURE + "dusts/");
     }
 
     @Override
-    public Icon getIcon() {
-        return this.icon;
+    public Icon getIcon()
+    {
+        return icon;
     }
 
     @Override
-    public Item getBaseItem() {
+    public Item getBaseItem()
+    {
         return ModItems.dustItems;
     }
 }

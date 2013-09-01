@@ -3,7 +3,8 @@ package ccm.hephaestus.item.tool;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraftforge.common.EnumHelper;
 
-public class ToolMaterials {
+public class ToolMaterials
+{
 
     public static EnumToolMaterial toolALUMINUM = EnumHelper.addToolMaterial("ALUMINUM", 2, 3000, 12.0F, 4, 17);
     public static EnumToolMaterial toolBRONZE = EnumHelper.addToolMaterial("BRONZE", 3, 3000, 12.0F, 4, 17);

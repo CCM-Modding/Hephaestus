@@ -2,7 +2,8 @@ package ccm.hephaestus.utils.lib;
 
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
 
-public final class Locations {
+public final class Locations
+{
 
     public static final String TEXTURE = MOD_ID + ":";
 

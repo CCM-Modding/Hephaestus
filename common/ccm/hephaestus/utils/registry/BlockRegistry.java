@@ -10,9 +10,11 @@ import ccm.nucleum.omnium.block.tile.TileLogic;
 import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.handler.TileHandler;
 
-final class BlockRegistry {
+final class BlockRegistry
+{
 
-    protected static void registerBlocks() {
+    protected static void registerBlocks()
+    {
         LogHandler.finest(Hephaestus.instance, "Making Sub Blocks");
 
         registerCustomBlocks();
@@ -20,14 +22,18 @@ final class BlockRegistry {
         registerCustomRenderBlocks();
     }
 
-    static void registerCustomBlocks() {
+    static void registerCustomBlocks()
+    {
         LogHandler.finest(Hephaestus.instance, "Making Sub Blocks, Stage 2");
     }
 
-    static void registerCustomRenderBlocks() {
+    static void registerCustomRenderBlocks()
+    {
         LogHandler.finest(Hephaestus.instance, "Making Sub Blocks, Stage 3");
 
-        SubBlock.setUp(EnumModeled.machineGrinder, new SubModelled(Properties.modeledBlockID, EnumModeled.machineGrinder.ordinal(), new TileLogic()).setTileEntity(TileHandler.getEnumTE(EnumModeled.machineGrinder)).setCreativeTab(HephaestusTabs.tabHephaestusBlocks).setUnlocalizedName(EnumModeled.machineGrinder).setHardness(3.0F));
+        SubBlock.setUp(EnumModeled.machineGrinder,
+                new SubModelled(Properties.modeledBlockID, EnumModeled.machineGrinder.ordinal(), new TileLogic()).setTileEntity(TileHandler.getEnumTE(EnumModeled.machineGrinder))
+                        .setCreativeTab(HephaestusTabs.tabHephaestusBlocks).setUnlocalizedName(EnumModeled.machineGrinder).setHardness(3.0F));
 
     }
 }

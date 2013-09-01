@@ -4,16 +4,20 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSword;
-import ccm.hephaestus.utils.lib.Locations;
-import ccm.nucleum.omnium.utils.handler.ResourceHandler;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DummySword extends ItemSword {
+import ccm.hephaestus.utils.lib.Locations;
+import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 
-    public DummySword(final int par1, final EnumToolMaterial par2EnumToolMaterial) {
+public class DummySword extends ItemSword
+{
+
+    public DummySword(final int par1, final EnumToolMaterial par2EnumToolMaterial)
+    {
         super(par1, par2EnumToolMaterial);
-        this.setCreativeTab(CreativeTabs.tabTools);
+        setCreativeTab(CreativeTabs.tabTools);
         // TODO Auto-generated constructor stub
     }
 
@@ -22,7 +26,8 @@ public class DummySword extends ItemSword {
      */
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(final IconRegister register) {
-        this.itemIcon = register.registerIcon(ResourceHandler.getTextureFromName(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
+    public void registerIcons(final IconRegister register)
+    {
+        itemIcon = register.registerIcon(ResourceHandler.getTextureFromName(this.getUnlocalizedName(), Locations.TEXTURE + "tools/"));
     }
 }
