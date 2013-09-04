@@ -11,11 +11,7 @@ import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 public enum EnumModTool implements IItemEnum
 {
     // Grinder "Fuel", TODO Update with the right Damages
-    gsStone(250),
-    gsIron(400),
-    gsBronze(600),
-    gsObsidian(2000),
-    gsDiamond(3000);
+    gsStone(250), gsIron(400), gsBronze(600), gsObsidian(2000), gsDiamond(3000);
 
     public static void registerIcons(final IconRegister register)
     {

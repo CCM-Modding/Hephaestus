@@ -11,11 +11,7 @@ import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 public enum EnumBlocksA implements IBlockEnum
 {
     // Make sure to keep this lower than 16 AT ALL TIMES
-    blockSoldarium(3),
-    blockElectrum(3),
-    blockBronze(3),
-    blockSteel(3),
-    blockTitanite(4);
+    blockSoldarium(3), blockElectrum(3), blockBronze(3), blockSteel(3), blockTitanite(4);
 
     private EnumBlocksA()
     {

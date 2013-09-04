@@ -12,16 +12,7 @@ import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 public enum EnumIngot implements IItemEnum
 {
     // Items (Stack up to 64)
-    ingotTin,
-    ingotAluminum,
-    ingotSilver,
-    ingotCopper,
-    ingotTitanium,
-    ingotSoldarium,
-    ingotElectrum,
-    ingotBronze,
-    ingotSteel,
-    ingotTitanite;
+    ingotTin, ingotAluminum, ingotSilver, ingotCopper, ingotTitanium, ingotSoldarium, ingotElectrum, ingotBronze, ingotSteel, ingotTitanite;
 
     public static void registerIcons(final IconRegister register)
     {
