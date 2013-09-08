@@ -2,7 +2,6 @@ package ccm.hephaestus;
 
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
 import static ccm.hephaestus.utils.lib.Archive.MOD_NAME;
-import static ccm.hephaestus.utils.lib.Archive.MOD_PREFIX;
 import static ccm.hephaestus.utils.lib.Locations.CLIENT_PROXY;
 import static ccm.hephaestus.utils.lib.Locations.SERVER_PROXY;
 
@@ -27,11 +26,8 @@ import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
 import ccm.nucleum.omnium.utils.handler.config.ConfigurationHandler;
 import ccm.nucleum.omnium.utils.handler.mods.ModHandler;
 
-import lib.org.modstats.ModstatInfo;
-
 @Mod(modid = MOD_ID, name = MOD_NAME, useMetadata = true)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-@ModstatInfo(prefix = MOD_PREFIX)
 public class Hephaestus extends CCMMod implements IMod
 {
 
