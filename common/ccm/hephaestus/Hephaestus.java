@@ -23,7 +23,6 @@ import ccm.hephaestus.utils.registry.Registry;
 import ccm.nucleum.omnium.CCMMod;
 import ccm.nucleum.omnium.IMod;
 import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
-import ccm.nucleum.omnium.utils.handler.config.ConfigurationHandler;
 import ccm.nucleum.omnium.utils.handler.mods.ModHandler;
 
 @Mod(modid = MOD_ID, name = MOD_NAME, useMetadata = true)
@@ -40,10 +39,7 @@ public class Hephaestus extends CCMMod implements IMod
     @EventHandler
     public void preInit(final FMLPreInitializationEvent evt)
     {
-        ModLoadingHandler.loadMod(this);
-
-        initializeConfig(evt);
-        ConfigurationHandler.init(this, HephaestusConfig.class);
+        ModLoadingHandler.loadMod(this, evt, new HephaestusConfig());
 
         HephaestusTabs.initTabs();
 
