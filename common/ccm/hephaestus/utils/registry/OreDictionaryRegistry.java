@@ -9,7 +9,6 @@ import ccm.hephaestus.block.enums.EnumOresM;
 import ccm.hephaestus.item.enums.EnumDust;
 import ccm.hephaestus.item.enums.EnumGem;
 import ccm.hephaestus.item.enums.EnumIngot;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.helper.enums.EnumToItemStack;
 
 final class OreDictionaryRegistry
@@ -20,7 +19,7 @@ final class OreDictionaryRegistry
      */
     protected static void oreDictionary()
     {
-        LogHandler.finest(Hephaestus.instance, "Adding Ore Dictionary Entries");
+        Hephaestus.instance.getLogger().finest("Adding Ore Dictionary Entries");
 
         register("naturalAluminum", EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));
         register("ingotAluminium", EnumToItemStack.getItemIS(EnumIngot.ingotAluminum));

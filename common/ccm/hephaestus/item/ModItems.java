@@ -7,7 +7,6 @@ import ccm.hephaestus.item.classes.BaseItem;
 import ccm.hephaestus.item.classes.BaseUseableItem;
 import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 
 public final class ModItems
 {
@@ -35,7 +34,7 @@ public final class ModItems
      */
     public static void init()
     {
-        LogHandler.finest(Hephaestus.instance, "Loading Items");
+        Hephaestus.instance.getLogger().finest("Loading Items");
         ModItems.mainItems = new BaseItem(Properties.mainItemID, 0);
         ModItems.gemItems = new BaseItem(Properties.gemItemID, 1);
         ModItems.ingotItems = new BaseItem(Properties.ingotItemID, 2);

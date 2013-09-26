@@ -2,8 +2,7 @@ package ccm.hephaestus.configuration;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.omnium.configuration.AdvConfiguration;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.configuration.ConfigurationWrapper;
 
 final class ConfigItems extends HephaestusConfig
 {
@@ -14,9 +13,9 @@ final class ConfigItems extends HephaestusConfig
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configItems(final AdvConfiguration config)
+    protected static void configItems(final ConfigurationWrapper config)
     {
-        LogHandler.finest(Hephaestus.instance, "Loading Item Configs");
+        Hephaestus.instance.getLogger().finest("Loading Item Configs");
         int id = Properties.itemID;
         Properties.mainItemID = config.getItem("All the Items that Stack up to 64", id++).getInt();
         Properties.gemItemID = config.getItem("All the Gems", id++).getInt();

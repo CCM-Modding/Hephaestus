@@ -2,8 +2,7 @@ package ccm.hephaestus.configuration;
 
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.omnium.configuration.AdvConfiguration;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.configuration.ConfigurationWrapper;
 
 final class ConfigBlocks extends HephaestusConfig
 {
@@ -14,9 +13,9 @@ final class ConfigBlocks extends HephaestusConfig
      * @param config
      *            The AdvConfiguration file that is being edited.
      */
-    protected static void configBlocks(final AdvConfiguration config)
+    protected static void configBlocks(final ConfigurationWrapper config)
     {
-        LogHandler.finest(Hephaestus.instance, "Loading Block Configs");
+        Hephaestus.instance.getLogger().finest("Loading Block Configs");
         int id = Properties.blockID;
 
         Properties.oreID = config.getBlock("Ores", id++).getInt();

@@ -4,10 +4,9 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.utils.lib.Properties;
+import ccm.nucleum.omnium.block.loader.tile.TileLogic;
 import ccm.nucleum.omnium.block.sub.SubBlock;
 import ccm.nucleum.omnium.block.sub.SubModelled;
-import ccm.nucleum.omnium.block.tile.TileLogic;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.helper.enums.EnumHelper;
 
 final class BlockRegistry
@@ -15,7 +14,7 @@ final class BlockRegistry
 
     protected static void registerBlocks()
     {
-        LogHandler.finest(Hephaestus.instance, "Making Sub Blocks");
+        Hephaestus.instance.getLogger().finest("Making Sub Blocks");
 
         registerCustomBlocks();
 
@@ -24,12 +23,12 @@ final class BlockRegistry
 
     static void registerCustomBlocks()
     {
-        LogHandler.finest(Hephaestus.instance, "Making Sub Blocks, Stage 2");
+        Hephaestus.instance.getLogger().finest("Making Sub Blocks, Stage 2");
     }
 
     static void registerCustomRenderBlocks()
     {
-        LogHandler.finest(Hephaestus.instance, "Making Sub Blocks, Stage 3");
+        Hephaestus.instance.getLogger().finest("Making Sub Blocks, Stage 3");
 
         SubBlock.setUp(EnumModeled.machineGrinder,
                 new SubModelled(Properties.modeledBlockID, EnumModeled.machineGrinder.ordinal(), new TileLogic()).setTileEntity(EnumHelper.getTile(EnumModeled.machineGrinder))

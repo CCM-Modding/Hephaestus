@@ -1,5 +1,7 @@
 package ccm.hephaestus;
 
+import static ccm.nucleum.omnium.utils.lib.Archive.MOD_CHANNEL;
+
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
 import static ccm.hephaestus.utils.lib.Archive.MOD_NAME;
 import static ccm.hephaestus.utils.lib.Locations.CLIENT_PROXY;
@@ -20,13 +22,14 @@ import ccm.hephaestus.creativetab.HephaestusTabs;
 import ccm.hephaestus.item.ModItems;
 import ccm.hephaestus.tconstruct.TConstructHandler;
 import ccm.hephaestus.utils.registry.Registry;
+import ccm.nucleum.network.PacketHandler;
 import ccm.nucleum.omnium.CCMMod;
 import ccm.nucleum.omnium.IMod;
 import ccm.nucleum.omnium.utils.handler.ModLoadingHandler;
 import ccm.nucleum.omnium.utils.handler.mods.ModHandler;
 
 @Mod(modid = MOD_ID, name = MOD_NAME, useMetadata = true)
-@NetworkMod(clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(clientSideRequired = true, serverSideRequired = false, channels = MOD_CHANNEL, packetHandler = PacketHandler.class)
 public class Hephaestus extends CCMMod implements IMod
 {
 
@@ -57,7 +60,7 @@ public class Hephaestus extends CCMMod implements IMod
     {
         proxy.registerGUIs();
 
-        ModHandler.addMod(TConstructHandler.class);
+        ModHandler.addModHandler(new TConstructHandler());
     }
 
     @EventHandler

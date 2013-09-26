@@ -3,8 +3,7 @@ package ccm.hephaestus.configuration;
 import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.item.enums.EnumModTool;
 import ccm.hephaestus.utils.lib.Properties;
-import ccm.nucleum.omnium.configuration.AdvConfiguration;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
+import ccm.nucleum.omnium.configuration.ConfigurationWrapper;
 
 final class ConfigUsable extends HephaestusConfig
 {
@@ -15,9 +14,9 @@ final class ConfigUsable extends HephaestusConfig
      * @param config
      *            The Configuration file that is being edited.
      */
-    protected static void configUsable(final AdvConfiguration config)
+    protected static void configUsable(final ConfigurationWrapper config)
     {
-        LogHandler.finest(Hephaestus.instance, "Loading Usable Configs");
+        Hephaestus.instance.getLogger().finest("Loading Usable Configs");
         int id = Properties.itemID;
         Properties.gsStoneID = config.getItem(EnumModTool.gsStone.name(), id++).getInt();
         Properties.gsIronID = config.getItem(EnumModTool.gsIron.name(), id++).getInt();

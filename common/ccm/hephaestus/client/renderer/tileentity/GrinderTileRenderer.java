@@ -6,11 +6,11 @@ import net.minecraft.tileentity.TileEntity;
 
 import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
-import ccm.nucleum.omnium.client.renderer.tileentity.TileRenderer;
+import ccm.nucleum.omnium.client.renderer.tileentity.SimpleTileRenderer;
 import ccm.nucleum.omnium.tileentity.ActiveTE;
 import ccm.nucleum.omnium.tileentity.LogicTE;
 
-public class GrinderTileRenderer extends TileRenderer
+public class GrinderTileRenderer extends SimpleTileRenderer
 {
 
     // The grinder needs to render only parts depending on inventory

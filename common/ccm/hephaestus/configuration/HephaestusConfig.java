@@ -1,6 +1,6 @@
 package ccm.hephaestus.configuration;
 
-import ccm.nucleum.omnium.utils.handler.config.IConfig;
+import ccm.nucleum.omnium.utils.handler.configuration.IConfig;
 
 public class HephaestusConfig extends IConfig
 {

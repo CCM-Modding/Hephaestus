@@ -22,7 +22,7 @@ public class TConstructHandler extends IModHandler
     }
 
     @Override
-    public String getModName()
+    public String getAPIModName()
     {
         return "TConstruct";
     }

@@ -5,9 +5,9 @@ import org.lwjgl.opengl.GL11;
 import net.minecraft.item.ItemStack;
 
 import ccm.hephaestus.block.enums.EnumModeled;
-import ccm.nucleum.omnium.client.renderer.item.ItemRenderer;
+import ccm.nucleum.omnium.client.renderer.item.ModeledItemRenderer;
 
-public class GrinderItemRenderer extends ItemRenderer
+public class GrinderItemRenderer extends ModeledItemRenderer
 {
 
     // The item for the grinder needs to render only the

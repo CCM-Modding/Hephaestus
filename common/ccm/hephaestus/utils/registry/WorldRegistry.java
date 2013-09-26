@@ -6,7 +6,6 @@ import ccm.hephaestus.Hephaestus;
 import ccm.hephaestus.block.enums.EnumOresM;
 import ccm.hephaestus.utils.lib.Properties;
 import ccm.nucleum.omnium.IMod;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 import ccm.nucleum.world.WorldGenerator;
 
@@ -70,73 +69,73 @@ final class WorldRegistry
 
     private static void registerAluminum()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Aluminum");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Aluminum");
         register(Hephaestus.instance, EnumOresM.oreAluminum, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenAluminum);
     }
 
     private static void registerCopper()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Copper");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Copper");
         register(Hephaestus.instance, EnumOresM.oreCopper, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCopper);
     }
 
     private static void registerSilver()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Silver");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Silver");
         register(Hephaestus.instance, EnumOresM.oreSilver, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSilver);
     }
 
     private static void registerSulfur()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Sulfur");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Sulfur");
         register(Hephaestus.instance, EnumOresM.oreSulfur, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSulfur);
     }
 
     private static void registerTin()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Tin");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Tin");
         register(Hephaestus.instance, EnumOresM.oreTin, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTin);
     }
 
     private static void registerTitanium()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Titanium");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Titanium");
         register(Hephaestus.instance, EnumOresM.oreTitanium, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTitanium);
     }
 
     private static void registerCitrine()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Citrine");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Citrine");
         register(Hephaestus.instance, EnumOresM.oreCitrine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCitrine);
     }
 
     private static void registerCZirconia()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for CubicZirconia");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for CubicZirconia");
         register(Hephaestus.instance, EnumOresM.oreCZirconia, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenCZirconia);
     }
 
     private static void registerOlivine()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Olivine");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Olivine");
         register(Hephaestus.instance, EnumOresM.oreOlivine, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenOlivine);
     }
 
     private static void registerRuby()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Ruby");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Ruby");
         register(Hephaestus.instance, EnumOresM.oreRuby, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenRuby);
     }
 
     private static void registerSapphire()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Sapphire");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Sapphire");
         register(Hephaestus.instance, EnumOresM.oreSapphire, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenSapphire);
     }
 
     private static void registerTopaz()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering World Generation for Topaz");
+        Hephaestus.instance.getLogger().finest("Registering World Generation for Topaz");
         register(Hephaestus.instance, EnumOresM.oreTopaz, Properties.oreID, 6, 5, 10, 60, Properties.enableWorldGenTopaz);
     }
 

@@ -3,7 +3,7 @@ package ccm.hephaestus.block.enums;
 import net.minecraft.block.Block;
 
 import ccm.hephaestus.Hephaestus;
-import ccm.nucleum.omnium.client.model.AdvancedBaseModel;
+import ccm.nucleum.omnium.client.model.SimpleModel;
 import ccm.nucleum.omnium.utils.handler.ResourceHandler;
 import ccm.nucleum.omnium.utils.helper.enums.IBlockEnum;
 
@@ -17,7 +17,7 @@ public enum EnumModeled implements IBlockEnum
 {
     machineGrinder;
 
-    private final AdvancedBaseModel model;
+    private final SimpleModel model;
 
     /**
      * Adds their Textures and Models
@@ -25,10 +25,10 @@ public enum EnumModeled implements IBlockEnum
     private EnumModeled()
     {
         ResourceHandler.addModel(Hephaestus.instance, name());
-        model = new AdvancedBaseModel(this);
+        model = new SimpleModel(name());
     }
 
-    public AdvancedBaseModel getModel()
+    public SimpleModel getModel()
     {
         return model;
     }

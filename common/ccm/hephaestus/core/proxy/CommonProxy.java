@@ -8,7 +8,6 @@ import ccm.hephaestus.block.enums.EnumModeled;
 import ccm.hephaestus.inventory.container.GrinderContainer;
 import ccm.hephaestus.tileentity.logic.GrinderLogic;
 import ccm.nucleum.omnium.tileentity.ActiveTE;
-import ccm.nucleum.omnium.utils.handler.LogHandler;
 import ccm.nucleum.omnium.utils.handler.TileHandler;
 import ccm.nucleum.omnium.utils.handler.gui.GuiHandler;
 import ccm.nucleum.omnium.utils.helper.enums.EnumHelper;
@@ -21,7 +20,7 @@ public class CommonProxy
      */
     public void registerGUIs()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering GUIs");
+        Hephaestus.instance.getLogger().finest("Registering GUIs");
 
         registerGUI(EnumModeled.machineGrinder, GrinderContainer.class);
     }
@@ -36,7 +35,7 @@ public class CommonProxy
      */
     public void registerTEs()
     {
-        LogHandler.finest(Hephaestus.instance, "Registering Tile Entities");
+        Hephaestus.instance.getLogger().finest("Registering Tile Entities");
 
         registerTE(EnumModeled.machineGrinder, new ActiveTE().setLogic(GrinderLogic.class).setInventorySize(4));
     }
