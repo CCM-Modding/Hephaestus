@@ -12,7 +12,13 @@ import ccm.nucleum.omnium.utils.helper.enums.IItemEnum;
 public enum EnumGem implements IItemEnum
 {
     // Items (Stack up to 64)
-    gemChildarium, gemCitrine, gemCZirconia, gemOlivine, gemRuby, gemSapphire, gemTopaz;
+    gemChildarium,
+    gemCitrine,
+    gemCZirconia,
+    gemOlivine,
+    gemRuby,
+    gemSapphire,
+    gemTopaz;
 
     public static void registerIcons(final IconRegister register)
     {

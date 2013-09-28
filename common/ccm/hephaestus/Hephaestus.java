@@ -1,11 +1,10 @@
 package ccm.hephaestus;
 
-import static ccm.nucleum.omnium.utils.lib.Archive.MOD_CHANNEL;
-
 import static ccm.hephaestus.utils.lib.Archive.MOD_ID;
 import static ccm.hephaestus.utils.lib.Archive.MOD_NAME;
 import static ccm.hephaestus.utils.lib.Locations.CLIENT_PROXY;
 import static ccm.hephaestus.utils.lib.Locations.SERVER_PROXY;
+import static ccm.nucleum.omnium.utils.lib.Archive.MOD_CHANNEL;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
